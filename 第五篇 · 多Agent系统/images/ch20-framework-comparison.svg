@@ -1,0 +1,56 @@
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg20" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafbfc"/>
+      <stop offset="100%" stop-color="#f0f2f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="400" fill="url(#bg20)" rx="8"/>
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#1a1a2e">四大框架定位象限图</text>
+
+  <!-- Axes -->
+  <line x1="280" y1="50" x2="280" y2="370" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="50" y1="210" x2="530" y2="210" stroke="#ccc" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Axis Labels -->
+  <text x="535" y="215" font-family="system-ui" font-size="10" fill="#666">控制力 →</text>
+  <text x="285" y="46" font-family="system-ui" font-size="10" fill="#666">↑ 复杂度</text>
+  <text x="285" y="385" font-family="system-ui" font-size="10" fill="#666">↓ 简单度</text>
+  <text x="48" y="215" text-anchor="end" font-family="system-ui" font-size="10" fill="#666">← 自由度</text>
+
+  <!-- Quadrant Labels -->
+  <text x="160" y="70" text-anchor="middle" font-family="system-ui" font-size="9" fill="#aaa" font-style="italic">高控制 · 高复杂</text>
+  <text x="400" y="70" text-anchor="middle" font-family="system-ui" font-size="9" fill="#aaa" font-style="italic">高控制 · 高复杂</text>
+  <text x="160" y="360" text-anchor="middle" font-family="system-ui" font-size="9" fill="#aaa" font-style="italic">高自由 · 低复杂</text>
+  <text x="400" y="360" text-anchor="middle" font-family="system-ui" font-size="9" fill="#aaa" font-style="italic">高控制 · 低复杂</text>
+
+  <!-- LangGraph (top-left: high control, high complexity) -->
+  <circle cx="160" cy="110" r="42" fill="#3b82f6" opacity="0.85"/>
+  <text x="160" y="106" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="white">LangGraph</text>
+  <text x="160" y="122" text-anchor="middle" font-family="system-ui" font-size="9" fill="#dbeafe">v1.0 · 2025.10</text>
+  <text x="160" y="165" text-anchor="middle" font-family="system-ui" font-size="9" fill="#3b82f6">图引擎 · 状态机</text>
+
+  <!-- AutoGen (top-right: high freedom, high complexity) -->
+  <circle cx="400" cy="130" r="42" fill="#8b5cf6" opacity="0.85"/>
+  <text x="400" y="126" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="white">AutoGen</text>
+  <text x="400" y="142" text-anchor="middle" font-family="system-ui" font-size="9" fill="#ede9fe">v0.4 · 2025.01</text>
+  <text x="400" y="185" text-anchor="middle" font-family="system-ui" font-size="9" fill="#8b5cf6">Actor模型 · 对话式</text>
+
+  <!-- CrewAI (bottom-left: high freedom, low complexity) -->
+  <circle cx="170" cy="290" r="42" fill="#10b981" opacity="0.85"/>
+  <text x="170" y="286" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="white">CrewAI</text>
+  <text x="170" y="302" text-anchor="middle" font-family="system-ui" font-size="9" fill="#d1fae5">v1.0 · 2025.10</text>
+  <text x="170" y="345" text-anchor="middle" font-family="system-ui" font-size="9" fill="#10b981">角色驱动 · 团队制</text>
+
+  <!-- Swarm/Agents SDK (bottom-right: high control, low complexity) -->
+  <circle cx="400" cy="290" r="42" fill="#f59e0b" opacity="0.85"/>
+  <text x="400" y="284" text-anchor="middle" font-family="system-ui" font-size="11" font-weight="bold" fill="white">Swarm</text>
+  <text x="400" y="298" text-anchor="middle" font-family="system-ui" font-size="9" fill="#fef3c7">→ Agents SDK</text>
+  <text x="400" y="345" text-anchor="middle" font-family="system-ui" font-size="9" fill="#f59e0b">交接模型 · 极简</text>
+
+  <!-- Bottom annotation -->
+  <rect x="80" y="375" width="400" height="18" fill="none" rx="3"/>
+  <text x="280" y="388" text-anchor="middle" font-family="system-ui" font-size="9" fill="#888">横轴：框架对执行流的控制力 ｜ 纵轴：使用复杂度</text>
+</svg>

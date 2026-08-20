@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow26c" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="bold" fill="#333">Agent并发模型与容灾恢复</text>
+
+  <!-- Left: Concurrency Model -->
+  <text x="140" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#1565C0">并发模型</text>
+
+  <rect x="50" y="65" width="180" height="40" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="140" y="89" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">API请求（异步）</text>
+
+  <line x1="140" y1="105" x2="140" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+
+  <rect x="50" y="121" width="180" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="140" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">asyncio事件循环</text>
+
+  <line x1="100" y1="161" x2="80" y2="175" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+  <line x1="140" y1="161" x2="140" y2="175" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+  <line x1="180" y1="161" x2="200" y2="175" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+
+  <rect x="40" y="178" width="70" height="35" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="5"/>
+  <text x="75" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">Agent A</text>
+
+  <rect x="105" y="178" width="70" height="35" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="5"/>
+  <text x="140" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">Agent B</text>
+
+  <rect x="170" y="178" width="70" height="35" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="5"/>
+  <text x="205" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">Agent C</text>
+
+  <text x="140" y="228" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">资源隔离：独立上下文</text>
+  <text x="140" y="243" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">递归限制：防死循环</text>
+  <text x="140" y="258" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">Ray Serve：GPU水平扩展</text>
+
+  <rect x="40" y="270" width="200" height="30" fill="#F5F5F5" stroke="#999" stroke-width="1" rx="5"/>
+  <text x="140" y="290" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">fractional GPU 0.25 → 16 agents/4A100</text>
+
+  <!-- Divider -->
+  <line x1="270" y1="45" x2="270" y2="370" stroke="#CCC" stroke-dasharray="5,3"/>
+
+  <!-- Right: Fault Tolerance -->
+  <text x="410" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#E76F00">容灾恢复</text>
+
+  <rect x="320" y="65" width="180" height="40" fill="#FFEBEE" stroke="#D32F2F" stroke-width="1.5" rx="6"/>
+  <text x="410" y="89" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">Agent进程崩溃</text>
+
+  <line x1="410" y1="105" x2="410" y2="118" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+
+  <rect x="320" y="121" width="180" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="410" y="145" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">PostgresSaver检查点</text>
+
+  <line x1="410" y1="161" x2="410" y2="175" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+
+  <rect x="320" y="178" width="180" height="40" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="410" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">状态恢复+会话续接</text>
+
+  <line x1="410" y1="218" x2="410" y2="232" stroke="#333" stroke-width="1.5" marker-end="url(#arrow26c)"/>
+
+  <rect x="320" y="235" width="180" height="40" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="6"/>
+  <text x="410" y="259" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">Agent恢复执行</text>
+
+  <text x="410" y="288" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">checkpointer每步存档</text>
+  <text x="410" y="303" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">thread_id会话关联</text>
+  <text x="410" y="318" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#555">故障转移自动重启</text>
+
+  <rect x="320" y="330" width="180" height="30" fill="#F5F5F5" stroke="#999" stroke-width="1" rx="5"/>
+  <text x="410" y="350" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">生产用PostgresSaver · 非MemorySaver</text>
+
+  <text x="280" y="380" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">异步并发+检查点恢复 = 7×24高可用Agent服务</text>
+  <text x="280" y="394" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">recursion_limit防死循环 · Git回滚安全网 · 指数退避重试</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg20b" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fafbfc"/>
+      <stop offset="100%" stop-color="#f0f2f5"/>
+    </linearGradient>
+  </defs>
+  <rect width="560" height="400" fill="url(#bg20b)" rx="8"/>
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#1a1a2e">四大框架架构隐喻图</text>
+
+  <!-- LangGraph: Graph/DAG -->
+  <rect x="30" y="50" width="240" height="160" fill="#3b82f6" opacity="0.08" rx="6" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="72" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#3b82f6">LangGraph · 图引擎</text>
+  <text x="150" y="88" text-anchor="middle" font-family="system-ui" font-size="9" fill="#666">隐喻：交通调度中心</text>
+  <!-- Graph nodes -->
+  <circle cx="70" cy="120" r="14" fill="#3b82f6" opacity="0.7"/>
+  <text x="70" y="124" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">S</text>
+  <circle cx="150" cy="105" r="14" fill="#3b82f6" opacity="0.7"/>
+  <text x="150" y="109" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">A</text>
+  <circle cx="150" cy="155" r="14" fill="#3b82f6" opacity="0.7"/>
+  <text x="150" y="159" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">B</text>
+  <circle cx="230" cy="130" r="14" fill="#3b82f6" opacity="0.7"/>
+  <text x="230" y="134" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">E</text>
+  <!-- Edges -->
+  <line x1="84" y1="118" x2="136" y2="108" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="84" y1="122" x2="136" y2="152" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="164" y1="108" x2="216" y2="128" stroke="#3b82f6" stroke-width="1.5"/>
+  <line x1="164" y1="152" x2="216" y2="132" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="150" y="195" text-anchor="middle" font-family="system-ui" font-size="9" fill="#3b82f6">StateGraph · 条件边 · 检查点</text>
+
+  <!-- CrewAI: Crew/Team -->
+  <rect x="290" y="50" width="240" height="160" fill="#10b981" opacity="0.08" rx="6" stroke="#10b981" stroke-width="1.5"/>
+  <text x="410" y="72" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#10b981">CrewAI · 角色团队</text>
+  <text x="410" y="88" text-anchor="middle" font-family="system-ui" font-size="9" fill="#666">隐喻：电影剧组</text>
+  <!-- Manager -->
+  <rect x="385" y="100" width="50" height="22" fill="#10b981" opacity="0.7" rx="4"/>
+  <text x="410" y="114" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">导演</text>
+  <!-- Members -->
+  <rect x="315" y="145" width="50" height="22" fill="#10b981" opacity="0.5" rx="4"/>
+  <text x="340" y="159" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">编剧</text>
+  <rect x="385" y="145" width="50" height="22" fill="#10b981" opacity="0.5" rx="4"/>
+  <text x="410" y="159" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">摄影</text>
+  <rect x="455" y="145" width="50" height="22" fill="#10b981" opacity="0.5" rx="4"/>
+  <text x="480" y="159" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">剪辑</text>
+  <!-- Lines -->
+  <line x1="395" y1="122" x2="345" y2="145" stroke="#10b981" stroke-width="1.2"/>
+  <line x1="410" y1="122" x2="410" y2="145" stroke="#10b981" stroke-width="1.2"/>
+  <line x1="425" y1="122" x2="475" y2="145" stroke="#10b981" stroke-width="1.2"/>
+  <text x="410" y="195" text-anchor="middle" font-family="system-ui" font-size="9" fill="#10b981">Agent · Task · Crew · Flow</text>
+
+  <!-- AutoGen: Actor Model -->
+  <rect x="30" y="225" width="240" height="160" fill="#8b5cf6" opacity="0.08" rx="6" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="150" y="247" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#8b5cf6">AutoGen · Actor模型</text>
+  <text x="150" y="263" text-anchor="middle" font-family="system-ui" font-size="9" fill="#666">隐喻：聊天室 + 异步消息</text>
+  <!-- Actors -->
+  <circle cx="70" cy="295" r="16" fill="#8b5cf6" opacity="0.7"/>
+  <text x="70" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">A1</text>
+  <circle cx="150" cy="295" r="16" fill="#8b5cf6" opacity="0.7"/>
+  <text x="150" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">A2</text>
+  <circle cx="230" cy="295" r="16" fill="#8b5cf6" opacity="0.7"/>
+  <text x="230" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">A3</text>
+  <!-- Message arrows -->
+  <path d="M 86,290 L 134,290" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrowV)"/>
+  <path d="M 166,300 L 214,300" stroke="#8b5cf6" stroke-width="1.5" marker-end="url(#arrowV)"/>
+  <path d="M 220,282 Q 150,260 80,282" stroke="#8b5cf6" stroke-width="1.2" stroke-dasharray="3,2" fill="none"/>
+  <defs>
+    <marker id="arrowV" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="#8b5cf6"/>
+    </marker>
+  </defs>
+  <text x="150" y="370" text-anchor="middle" font-family="system-ui" font-size="9" fill="#8b5cf6">异步消息 · 事件驱动 · 分布式</text>
+
+  <!-- Swarm: Handoff -->
+  <rect x="290" y="225" width="240" height="160" fill="#f59e0b" opacity="0.08" rx="6" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="410" y="247" text-anchor="middle" font-family="system-ui" font-size="12" font-weight="bold" fill="#f59e0b">Swarm · 交接模型</text>
+  <text x="410" y="263" text-anchor="middle" font-family="system-ui" font-size="9" fill="#666">隐喻：前台转接</text>
+  <!-- Agent chain -->
+  <rect x="315" y="285" width="50" height="22" fill="#f59e0b" opacity="0.7" rx="4"/>
+  <text x="340" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">分诊</text>
+  <rect x="385" y="285" width="50" height="22" fill="#f59e0b" opacity="0.5" rx="4"/>
+  <text x="410" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">客服</text>
+  <rect x="455" y="285" width="50" height="22" fill="#f59e0b" opacity="0.5" rx="4"/>
+  <text x="480" y="299" text-anchor="middle" font-family="system-ui" font-size="8" fill="white">技术</text>
+  <!-- Handoff arrows -->
+  <path d="M 365,296 L 385,296" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowO)"/>
+  <path d="M 435,296 L 455,296" stroke="#f59e0b" stroke-width="1.5" marker-end="url(#arrowO)"/>
+  <defs>
+    <marker id="arrowO" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0,0 6,3 0,6" fill="#f59e0b"/>
+    </marker>
+  </defs>
+  <text x="375" y="318" text-anchor="middle" font-family="system-ui" font-size="8" fill="#f59e0b">handoff</text>
+  <text x="445" y="318" text-anchor="middle" font-family="system-ui" font-size="8" fill="#f59e0b">handoff</text>
+  <text x="410" y="345" text-anchor="middle" font-family="system-ui" font-size="8" fill="#666">无状态 · 函数即路由</text>
+  <text x="410" y="370" text-anchor="middle" font-family="system-ui" font-size="9" fill="#f59e0b">Agent · Handoff · Context Var</text>
+</svg>

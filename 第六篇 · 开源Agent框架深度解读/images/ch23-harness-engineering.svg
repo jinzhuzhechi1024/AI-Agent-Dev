@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">Codex Harness Engineering 四大支柱</text>
+
+  <!-- 中心 -->
+  <rect x="210" y="165" width="140" height="70" fill="#FFF3E0" stroke="#E65100" stroke-width="2.5" rx="10"/>
+  <text x="280" y="192" text-anchor="middle" font-size="14" font-weight="bold" fill="#E65100">Harness</text>
+  <text x="280" y="210" text-anchor="middle" font-size="12" fill="#E65100">Engineering</text>
+  <text x="280" y="225" text-anchor="middle" font-size="10" fill="#888">Agent = Model + Harness</text>
+
+  <!-- 四大支柱：上下左右 -->
+  <!-- 上：渐进式文档披露 -->
+  <rect x="155" y="55" width="250" height="55" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="280" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565C0">渐进式文档披露</text>
+  <text x="280" y="97" text-anchor="middle" font-size="10" fill="#555">AGENTS.md → 目录索引 → docs/按需加载</text>
+
+  <line x1="280" y1="110" x2="280" y2="165" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 右：架构约束 -->
+  <rect x="370" y="150" width="170" height="100" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="455" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">架构约束</text>
+  <text x="455" y="195" text-anchor="middle" font-size="10" fill="#555">确定性Linter</text>
+  <text x="455" y="212" text-anchor="middle" font-size="10" fill="#555">LLM审计Agent</text>
+  <text x="455" y="229" text-anchor="middle" font-size="10" fill="#555">CI门控</text>
+
+  <line x1="350" y1="200" x2="370" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 下：熵管理 -->
+  <rect x="155" y="290" width="250" height="55" fill="#FCE4EC" stroke="#C62828" stroke-width="2" rx="8"/>
+  <text x="280" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#C62828">熵管理</text>
+  <text x="280" y="332" text-anchor="middle" font-size="10" fill="#555">文档一致性·约束扫描·模式强化·依赖审计</text>
+
+  <line x1="280" y1="235" x2="280" y2="290" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 左：MCP集成 -->
+  <rect x="20" y="150" width="170" height="100" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="8"/>
+  <text x="105" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#7B1FA2">MCP集成</text>
+  <text x="105" y="195" text-anchor="middle" font-size="10" fill="#555">~/.codex/config.toml</text>
+  <text x="105" y="212" text-anchor="middle" font-size="10" fill="#555">[mcp_servers.]段</text>
+  <text x="105" y="229" text-anchor="middle" font-size="10" fill="#555">工具扩展标准</text>
+
+  <line x1="190" y1="200" x2="210" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- 底部标注 -->
+  <text x="280" y="375" text-anchor="middle" font-size="12" fill="#D32F2F">⚡ 不改模型，只改Harness — 基准得分 52.8% → 66.5%</text>
+
+  <defs>
+  </defs>
+</svg>

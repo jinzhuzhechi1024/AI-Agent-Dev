@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="560" height="400" fill="#F5F5F5" rx="8" />
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#333333">Codex CLI 三档审批模式</text>
+  <text x="280" y="48" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#888888">suggest → auto-edit → full-auto（信任递增）</text>
+
+  <!-- Level 1: suggest -->
+  <rect x="40" y="68" width="480" height="88" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2" rx="6" />
+  <rect x="40" y="68" width="120" height="88" fill="#00ADD8" rx="6" />
+  <text x="100" y="102" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">suggest</text>
+  <text x="100" y="122" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FFFFFF">建议模式</text>
+  <text x="100" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#CCEEFF">最安全</text>
+  <text x="175" y="90" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">读文件: 自动</text>
+  <text x="175" y="108" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">写文件: 需审批</text>
+  <text x="175" y="126" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">Shell: 需审批</text>
+  <text x="175" y="144" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">无额外约束，人是安全网</text>
+  <text x="510" y="100" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#00ADD8">探索代码库</text>
+  <text x="510" y="116" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#00ADD8">代码审查</text>
+  <text x="510" y="132" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#00ADD8">高风险环境</text>
+
+  <!-- Arrow 1 -->
+  <path d="M280 160 L280 175" stroke="#888888" stroke-width="2" marker-end="url(#arrowhead1)" fill="none" />
+  <polygon points="276,172 280,180 284,172" fill="#888888" />
+
+  <!-- Level 2: auto-edit -->
+  <rect x="40" y="185" width="480" height="88" fill="#FFFFFF" stroke="#E76F00" stroke-width="2" rx="6" />
+  <rect x="40" y="185" width="120" height="88" fill="#E76F00" rx="6" />
+  <text x="100" y="219" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">auto-edit</text>
+  <text x="100" y="239" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FFFFFF">自动编辑</text>
+  <text x="100" y="257" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FFDDBB">平衡效率</text>
+  <text x="175" y="207" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">读文件: 自动</text>
+  <text x="175" y="225" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">写文件: 自动</text>
+  <text x="175" y="243" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">Shell: 需审批</text>
+  <text x="175" y="261" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">非Git目录有警告</text>
+  <text x="510" y="217" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#E76F00">日常开发</text>
+  <text x="510" y="233" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#E76F00">批量重构</text>
+  <text x="510" y="249" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#E76F00">代码生成</text>
+
+  <!-- Arrow 2 -->
+  <path d="M280 277 L280 292" stroke="#888888" stroke-width="2" marker-end="url(#arrowhead2)" fill="none" />
+  <polygon points="276,289 280,297 284,289" fill="#888888" />
+
+  <!-- Level 3: full-auto -->
+  <rect x="40" y="302" width="480" height="88" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2" rx="6" />
+  <rect x="40" y="302" width="120" height="88" fill="#D32F2F" rx="6" />
+  <text x="100" y="336" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">full-auto</text>
+  <text x="100" y="356" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FFFFFF">完全自动</text>
+  <text x="100" y="374" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#FFCCCC">沙箱约束</text>
+  <text x="175" y="324" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">读/写/Shell: 全自动</text>
+  <text x="175" y="342" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">网络: 完全禁用</text>
+  <text x="175" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">文件: 限PWD/TMPDIR</text>
+  <text x="175" y="378" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">深度防御沙箱运行</text>
+  <text x="510" y="334" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#D32F2F">CI/CD流水线</text>
+  <text x="510" y="350" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#D32F2F">快速原型</text>
+  <text x="510" y="366" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#D32F2F">批量任务</text>
+</svg>

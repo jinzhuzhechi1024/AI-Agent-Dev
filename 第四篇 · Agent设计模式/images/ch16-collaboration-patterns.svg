@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr16a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" fill="#fafafa"/>
+
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">交互协作模式一览</text>
+
+  <!-- Human-in-the-Loop -->
+  <rect x="25" y="45" width="120" height="90" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="85" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#78350f">人机协作</text>
+  <text x="85" y="76" text-anchor="middle" font-size="8" fill="#f59e0b">Human-in-Loop</text>
+  <circle cx="65" cy="95" r="10" fill="#fff" stroke="#f59e0b" stroke-width="1"/>
+  <text x="65" y="98" text-anchor="middle" font-size="7" fill="#78350f">AI</text>
+  <circle cx="105" cy="95" r="10" fill="#fff" stroke="#f59e0b" stroke-width="1"/>
+  <text x="105" y="98" text-anchor="middle" font-size="7" fill="#78350f">人</text>
+  <path d="M 75 95 L 95 95" stroke="#64748b" stroke-width="1" marker-end="url(#arr16a)" marker-start="url(#arr16a)"/>
+  <text x="85" y="120" text-anchor="middle" font-size="7" fill="#64748b">关键节点审批</text>
+
+  <!-- Delegation -->
+  <rect x="160" y="45" width="120" height="90" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="220" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#7c2d12">委派</text>
+  <text x="220" y="76" text-anchor="middle" font-size="8" fill="#f97316">Delegation</text>
+  <circle cx="220" cy="93" r="11" fill="#f97316" stroke="#f97316" stroke-width="1"/>
+  <text x="220" y="96" text-anchor="middle" font-size="7" fill="#fff">主</text>
+  <circle cx="195" cy="115" r="8" fill="#fff" stroke="#f97316" stroke-width="1"/>
+  <text x="195" y="118" text-anchor="middle" font-size="6" fill="#7c2d12">专A</text>
+  <circle cx="245" cy="115" r="8" fill="#fff" stroke="#f97316" stroke-width="1"/>
+  <text x="245" y="118" text-anchor="middle" font-size="6" fill="#7c2d12">专B</text>
+  <path d="M 215 100 L 200 110" stroke="#64748b" stroke-width="1" marker-end="url(#arr16a)"/>
+  <path d="M 225 100 L 240 110" stroke="#64748b" stroke-width="1" marker-end="url(#arr16a)"/>
+  <text x="220" y="130" text-anchor="middle" font-size="7" fill="#64748b">任务分发</text>
+
+  <!-- Debate -->
+  <rect x="295" y="45" width="120" height="90" rx="8" fill="#e0e7ff" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="355" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#3730a3">辩论</text>
+  <text x="355" y="76" text-anchor="middle" font-size="8" fill="#6366f1">Debate</text>
+  <circle cx="330" cy="97" r="9" fill="#fff" stroke="#6366f1" stroke-width="1"/>
+  <text x="330" y="100" text-anchor="middle" font-size="6" fill="#3730a3">正</text>
+  <circle cx="380" cy="97" r="9" fill="#fff" stroke="#6366f1" stroke-width="1"/>
+  <text x="380" y="100" text-anchor="middle" font-size="6" fill="#3730a3">反</text>
+  <path d="M 339 97 L 371 97" stroke="#6366f1" stroke-width="1" marker-end="url(#arr16a)" marker-start="url(#arr16a)"/>
+  <rect x="332" y="112" width="46" height="14" rx="3" fill="#6366f1" stroke="#6366f1"/>
+  <text x="355" y="122" text-anchor="middle" font-size="7" fill="#fff">仲裁</text>
+  <text x="355" y="131" text-anchor="middle" font-size="7" fill="#64748b">对抗提升</text>
+
+  <!-- Consensus -->
+  <rect x="430" y="45" width="120" height="90" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="490" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d">共识</text>
+  <text x="490" y="76" text-anchor="middle" font-size="8" fill="#22c55e">Consensus</text>
+  <circle cx="465" cy="93" r="8" fill="#fff" stroke="#22c55e" stroke-width="1"/>
+  <text x="465" y="96" text-anchor="middle" font-size="6" fill="#14532d">A1</text>
+  <circle cx="490" cy="93" r="8" fill="#fff" stroke="#22c55e" stroke-width="1"/>
+  <text x="490" y="96" text-anchor="middle" font-size="6" fill="#14532d">A2</text>
+  <circle cx="515" cy="93" r="8" fill="#fff" stroke="#22c55e" stroke-width="1"/>
+  <text x="515" y="96" text-anchor="middle" font-size="6" fill="#14532d">A3</text>
+  <path d="M 465 101 L 490 113" stroke="#64748b" stroke-width="1"/>
+  <path d="M 490 101 L 490 113" stroke="#64748b" stroke-width="1"/>
+  <path d="M 515 101 L 490 113" stroke="#64748b" stroke-width="1" marker-end="url(#arr16a)"/>
+  <rect x="470" y="113" width="40" height="14" rx="3" fill="#22c55e" stroke="#22c55e"/>
+  <text x="490" y="123" text-anchor="middle" font-size="7" fill="#fff">投票</text>
+  <text x="490" y="131" text-anchor="middle" font-size="7" fill="#64748b">多数决定</text>
+
+  <!-- Divider -->
+  <line x1="20" y1="155" x2="540" y2="155" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Handoff (centered, larger) -->
+  <text x="280" y="175" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">交接 (Handoff)</text>
+  <circle cx="180" cy="210" r="14" fill="#fff" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="180" y="214" text-anchor="middle" font-size="8" font-weight="600" fill="#5b21b6">Agent A</text>
+  <path d="M 194 210 L 362 210" stroke="#8b5cf6" stroke-width="1.5" fill="none" marker-end="url(#arr16a)"/>
+  <rect x="230" y="195" width="100" height="16" rx="3" fill="#f3e8ff" stroke="#8b5cf6" stroke-width="0.8"/>
+  <text x="280" y="206" text-anchor="middle" font-size="8" fill="#5b21b6">携带上下文转交</text>
+  <circle cx="380" cy="210" r="14" fill="#8b5cf6" stroke="#8b5cf6" stroke-width="1.5"/>
+  <text x="380" y="214" text-anchor="middle" font-size="8" font-weight="600" fill="#fff">Agent B</text>
+  <text x="280" y="235" text-anchor="middle" font-size="8" fill="#64748b">任务从一个 Agent 完整转交给另一个</text>
+
+  <!-- Divider 2 -->
+  <line x1="20" y1="255" x2="540" y2="255" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Robustness patterns -->
+  <text x="280" y="275" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">稳健安全模式</text>
+
+  <!-- Row of 5 robustness patterns -->
+  <rect x="25" y="290" width="95" height="55" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="72" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">异常处理</text>
+  <text x="72" y="319" text-anchor="middle" font-size="7" fill="#ef4444">Exception</text>
+  <text x="72" y="335" text-anchor="middle" font-size="7" fill="#64748b">优雅降级</text>
+
+  <rect x="130" y="290" width="95" height="55" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="177" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">护栏</text>
+  <text x="177" y="319" text-anchor="middle" font-size="7" fill="#ef4444">Guardrails</text>
+  <text x="177" y="335" text-anchor="middle" font-size="7" fill="#64748b">边界控制</text>
+
+  <rect x="235" y="290" width="95" height="55" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="282" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">降级</text>
+  <text x="282" y="319" text-anchor="middle" font-size="7" fill="#ef4444">Fallback</text>
+  <text x="282" y="335" text-anchor="middle" font-size="7" fill="#64748b">备份方案</text>
+
+  <rect x="340" y="290" width="95" height="55" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="387" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">熔断</text>
+  <text x="387" y="319" text-anchor="middle" font-size="7" fill="#ef4444">Circuit Brkr</text>
+  <text x="387" y="335" text-anchor="middle" font-size="7" fill="#64748b">防级联失败</text>
+
+  <rect x="445" y="290" width="95" height="55" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="492" y="307" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">限流</text>
+  <text x="492" y="319" text-anchor="middle" font-size="7" fill="#ef4444">Rate Limit</text>
+  <text x="492" y="335" text-anchor="middle" font-size="7" fill="#64748b">成本控制</text>
+
+  <!-- Defense-in-depth arrow -->
+  <text x="280" y="372" text-anchor="middle" font-size="8" fill="#94a3b8" font-style="italic">↑ 纵深防御：从内到外，层层保护</text>
+  <text x="280" y="388" text-anchor="middle" font-size="8" fill="#94a3b8">异常处理(内) → 护栏 → 降级 → 熔断 → 限流(外)</text>
+</svg>

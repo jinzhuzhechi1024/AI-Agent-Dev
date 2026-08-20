@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrowD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748b"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Rule 三层覆盖：就近原则</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">子目录规则覆盖父目录，如同"地方法规优先于国家法"</text>
+
+  <!-- 项目根 -->
+  <rect x="40" y="70" width="480" height="50" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="60" y="90" font-size="11" font-weight="700" fill="#1e40af">📁 项目根 /AGENTS.md</text>
+  <text x="60" y="106" font-size="9.5" fill="#475569">全局规则：技术栈=TypeScript | 测试框架=Vitest | 提交规范=Conventional Commits</text>
+  <text x="470" y="108" font-size="8.5" fill="#3b82f6" font-weight="600">L1 基线</text>
+
+  <!-- 箭头1 -->
+  <path d="M280,120 L280,138" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowD)" fill="none"/>
+  <text x="295" y="133" font-size="8.5" fill="#64748b">继承</text>
+
+  <!-- src目录 -->
+  <rect x="80" y="140" width="400" height="50" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="100" y="160" font-size="11" font-weight="700" fill="#15803d">📁 /src/AGENTS.md</text>
+  <text x="100" y="176" font-size="9.5" fill="#475569">覆盖：代码风格=ESLint strict | import排序=alphabetical | 禁止 any</text>
+  <text x="410" y="178" font-size="8.5" fill="#22c55e" font-weight="600">L2 覆盖</text>
+
+  <!-- 箭头2 -->
+  <path d="M280,190 L280,208" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowD)" fill="none"/>
+  <text x="295" y="203" font-size="8.5" fill="#64748b">继承</text>
+
+  <!-- src/tests目录 -->
+  <rect x="120" y="210" width="320" height="50" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="140" y="230" font-size="11" font-weight="700" fill="#b45309">📁 /src/tests/AGENTS.md</text>
+  <text x="140" y="246" font-size="9.5" fill="#475569">覆盖：允许 any（测试宽容）| 必须覆盖边界 | mock 优先</text>
+  <text x="380" y="248" font-size="8.5" fill="#f59e0b" font-weight="600">L3 再覆盖</text>
+
+  <!-- 箭头3 -->
+  <path d="M280,260 L280,278" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowD)" fill="none"/>
+  <text x="295" y="273" font-size="8.5" fill="#64748b">继承</text>
+
+  <!-- 有效规则 -->
+  <rect x="160" y="280" width="240" height="44" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="280" y="298" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">⚡ /src/tests/ 下有效规则</text>
+  <text x="280" y="313" text-anchor="middle" font-size="9" fill="#64748b">技术栈=TS + Vitest + Conventional</text>
+  <text x="280" y="325" text-anchor="middle" font-size="9" fill="#64748b">+ ESLint strict + 允许 any + mock 优先</text>
+
+  <!-- 底部注释 -->
+  <rect x="40" y="350" width="480" height="38" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="280" y="368" text-anchor="middle" font-size="9" fill="#64748b">🔍 就近原则（Proximity Rule）：Agent 沿目录树向上搜索，最近匹配的规则优先生效</text>
+  <text x="280" y="381" text-anchor="middle" font-size="9" fill="#64748b">未覆盖的规则自动继承父级——如同"子法补充父法，不冲突则并存"</text>
+</svg>

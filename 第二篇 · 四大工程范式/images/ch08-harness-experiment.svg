@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr8" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#333333"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#333333">Harness 工程实验证据</text>
+
+  <!-- LangChain Experiment -->
+  <rect x="20" y="50" width="160" height="330" rx="8" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2"/>
+  <rect x="20" y="50" width="160" height="32" rx="8" fill="#00ADD8"/>
+  <text x="100" y="72" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">LangChain</text>
+
+  <text x="100" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">Terminal Bench 2.0</text>
+  <text x="100" y="125" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">模型: GPT-5.2-Codex</text>
+  <text x="100" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">（全程不变）</text>
+
+  <rect x="40" y="165" width="120" height="30" rx="4" fill="#F5F5F5" stroke="#DDDDDD"/>
+  <text x="100" y="185" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#D32F2F">52.8%</text>
+  <text x="100" y="205" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">优化前 · Top 30</text>
+
+  <line x1="100" y1="215" x2="100" y2="235" stroke="#333333" stroke-width="1.5" marker-end="url(#arr8)"/>
+
+  <text x="100" y="250" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">自验证循环</text>
+  <text x="100" y="265" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">循环检测</text>
+  <text x="100" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">环境注入</text>
+  <text x="100" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">推理三明治</text>
+
+  <line x1="100" y1="305" x2="100" y2="325" stroke="#333333" stroke-width="1.5" marker-end="url(#arr8)"/>
+
+  <rect x="40" y="330" width="120" height="30" rx="4" fill="#F5F5F5" stroke="#00ADD8"/>
+  <text x="100" y="350" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#00ADD8">66.5%</text>
+  <text x="100" y="370" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">优化后 · Top 5</text>
+
+  <!-- OpenAI Experiment -->
+  <rect x="200" y="50" width="160" height="330" rx="8" fill="#FFFFFF" stroke="#E76F00" stroke-width="2"/>
+  <rect x="200" y="50" width="160" height="32" rx="8" fill="#E76F00"/>
+  <text x="280" y="72" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">OpenAI Codex</text>
+
+  <text x="280" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">百万行代码实验</text>
+  <text x="280" y="125" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">2025.08 - 2025.12</text>
+
+  <text x="280" y="155" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">3 → 7 工程师</text>
+  <text x="280" y="175" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">~100 万行代码</text>
+  <text x="280" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">0 行手写</text>
+  <text x="280" y="215" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">~1500 个 PR</text>
+
+  <text x="280" y="250" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">AGENTS.md 索引</text>
+  <text x="280" y="265" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">CI 编码约束</text>
+  <text x="280" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">自动清理 PR</text>
+  <text x="280" y="295" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">反馈闭环</text>
+
+  <rect x="220" y="315" width="120" height="30" rx="4" fill="#F5F5F5" stroke="#E76F00"/>
+  <text x="280" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#E76F00">10x 效率</text>
+  <text x="280" y="355" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">vs 传统开发</text>
+
+  <!-- Stripe Experiment -->
+  <rect x="380" y="50" width="160" height="330" rx="8" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2"/>
+  <rect x="380" y="50" width="160" height="32" rx="8" fill="#D32F2F"/>
+  <text x="460" y="72" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Stripe Minions</text>
+
+  <text x="460" y="105" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">工业级实践</text>
+  <text x="460" y="125" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">每周持续运行</text>
+
+  <text x="460" y="155" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">1300+ PR/周</text>
+  <text x="460" y="175" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">AI 完全编写</text>
+  <text x="460" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">人类仅审查</text>
+
+  <text x="460" y="230" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">独立 devbox</text>
+  <text x="460" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">~500 个工具</text>
+  <text x="460" y="260" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">确定性 + Agent</text>
+  <text x="460" y="275" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">混合蓝图</text>
+
+  <rect x="400" y="295" width="120" height="30" rx="4" fill="#F5F5F5" stroke="#D32F2F"/>
+  <text x="460" y="315" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#D32F2F">生产级</text>
+  <text x="460" y="335" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">大规模验证</text>
+</svg>

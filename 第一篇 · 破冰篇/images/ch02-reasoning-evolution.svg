@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#00ADD8"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">推理范式演进</text>
+
+  <!-- Axis labels -->
+  <text x="25" y="200" text-anchor="middle" font-size="11" fill="#888888" transform="rotate(-90, 25, 200)">推理能力 →</text>
+  <text x="280" y="385" text-anchor="middle" font-size="11" fill="#888888">时间 →</text>
+
+  <!-- Dashed trend line -->
+  <line x1="90" y1="325" x2="490" y2="95" stroke="#E76F00" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <!-- Step 1: Standard Prompting -->
+  <rect x="30" y="290" width="120" height="70" rx="6" fill="#F5F5F5" stroke="#333333" stroke-width="1.5"/>
+  <text x="90" y="315" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">直接回答</text>
+  <text x="90" y="335" text-anchor="middle" font-size="10" fill="#888888">Standard Prompting</text>
+  <text x="90" y="350" text-anchor="middle" font-size="9" fill="#AAAAAA">pre-2022</text>
+
+  <!-- Arrow 1→2 -->
+  <path d="M 150 310 Q 175 285 172 258" stroke="#00ADD8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2: Chain-of-Thought -->
+  <rect x="172" y="218" width="120" height="70" rx="6" fill="#F5F5F5" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="232" y="243" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">思维链 CoT</text>
+  <text x="232" y="263" text-anchor="middle" font-size="10" fill="#555555">分步推理</text>
+  <text x="232" y="278" text-anchor="middle" font-size="9" fill="#AAAAAA">Wei et al. 2022</text>
+
+  <!-- Arrow 2→3 -->
+  <path d="M 292 238 Q 317 213 314 186" stroke="#00ADD8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 3: Tree-of-Thoughts -->
+  <rect x="314" y="146" width="120" height="70" rx="6" fill="#F5F5F5" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="374" y="171" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">思维树 ToT</text>
+  <text x="374" y="191" text-anchor="middle" font-size="10" fill="#555555">树状搜索推理</text>
+  <text x="374" y="206" text-anchor="middle" font-size="9" fill="#AAAAAA">Yao et al. 2023</text>
+
+  <!-- Arrow 3→4 -->
+  <path d="M 434 166 Q 459 141 456 114" stroke="#00ADD8" stroke-width="1.5" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 4: Test-Time Compute -->
+  <rect x="430" y="60" width="120" height="70" rx="6" fill="#F5F5F5" stroke="#00ADD8" stroke-width="2"/>
+  <text x="490" y="85" text-anchor="middle" font-size="12" font-weight="bold" fill="#00ADD8">推理时计算</text>
+  <text x="490" y="105" text-anchor="middle" font-size="10" fill="#555555">o1 / o3 / R1</text>
+  <text x="490" y="120" text-anchor="middle" font-size="9" fill="#AAAAAA">2024 — 2025</text>
+</svg>

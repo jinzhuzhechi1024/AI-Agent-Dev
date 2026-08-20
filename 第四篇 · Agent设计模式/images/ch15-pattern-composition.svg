@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr15b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" fill="#fafafa"/>
+
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">模式组合实战：企业客服 Agent</text>
+
+  <!-- Entry: user message -->
+  <rect x="220" y="42" width="120" height="28" rx="6" fill="#1e293b"/>
+  <text x="280" y="60" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">用户消息</text>
+  <path d="M 280 70 L 280 82" stroke="#64748b" stroke-width="1.2" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Routing layer -->
+  <rect x="160" y="82" width="240" height="34" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="280" y="97" text-anchor="middle" font-size="10" font-weight="700" fill="#14532d">路由 (Routing)</text>
+  <text x="280" y="110" text-anchor="middle" font-size="8" fill="#22c55e">售前 / 售后 / 技术</text>
+
+  <!-- Three branches -->
+  <path d="M 200 116 L 90 135" stroke="#64748b" stroke-width="1" fill="none" marker-end="url(#arr15b)"/>
+  <path d="M 280 116 L 280 135" stroke="#64748b" stroke-width="1" fill="none" marker-end="url(#arr15b)"/>
+  <path d="M 360 116 L 470 135" stroke="#64748b" stroke-width="1" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Branch 1: Prompt Chaining -->
+  <rect x="25" y="135" width="130" height="70" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1"/>
+  <text x="90" y="150" text-anchor="middle" font-size="9" font-weight="600" fill="#1e3a8a">售前 → 提示链</text>
+  <rect x="35" y="157" width="40" height="14" rx="2" fill="#fff" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="55" y="168" text-anchor="middle" font-size="7" fill="#1e3a8a">检索</text>
+  <path d="M 75 164 L 82 164" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <rect x="82" y="157" width="40" height="14" rx="2" fill="#fff" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="102" y="168" text-anchor="middle" font-size="7" fill="#1e3a8a">推荐</text>
+  <path d="M 122 164 L 128 164" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <rect x="128" y="157" width="22" height="14" rx="2" fill="#fff" stroke="#3b82f6" stroke-width="0.8"/>
+  <text x="139" y="168" text-anchor="middle" font-size="7" fill="#1e3a8a">审</text>
+  <text x="90" y="190" text-anchor="middle" font-size="7" fill="#64748b">顺序流水线</text>
+
+  <!-- Branch 2: Evaluator-Optimizer -->
+  <rect x="195" y="135" width="170" height="70" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1"/>
+  <text x="280" y="150" text-anchor="middle" font-size="9" font-weight="600" fill="#831843">售后 → 评估器-优化器</text>
+  <rect x="210" y="157" width="45" height="14" rx="2" fill="#fff" stroke="#ec4899" stroke-width="0.8"/>
+  <text x="232" y="168" text-anchor="middle" font-size="7" fill="#831843">生成</text>
+  <path d="M 255 164 L 265 164" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <rect x="265" y="157" width="45" height="14" rx="2" fill="#fff" stroke="#ec4899" stroke-width="0.8"/>
+  <text x="287" y="168" text-anchor="middle" font-size="7" fill="#831843">评估</text>
+  <path d="M 287 171 Q 287 180 232 180 Q 232 174 232 171" stroke="#ec4899" stroke-width="0.8" fill="none" stroke-dasharray="2,1.5"/>
+  <path d="M 310 164 L 320 164" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <rect x="320" y="157" width="35" height="14" rx="2" fill="#22c55e" stroke="#22c55e" stroke-width="0.8"/>
+  <text x="337" y="168" text-anchor="middle" font-size="7" fill="#fff">达标</text>
+  <text x="280" y="190" text-anchor="middle" font-size="7" fill="#64748b">质量闭环</text>
+
+  <!-- Branch 3: Orchestrator-Worker -->
+  <rect x="395" y="135" width="140" height="70" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+  <text x="465" y="150" text-anchor="middle" font-size="9" font-weight="600" fill="#3730a3">技术 → 编排者</text>
+  <rect x="445" y="157" width="40" height="14" rx="2" fill="#6366f1" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="465" y="168" text-anchor="middle" font-size="7" fill="#fff">编排</text>
+  <path d="M 455 171 L 425 181" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <path d="M 465 171 L 465 181" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <path d="M 475 171 L 505 181" stroke="#64748b" stroke-width="0.8" marker-end="url(#arr15b)"/>
+  <rect x="410" y="181" width="30" height="12" rx="2" fill="#fff" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="425" y="190" text-anchor="middle" font-size="6" fill="#3730a3">日志</text>
+  <rect x="450" y="181" width="30" height="12" rx="2" fill="#fff" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="465" y="190" text-anchor="middle" font-size="6" fill="#3730a3">配置</text>
+  <rect x="490" y="181" width="30" height="12" rx="2" fill="#fff" stroke="#6366f1" stroke-width="0.8"/>
+  <text x="505" y="190" text-anchor="middle" font-size="6" fill="#3730a3">知识</text>
+  <text x="465" y="202" text-anchor="middle" font-size="7" fill="#64748b">动态分解</text>
+
+  <!-- Merge -->
+  <path d="M 90 205 L 280 225" stroke="#64748b" stroke-width="1" fill="none"/>
+  <path d="M 280 205 L 280 225" stroke="#64748b" stroke-width="1" fill="none"/>
+  <path d="M 465 205 L 280 225" stroke="#64748b" stroke-width="1" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Human-in-the-Loop -->
+  <rect x="200" y="225" width="160" height="30" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="280" y="240" text-anchor="middle" font-size="9" font-weight="600" fill="#78350f">人机协作 (高风险审批)</text>
+  <text x="280" y="250" text-anchor="middle" font-size="7" fill="#f59e0b">Human-in-the-Loop</text>
+  <path d="M 280 255 L 280 267" stroke="#64748b" stroke-width="1.2" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Guardrails -->
+  <rect x="200" y="267" width="160" height="30" rx="6" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="280" y="282" text-anchor="middle" font-size="9" font-weight="600" fill="#831843">护栏 (内容审核)</text>
+  <text x="280" y="292" text-anchor="middle" font-size="7" fill="#ec4899">Guardrails</text>
+  <path d="M 280 297 L 280 309" stroke="#64748b" stroke-width="1.2" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Fallback -->
+  <rect x="200" y="309" width="160" height="30" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="280" y="324" text-anchor="middle" font-size="9" font-weight="600" fill="#991b1b">降级 (超时返回模板)</text>
+  <text x="280" y="334" text-anchor="middle" font-size="7" fill="#ef4444">Fallback</text>
+  <path d="M 280 339 L 280 351" stroke="#64748b" stroke-width="1.2" fill="none" marker-end="url(#arr15b)"/>
+
+  <!-- Output -->
+  <rect x="220" y="351" width="120" height="28" rx="6" fill="#1e293b"/>
+  <text x="280" y="369" text-anchor="middle" font-size="10" font-weight="600" fill="#fff">最终输出</text>
+
+  <!-- Legend -->
+  <text x="280" y="394" text-anchor="middle" font-size="7" fill="#94a3b8">流程控制（蓝/绿/粉/紫） + 交互协作（黄） + 稳健安全（粉/红）</text>
+</svg>

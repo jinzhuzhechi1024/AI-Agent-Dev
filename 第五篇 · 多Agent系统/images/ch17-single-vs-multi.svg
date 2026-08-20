@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">单体 vs 多 Agent：何时拆分？</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#888888">上下文压力 × 角色复杂度 × 协作成本 的权衡</text>
+
+  <!-- Left: Single Agent -->
+  <rect x="25" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="25" y="60" width="245" height="22" fill="#1976D2" rx="8"/>
+  <text x="148" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">单 Agent — 个体户</text>
+
+  <circle cx="148" cy="120" r="30" fill="#1976D2"/>
+  <text x="148" y="117" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">一个 Agent</text>
+  <text x="148" y="130" text-anchor="middle" font-size="8" fill="#FFFFFF">全角色</text>
+
+  <text x="148" y="170" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">✅ 优势</text>
+  <g font-size="8" fill="#2E7D32">
+    <text x="35" y="188">▪ 零通信开销</text>
+    <text x="35" y="201">▪ 共享上下文完整</text>
+    <text x="35" y="214">▪ 调试简单（一条链）</text>
+    <text x="35" y="227">▪ 成本可控（一个模型）</text>
+    <text x="35" y="240">▪ 延迟低（无协调）</text>
+  </g>
+
+  <text x="148" y="265" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">⚠️ 局限</text>
+  <g font-size="8" fill="#D32F2F">
+    <text x="35" y="283">▪ 上下文窗口有上限</text>
+    <text x="35" y="296">▪ 多角色推理质量下降</text>
+    <text x="35" y="309">▪ 长任务 Context Rot</text>
+    <text x="35" y="322">▪ 无法并行</text>
+  </g>
+
+  <rect x="35" y="335" width="230" height="25" fill="#E3F2FD" rx="4"/>
+  <text x="148" y="352" text-anchor="middle" font-size="8" fill="#1565C0" font-weight="bold">适合：线性·单域·中等复杂度</text>
+
+  <!-- Right: Multi Agent -->
+  <rect x="290" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="290" y="60" width="245" height="22" fill="#00897B" rx="8"/>
+  <text x="412" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">多 Agent — 公司制</text>
+
+  <!-- Mini team -->
+  <circle cx="350" cy="115" r="15" fill="#00897B"/>
+  <text x="350" y="119" text-anchor="middle" font-size="6" fill="#FFFFFF">规划</text>
+  <circle cx="412" cy="115" r="15" fill="#00897B"/>
+  <text x="412" y="119" text-anchor="middle" font-size="6" fill="#FFFFFF">编码</text>
+  <circle cx="474" cy="115" r="15" fill="#00897B"/>
+  <text x="474" y="119" text-anchor="middle" font-size="6" fill="#FFFFFF">审查</text>
+
+  <text x="412" y="155" text-anchor="middle" font-size="8" fill="#888888">专业化分工 · 各司其职</text>
+
+  <text x="412" y="178" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">✅ 优势</text>
+  <g font-size="8" fill="#2E7D32">
+    <text x="300" y="196">▪ 专业化·质量更高</text>
+    <text x="300" y="209">▪ 可并行执行</text>
+    <text x="300" y="222">▪ 上下文隔离·防 Rot</text>
+    <text x="300" y="235">▪ 可扩展·模块化</text>
+    <text x="300" y="248">▪ 模型分级（贵规划+便宜执行）</text>
+  </g>
+
+  <text x="412" y="272" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">⚠️ 成本</text>
+  <g font-size="8" fill="#D32F2F">
+    <text x="300" y="290">▪ 通信开销 3-5x Token</text>
+    <text x="300" y="303">▪ 协调复杂度高</text>
+    <text x="300" y="316">▪ 调试难（多链路）</text>
+    <text x="300" y="329">▪ 质量乘法衰减</text>
+  </g>
+
+  <rect x="300" y="335" width="230" height="25" fill="#E0F2F1" rx="4"/>
+  <text x="412" y="352" text-anchor="middle" font-size="8" fill="#00695C" font-weight="bold">适合：跨域·高复杂度·可并行</text>
+
+  <!-- Decision arrow at bottom -->
+  <rect x="100" y="375" width="360" height="20" fill="#FFFFFF" stroke="#FFB74D" stroke-width="1" rx="4"/>
+  <text x="280" y="389" text-anchor="middle" font-size="8" fill="#E65100">决策线：上下文压力 > 60% 或 角色数 > 3 → 拆分</text>
+</svg>

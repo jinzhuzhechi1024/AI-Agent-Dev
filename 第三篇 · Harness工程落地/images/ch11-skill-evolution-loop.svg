@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">Skill 自动创建与进化闭环</text>
+  <text x="280" y="42" text-anchor="middle" font-size="10" fill="#888888">Hermes Agent · Observe → Crystallize → Reuse → Refine</text>
+
+  <!-- Center hub -->
+  <circle cx="280" cy="220" r="38" fill="#333333"/>
+  <text x="280" y="216" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">学习</text>
+  <text x="280" y="230" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">闭环</text>
+
+  <!-- 5 stages around the hub -->
+  <!-- 1. Observe (top) -->
+  <rect x="210" y="60" width="140" height="55" fill="#FFFFFF" stroke="#00ADD8" stroke-width="1.5" rx="8"/>
+  <text x="280" y="78" text-anchor="middle" font-size="10" font-weight="bold" fill="#00ADD8">1. Observe 观察</text>
+  <text x="280" y="92" text-anchor="middle" font-size="8" fill="#555555">监控多步骤任务执行</text>
+  <text x="280" y="104" text-anchor="middle" font-size="8" fill="#555555">记录工具调用·决策·纠错</text>
+  <line x1="280" y1="115" x2="280" y2="182" stroke="#00ADD8" stroke-width="1.5" marker-end="url(#m1)"/>
+
+  <!-- 2. Crystallize (right) -->
+  <rect x="420" y="140" width="125" height="55" fill="#FFFFFF" stroke="#E76F00" stroke-width="1.5" rx="8"/>
+  <text x="482" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#E76F00">2. Crystallize 沉淀</text>
+  <text x="482" y="172" text-anchor="middle" font-size="8" fill="#555555">3+次成功后生成</text>
+  <text x="482" y="184" text-anchor="middle" font-size="8" fill="#555555">SKILL.md 标准格式</text>
+  <line x1="318" y1="210" x2="420" y2="167" stroke="#E76F00" stroke-width="1.5" marker-end="url(#m2)"/>
+
+  <!-- 3. Reuse (bottom-right) -->
+  <rect x="420" y="245" width="125" height="55" fill="#FFFFFF" stroke="#00ADD8" stroke-width="1.5" rx="8"/>
+  <text x="482" y="263" text-anchor="middle" font-size="10" font-weight="bold" fill="#00ADD8">3. Reuse 复用</text>
+  <text x="482" y="277" text-anchor="middle" font-size="8" fill="#555555">类似任务直接调用</text>
+  <text x="482" y="289" text-anchor="middle" font-size="8" fill="#555555">跳过从零推理</text>
+  <line x1="318" y1="230" x2="420" y2="272" stroke="#00ADD8" stroke-width="1.5" marker-end="url(#m3)"/>
+
+  <!-- 4. Refine (bottom-left) -->
+  <rect x="15" y="245" width="125" height="55" fill="#FFFFFF" stroke="#E76F00" stroke-width="1.5" rx="8"/>
+  <text x="77" y="263" text-anchor="middle" font-size="10" font-weight="bold" fill="#E76F00">4. Refine 优化</text>
+  <text x="77" y="277" text-anchor="middle" font-size="8" fill="#555555">发现更好方法时</text>
+  <text x="77" y="289" text-anchor="middle" font-size="8" fill="#555555">patch 精准修复技能</text>
+  <line x1="242" y1="230" x2="140" y2="272" stroke="#E76F00" stroke-width="1.5" marker-end="url(#m4)"/>
+
+  <!-- 5. Share (left) -->
+  <rect x="15" y="140" width="125" height="55" fill="#FFFFFF" stroke="#D32F2F" stroke-width="1.5" rx="8"/>
+  <text x="77" y="158" text-anchor="middle" font-size="10" font-weight="bold" fill="#D32F2F">5. Share 分享</text>
+  <text x="77" y="172" text-anchor="middle" font-size="8" fill="#555555">发布到 Skills Hub</text>
+  <text x="77" y="184" text-anchor="middle" font-size="8" fill="#555555">社区可复用进化</text>
+  <line x1="242" y1="210" x2="140" y2="167" stroke="#D32F2F" stroke-width="1.5" marker-end="url(#m5)"/>
+
+  <!-- Arrows back to hub from each -->
+  <line x1="420" y1="195" x2="320" y2="215" stroke="#00ADD8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="420" y1="245" x2="320" y2="225" stroke="#00ADD8" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="140" y1="245" x2="240" y2="225" stroke="#E76F00" stroke-width="1" stroke-dasharray="3,2"/>
+  <line x1="140" y1="195" x2="240" y2="215" stroke="#D32F2F" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <defs>
+    <marker id="m1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#00ADD8"/></marker>
+    <marker id="m2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#E76F00"/></marker>
+    <marker id="m3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#00ADD8"/></marker>
+    <marker id="m4" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#E76F00"/></marker>
+    <marker id="m5" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#D32F2F"/></marker>
+  </defs>
+
+  <!-- Bottom annotation -->
+  <text x="280" y="375" text-anchor="middle" font-size="9" fill="#666666" font-style="italic">兼容 agentskills.io 开放标准 · 技能存储于 ~/.hermes/skills/ 可审查</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrS" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Skill · Rule · Hook 三者协同</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">Skill 扩展能力 · Rule 约束行为 · Hook 保障质量</text>
+
+  <!-- 中心：Agent -->
+  <circle cx="280" cy="200" r="42" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+  <text x="280" y="196" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Agent</text>
+  <text x="280" y="210" text-anchor="middle" font-size="8.5" fill="#94a3b8">决策引擎</text>
+
+  <!-- Skill（左） -->
+  <rect x="40" y="140" width="130" height="120" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="105" y="162" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">🎯 Skill</text>
+  <text x="105" y="180" text-anchor="middle" font-size="9" font-weight="600" fill="#3b82f6">扩展能力</text>
+  <line x1="55" y1="188" x2="155" y2="188" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="105" y="202" text-anchor="middle" font-size="8.5" fill="#475569">"你能做什么？"</text>
+  <text x="105" y="218" text-anchor="middle" font-size="8.5" fill="#64748b">代码审查、SQL</text>
+  <text x="105" y="230" text-anchor="middle" font-size="8.5" fill="#64748b">生成、部署运维</text>
+  <text x="105" y="246" text-anchor="middle" font-size="8" font-style="italic" fill="#3b82f6">按需加载</text>
+
+  <!-- Rule（上） -->
+  <rect x="215" y="55" width="130" height="95" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+  <text x="280" y="77" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">📐 Rule</text>
+  <text x="280" y="95" text-anchor="middle" font-size="9" font-weight="600" fill="#22c55e">约束行为</text>
+  <line x1="230" y1="103" x2="330" y2="103" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="280" y="117" text-anchor="middle" font-size="8.5" fill="#475569">"你必须遵守什么？"</text>
+  <text x="280" y="131" text-anchor="middle" font-size="8.5" fill="#64748b">技术栈、提交规范</text>
+  <text x="280" y="143" text-anchor="middle" font-size="8" font-style="italic" fill="#22c55e">始终在上下文</text>
+
+  <!-- Hook（右） -->
+  <rect x="390" y="140" width="130" height="120" rx="12" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="455" y="162" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">🛡️ Hook</text>
+  <text x="455" y="180" text-anchor="middle" font-size="9" font-weight="600" fill="#f59e0b">保障质量</text>
+  <line x1="405" y1="188" x2="505" y2="188" stroke="#fde68a" stroke-width="1"/>
+  <text x="455" y="202" text-anchor="middle" font-size="8.5" fill="#475569">"执行后检查什么？"</text>
+  <text x="455" y="218" text-anchor="middle" font-size="8.5" fill="#64748b">格式化、安全扫描</text>
+  <text x="455" y="230" text-anchor="middle" font-size="8.5" fill="#64748b">高危操作门控</text>
+  <text x="455" y="246" text-anchor="middle" font-size="8" font-style="italic" fill="#f59e0b">自动拦截</text>
+
+  <!-- 连接线 -->
+  <path d="M170,200 C200,200 220,200 238,200" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrS)" fill="none"/>
+  <text x="200" y="190" font-size="8" fill="#3b82f6" font-weight="600">赋予能力</text>
+
+  <path d="M280,150 L280,160" stroke="#22c55e" stroke-width="2" marker-end="url(#arrS)" fill="none"/>
+  <text x="293" y="158" font-size="8" fill="#22c55e" font-weight="600">约束</text>
+
+  <path d="M390,200 C360,200 340,200 322,200" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrS)" fill="none"/>
+  <text x="350" y="190" font-size="8" fill="#f59e0b" font-weight="600">守护</text>
+
+  <!-- 底部三方比喻 -->
+  <rect x="40" y="290" width="480" height="92" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="280" y="308" text-anchor="middle" font-size="10" font-weight="700" fill="#334155">🍳 厨师比喻</text>
+  <text x="60" y="326" font-size="9" fill="#3b82f6">Skill = 厨师的菜谱书：想做什么菜，翻到对应页（按需加载）</text>
+  <text x="60" y="342" font-size="9" fill="#22c55e">Rule = 厨房的卫生条例：必须戴帽、洗手、生熟分开（始终遵守）</text>
+  <text x="60" y="358" font-size="9" fill="#f59e0b">Hook = 出餐前质检员：每道菜端出前必须过检（自动拦截不合格品）</text>
+  <text x="60" y="374" font-size="8.5" fill="#64748b" font-style="italic">三者缺一不可：有菜谱才能做菜，有条例才不违规，有质检才不出事故</text>
+</svg>

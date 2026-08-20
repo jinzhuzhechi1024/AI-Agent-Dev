@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">Prompt 的边界：Context 的子集</text>
+  <text x="280" y="42" text-anchor="middle" font-size="10" fill="#888888">当你需要管理模型"看到什么"，就到了下一层</text>
+
+  <!-- Outer Context container -->
+  <rect x="30" y="60" width="500" height="310" fill="#FFFFFF" stroke="#00897B" stroke-width="2" rx="10"/>
+  <rect x="30" y="60" width="500" height="24" fill="#00897B" rx="10"/>
+  <text x="280" y="77" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFFFFF">Context（模型每次推理看到的全部信息）</text>
+
+  <!-- Prompt Engineering zone (inner small box) -->
+  <rect x="50" y="100" width="200" height="130" fill="#E3F2FD" stroke="#42A5F5" stroke-width="2" rx="8"/>
+  <rect x="50" y="100" width="200" height="22" fill="#1976D2" rx="8"/>
+  <text x="150" y="115" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">Prompt Engineering (L1)</text>
+  <g font-size="9" fill="#1565C0">
+    <text x="60" y="138">▪ System Prompt 指令</text>
+    <text x="60" y="153">▪ Few-Shot 示例</text>
+    <text x="60" y="168">▪ 输出格式要求</text>
+    <text x="60" y="183">▪ 角色设定</text>
+  </g>
+  <text x="150" y="210" text-anchor="middle" font-size="9" fill="#1976D2" font-weight="bold">优化"说什么"</text>
+  <text x="150" y="223" text-anchor="middle" font-size="8" fill="#999999">单轮·无状态·无工具</text>
+
+  <!-- Context Engineering zone (larger area) -->
+  <rect x="270" y="100" width="245" height="255" fill="#E8F5E9" stroke="#81C784" stroke-width="2" rx="8"/>
+  <rect x="270" y="100" width="245" height="22" fill="#2E7D32" rx="8"/>
+  <text x="392" y="115" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">Context Engineering (L2)</text>
+
+  <g font-size="9" fill="#2E7D32">
+    <text x="280" y="140">▪ Conversation History 记忆系统</text>
+    <text x="280" y="155">  → 跨会话上下文管理</text>
+    <text x="280" y="170">▪ Tool Definitions 工具定义</text>
+    <text x="280" y="185">  → MCP / Function Calling</text>
+    <text x="280" y="200">▪ Retrieved Knowledge 检索知识</text>
+    <text x="280" y="215">  → RAG 向量检索</text>
+    <text x="280" y="230">▪ File Contents 文件内容</text>
+    <text x="280" y="245">  → 按需读取工作区文件</text>
+    <text x="280" y="260">▪ Environment State 环境状态</text>
+    <text x="280" y="275">  → 运行时上下文注入</text>
+  </g>
+
+  <text x="392" y="305" text-anchor="middle" font-size="9" fill="#2E7D32" font-weight="bold">优化"看到什么"</text>
+  <text x="392" y="320" text-anchor="middle" font-size="8" fill="#999999">多轮·有状态·有工具·有循环</text>
+  <text x="392" y="340" text-anchor="middle" font-size="8" fill="#2E7D32" font-style="italic">→ 第6章深入</text>
+
+  <!-- Subset annotation -->
+  <text x="150" y="250" text-anchor="middle" font-size="8" fill="#666666" font-style="italic">Prompt 是 Context 的</text>
+  <text x="150" y="262" text-anchor="middle" font-size="8" fill="#666666" font-style="italic">一个子集</text>
+
+  <!-- Dashed inclusion line -->
+  <line x1="250" y1="165" x2="270" y2="165" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- Bottom boundary annotations -->
+  <rect x="50" y="270" width="200" height="80" fill="#FFF3E0" stroke="#FFB74D" stroke-width="1" rx="6"/>
+  <text x="150" y="288" text-anchor="middle" font-size="9" font-weight="bold" fill="#E65100">Prompt 能解决的</text>
+  <g font-size="8" fill="#E65100">
+    <text x="60" y="305">✓ 单轮问答 · 格式转换</text>
+    <text x="60" y="320">✓ 内容生成 · 简单分类</text>
+    <text x="60" y="335">✓ Few-Shot + 结构化输出</text>
+  </g>
+  <text x="60" y="348" font-size="8" fill="#999999">✗ 跨会话记忆 ✗ 工具编排 ✗ 状态管理</text>
+
+  <text x="280" y="385" text-anchor="middle" font-size="9" fill="#00897B" font-style="italic">Context = System Prompt + History + Tools + RAG + Files + State</text>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">Hermes 三层记忆架构</text>
+
+  <!-- 第一层：工作记忆（顶部） -->
+  <rect x="60" y="50" width="440" height="60" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="280" y="72" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565C0">工作记忆（Working Memory）</text>
+  <text x="280" y="92" text-anchor="middle" font-size="11" fill="#555">当前对话上下文 · 即时推理状态 · 工具调用中间结果</text>
+  <text x="280" y="106" text-anchor="middle" font-size="10" fill="#888">生命周期：单次会话 · 存储：内存</text>
+
+  <!-- 连接箭头1 -->
+  <line x1="200" y1="110" x2="200" y2="135" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrDown)"/>
+  <line x1="360" y1="135" x2="360" y2="110" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrUp)"/>
+  <text x="200" y="128" text-anchor="middle" font-size="9" fill="#666">写入</text>
+  <text x="360" y="128" text-anchor="middle" font-size="9" fill="#666">回溯</text>
+
+  <!-- 第二层：情景记忆（中间） -->
+  <rect x="60" y="140" width="440" height="60" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="8"/>
+  <text x="280" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="#E65100">情景记忆（Episodic Memory）</text>
+  <text x="280" y="182" text-anchor="middle" font-size="11" fill="#555">历史对话记录 · 任务执行轨迹 · 用户交互事件</text>
+  <text x="280" y="196" text-anchor="middle" font-size="10" fill="#888">生命周期：永久 · 存储：SQLite + FTS5</text>
+
+  <!-- 连接箭头2 -->
+  <line x1="200" y1="200" x2="200" y2="225" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrDown)"/>
+  <line x1="360" y1="225" x2="360" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrUp)"/>
+  <text x="200" y="218" text-anchor="middle" font-size="9" fill="#666">提炼</text>
+  <text x="360" y="218" text-anchor="middle" font-size="9" fill="#666">检索</text>
+
+  <!-- 第三层：技能记忆（底部） -->
+  <rect x="60" y="230" width="440" height="60" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="280" y="252" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E7D32">程序化技能记忆（Skill Memory）</text>
+  <text x="280" y="272" text-anchor="middle" font-size="11" fill="#555">自动生成的SKILL.md · 工作流模板 · 工具使用模式</text>
+  <text x="280" y="286" text-anchor="middle" font-size="10" fill="#888">生命周期：永久 · 存储：文件系统 + Skill Curator</text>
+
+  <!-- 底部对比标注 -->
+  <rect x="60" y="310" width="440" height="70" fill="#FAFAFA" stroke="#D32F2F" stroke-width="1.5" rx="6"/>
+  <text x="280" y="332" text-anchor="middle" font-size="12" font-weight="bold" fill="#D32F2F">⚡ 与 OpenClaw 双模记忆的区别</text>
+  <text x="280" y="352" text-anchor="middle" font-size="11" fill="#555">OpenClaw：短期(72h) + 长期(SQLite) — 二层</text>
+  <text x="280" y="370" text-anchor="middle" font-size="11" fill="#555">Hermes：工作 + 情景 + 技能 — 三层，多了"技能"层</text>
+
+  <defs>
+    <marker id="arrDown" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L8,0 L4,6 z" fill="#333"/>
+    </marker>
+    <marker id="arrUp" markerWidth="8" markerHeight="8" refX="4" refY="2" orient="auto">
+      <path d="M4,0 L8,6 L0,6 z" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">LLM 的四个硬伤</text>
+
+  <!-- Box 1: No cross-session memory -->
+  <rect x="20" y="55" width="250" height="150" rx="8" fill="#F5F5F5" stroke="#D32F2F" stroke-width="1.5"/>
+  <circle cx="50" cy="85" r="14" fill="#D32F2F"/>
+  <text x="50" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="75" y="90" font-size="13" font-weight="bold" fill="#333333">无跨会话记忆</text>
+  <text x="40" y="120" font-size="10.5" fill="#555555">每次对话都是全新开始</text>
+  <text x="40" y="140" font-size="10.5" fill="#555555">昨天的上下文全部丢失</text>
+  <text x="40" y="170" font-size="10" fill="#00ADD8" font-style="italic">→ 需要：记忆系统</text>
+
+  <!-- Box 2: Cannot execute code -->
+  <rect x="290" y="55" width="250" height="150" rx="8" fill="#F5F5F5" stroke="#D32F2F" stroke-width="1.5"/>
+  <circle cx="320" cy="85" r="14" fill="#D32F2F"/>
+  <text x="320" y="90" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="345" y="90" font-size="13" font-weight="bold" fill="#333333">无法执行代码</text>
+  <text x="310" y="120" font-size="10.5" fill="#555555">只能输出文本建议</text>
+  <text x="310" y="140" font-size="10.5" fill="#555555">不能真正运行程序</text>
+  <text x="310" y="170" font-size="10" fill="#00ADD8" font-style="italic">→ 需要：沙箱执行环境</text>
+
+  <!-- Box 3: No real-time knowledge -->
+  <rect x="20" y="225" width="250" height="150" rx="8" fill="#F5F5F5" stroke="#D32F2F" stroke-width="1.5"/>
+  <circle cx="50" cy="255" r="14" fill="#D32F2F"/>
+  <text x="50" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="75" y="260" font-size="13" font-weight="bold" fill="#333333">无实时知识</text>
+  <text x="40" y="290" font-size="10.5" fill="#555555">训练数据是知识天花板</text>
+  <text x="40" y="310" font-size="10.5" fill="#555555">不知道昨天发生的事</text>
+  <text x="40" y="340" font-size="10" fill="#00ADD8" font-style="italic">→ 需要：Web Search + MCP</text>
+
+  <!-- Box 4: Cannot set up environment -->
+  <rect x="290" y="225" width="250" height="150" rx="8" fill="#F5F5F5" stroke="#D32F2F" stroke-width="1.5"/>
+  <circle cx="320" cy="255" r="14" fill="#D32F2F"/>
+  <text x="320" y="260" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">4</text>
+  <text x="345" y="260" font-size="13" font-weight="bold" fill="#333333">无法搭建环境</text>
+  <text x="310" y="290" font-size="10.5" fill="#555555">不能创建文件、安装依赖</text>
+  <text x="310" y="310" font-size="10.5" fill="#555555">无法配置运行时环境</text>
+  <text x="310" y="340" font-size="10" fill="#00ADD8" font-style="italic">→ 需要：文件系统 + Bash</text>
+</svg>

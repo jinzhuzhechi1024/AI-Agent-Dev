@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arr14" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">Agent 设计模式四象限</text>
+
+  <!-- Center Agent circle -->
+  <circle cx="280" cy="210" r="30" fill="#1e293b"/>
+  <text x="280" y="206" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">Agent</text>
+  <text x="280" y="220" text-anchor="middle" font-size="9" fill="#cbd5e1">核心</text>
+
+  <!-- Q1 流程控制 (top-left, blue) -->
+  <rect x="40" y="50" width="200" height="120" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="140" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#1e3a8a">流程控制</text>
+  <text x="140" y="87" text-anchor="middle" font-size="9" fill="#3b82f6">Flow Control</text>
+  <line x1="60" y1="96" x2="220" y2="96" stroke="#93c5fd" stroke-width="1"/>
+  <text x="55" y="113" font-size="9" fill="#1e3a8a">· 顺序 (Prompt Chaining)</text>
+  <text x="55" y="127" font-size="9" fill="#1e3a8a">· 路由 (Routing)</text>
+  <text x="55" y="141" font-size="9" fill="#1e3a8a">· 并行 (Parallelization)</text>
+  <text x="55" y="155" font-size="9" fill="#1e3a8a">· 编排 (Orchestrator)</text>
+
+  <!-- Q2 增强优化 (top-right, green) -->
+  <rect x="320" y="50" width="200" height="120" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="420" y="72" text-anchor="middle" font-size="12" font-weight="700" fill="#14532d">增强优化</text>
+  <text x="420" y="87" text-anchor="middle" font-size="9" fill="#22c55e">Enhancement</text>
+  <line x1="340" y1="96" x2="500" y2="96" stroke="#86efac" stroke-width="1"/>
+  <text x="335" y="113" font-size="9" fill="#14532d">· 反思 (Reflection)</text>
+  <text x="335" y="127" font-size="9" fill="#14532d">· 规划 (Planning)</text>
+  <text x="335" y="141" font-size="9" fill="#14532d">· 工具使用 (Tool Use)</text>
+  <text x="335" y="155" font-size="9" fill="#14532d">· 记忆增强 (Memory)</text>
+
+  <!-- Q3 交互协作 (bottom-left, orange) -->
+  <rect x="40" y="250" width="200" height="120" rx="8" fill="#fed7aa" stroke="#f97316" stroke-width="1.5"/>
+  <text x="140" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#7c2d12">交互协作</text>
+  <text x="140" y="287" text-anchor="middle" font-size="9" fill="#f97316">Collaboration</text>
+  <line x1="60" y1="296" x2="220" y2="296" stroke="#fdba74" stroke-width="1"/>
+  <text x="55" y="313" font-size="9" fill="#7c2d12">· 人机协作 (Human-in-Loop)</text>
+  <text x="55" y="327" font-size="9" fill="#7c2d12">· 委派 (Delegation)</text>
+  <text x="55" y="341" font-size="9" fill="#7c2d12">· 辩论 (Debate)</text>
+  <text x="55" y="355" font-size="9" fill="#7c2d12">· 共识 / 交接</text>
+
+  <!-- Q4 稳健安全 (bottom-right, pink) -->
+  <rect x="320" y="250" width="200" height="120" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="420" y="272" text-anchor="middle" font-size="12" font-weight="700" fill="#831843">稳健安全</text>
+  <text x="420" y="287" text-anchor="middle" font-size="9" fill="#ec4899">Robustness</text>
+  <line x1="340" y1="296" x2="500" y2="296" stroke="#f9a8d4" stroke-width="1"/>
+  <text x="335" y="313" font-size="9" fill="#831843">· 异常处理 (Exception)</text>
+  <text x="335" y="327" font-size="9" fill="#831843">· 护栏 (Guardrails)</text>
+  <text x="335" y="341" font-size="9" fill="#831843">· 降级 / 熔断 / 限流</text>
+  <text x="335" y="355" font-size="9" fill="#831843">· 审计日志 (Audit)</text>
+
+  <!-- Arrows from center to each quadrant -->
+  <path d="M 258 190 L 220 160" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#arr14)"/>
+  <path d="M 302 190 L 340 160" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#arr14)"/>
+  <path d="M 258 230 L 220 250" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#arr14)"/>
+  <path d="M 302 230 L 340 250" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#arr14)"/>
+
+  <!-- Axis labels -->
+  <text x="280" y="180" text-anchor="middle" font-size="8" fill="#94a3b8" font-style="italic">↑ 内部优化</text>
+  <text x="280" y="248" text-anchor="middle" font-size="8" fill="#94a3b8" font-style="italic">↓ 外部交互</text>
+
+  <!-- Footer -->
+  <text x="280" y="392" text-anchor="middle" font-size="8" fill="#94a3b8">纵轴：内部优化 ↔ 外部交互　|　横轴：确定性流程 ↔ 灵活性</text>
+</svg>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <!-- 标题 -->
+  <text x="280" y="30" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="bold" fill="#333">Chatbot vs Agent：本质区别</text>
+
+  <!-- 分割线 -->
+  <line x1="280" y1="50" x2="280" y2="360" stroke="#CCC" stroke-dasharray="5,3"/>
+
+  <!-- 左侧 Chatbot -->
+  <text x="140" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#888">Chatbot（聊天机器人）</text>
+
+  <rect x="60" y="90" width="160" height="50" fill="#F5F5F5" stroke="#888" stroke-width="1.5" rx="6"/>
+  <text x="140" y="112" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">用户提问</text>
+  <text x="140" y="128" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#666">"帮我查查天气"</text>
+
+  <line x1="140" y1="140" x2="140" y2="160" stroke="#888" stroke-width="1.5" marker-end="url(#aGray)"/>
+
+  <rect x="60" y="165" width="160" height="50" fill="#F5F5F5" stroke="#888" stroke-width="1.5" rx="6"/>
+  <text x="140" y="187" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">LLM 生成回答</text>
+  <text x="140" y="203" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#666">基于训练数据回答</text>
+
+  <line x1="140" y1="215" x2="140" y2="235" stroke="#888" stroke-width="1.5" marker-end="url(#aGray)"/>
+
+  <rect x="60" y="240" width="160" height="50" fill="#F5F5F5" stroke="#888" stroke-width="1.5" rx="6"/>
+  <text x="140" y="262" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">返回文本</text>
+  <text x="140" y="278" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#666">结束。单轮。无状态。</text>
+
+  <!-- 右侧 Agent -->
+  <text x="420" y="70" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#1565C0">Agent（智能体）</text>
+
+  <rect x="340" y="90" width="160" height="50" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="420" y="112" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">用户下达目标</text>
+  <text x="420" y="128" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1565C0">"帮我订明天北京的机票"</text>
+
+  <line x1="420" y1="140" x2="420" y2="160" stroke="#1565C0" stroke-width="1.5" marker-end="url(#aBlue)"/>
+
+  <rect x="340" y="165" width="160" height="50" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="420" y="187" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">LLM 规划 + 调用工具</text>
+  <text x="420" y="203" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1565C0">搜索→比价→下单→确认</text>
+
+  <line x1="420" y1="215" x2="420" y2="235" stroke="#1565C0" stroke-width="1.5" marker-end="url(#aBlue)"/>
+
+  <rect x="340" y="240" width="160" height="50" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="420" y="262" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">执行行动 + 返回结果</text>
+  <text x="420" y="278" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1565C0">多轮循环。有状态。</text>
+
+  <!-- 底部差异标注 -->
+  <text x="140" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#888">问→答。一问一答，到此结束。</text>
+  <text x="420" y="320" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1565C0">目标→行动→反馈→再行动...</text>
+
+  <text x="280" y="370" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#D32F2F" font-weight="bold">⚡ 核心区别：Chatbot 只"说话"，Agent 会"做事"</text>
+
+  <defs>
+    <marker id="aGray" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#888"/>
+    </marker>
+    <marker id="aBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#1565C0"/>
+    </marker>
+  </defs>
+</svg>

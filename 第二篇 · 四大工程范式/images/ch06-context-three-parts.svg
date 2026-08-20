@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">上下文窗口的三部分</text>
+
+  <!-- Outer container: Context Window -->
+  <rect x="30" y="50" width="500" height="310" rx="10" fill="#F5F5F5" stroke="#333333" stroke-width="2"/>
+  <text x="280" y="45" text-anchor="middle" font-size="11" fill="#888888" font-style="italic">Context Window（上下文窗口）</text>
+
+  <!-- Section 1: Instructions -->
+  <rect x="50" y="70" width="150" height="270" rx="6" fill="#E76F00" opacity="0.1" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="125" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#E76F00">Instructions</text>
+  <text x="125" y="115" text-anchor="middle" font-size="10" fill="#555555">指令层</text>
+  <text x="60" y="140" font-size="9" fill="#666666">• System Prompt</text>
+  <text x="60" y="158" font-size="9" fill="#666666">• 角色设定</text>
+  <text x="60" y="176" font-size="9" fill="#666666">• 行为约束</text>
+  <text x="60" y="194" font-size="9" fill="#666666">• 输出格式</text>
+  <text x="60" y="212" font-size="9" fill="#666666">• AGENTS.md</text>
+  <text x="60" y="230" font-size="9" fill="#666666">• Skills 元数据</text>
+  <text x="60" y="270" font-size="8" fill="#AAAAAA" font-style="italic">告诉模型</text>
+  <text x="60" y="282" font-size="8" fill="#AAAAAA" font-style="italic">"该做什么"</text>
+
+  <!-- Section 2: Knowledge -->
+  <rect x="210" y="70" width="150" height="270" rx="6" fill="#00ADD8" opacity="0.1" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="285" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ADD8">Knowledge</text>
+  <text x="285" y="115" text-anchor="middle" font-size="10" fill="#555555">知识层</text>
+  <text x="220" y="140" font-size="9" fill="#666666">• 对话历史</text>
+  <text x="220" y="158" font-size="9" fill="#666666">• RAG 检索结果</text>
+  <text x="220" y="176" font-size="9" fill="#666666">• 文件内容</text>
+  <text x="220" y="194" font-size="9" fill="#666666">• 工具返回结果</text>
+  <text x="220" y="212" font-size="9" fill="#666666">• 记忆检索</text>
+  <text x="220" y="230" font-size="9" fill="#666666">• Web Search 结果</text>
+  <text x="220" y="270" font-size="8" fill="#AAAAAA" font-style="italic">告诉模型</text>
+  <text x="220" y="282" font-size="8" fill="#AAAAAA" font-style="italic">"知道什么"</text>
+
+  <!-- Section 3: Tools -->
+  <rect x="370" y="70" width="150" height="270" rx="6" fill="#E76F00" opacity="0.08" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="445" y="95" text-anchor="middle" font-size="13" font-weight="bold" fill="#E76F00">Tools</text>
+  <text x="445" y="115" text-anchor="middle" font-size="10" fill="#555555">工具层</text>
+  <text x="380" y="140" font-size="9" fill="#666666">• Function Schema</text>
+  <text x="380" y="158" font-size="9" fill="#666666">• MCP Tools</text>
+  <text x="380" y="176" font-size="9" fill="#666666">• 工具参数定义</text>
+  <text x="380" y="194" font-size="9" fill="#666666">• 工具描述</text>
+  <text x="380" y="270" font-size="8" fill="#AAAAAA" font-style="italic">告诉模型</text>
+  <text x="380" y="282" font-size="8" fill="#AAAAAA" font-style="italic">"能做什么"</text>
+
+  <!-- Bottom label -->
+  <text x="280" y="385" text-anchor="middle" font-size="10" fill="#888888">运行时组装 · 非设计时写死</text>
+</svg>

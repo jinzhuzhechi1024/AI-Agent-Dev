@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">Skills 三层渐进式加载机制</text>
+
+  <!-- Left: 20 Skills installed -->
+  <rect x="20" y="50" width="120" height="330" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <text x="80" y="72" text-anchor="middle" font-size="11" font-weight="bold" fill="#666666">已安装 20 个 Skills</text>
+  <g font-size="9" fill="#999999">
+    <text x="30" y="90">▸ code-review</text>
+    <text x="30" y="104">▸ git-commit</text>
+    <text x="30" y="118">▸ pdf-export</text>
+    <text x="30" y="132">▸ deploy-k8s</text>
+    <text x="30" y="146">▸ test-runner</text>
+    <text x="30" y="160">▸ db-migrate</text>
+    <text x="30" y="174">▸ doc-gen</text>
+    <text x="30" y="188">▸ lint-fix</text>
+    <text x="30" y="202">▸ api-test</text>
+    <text x="30" y="216">▸ sec-scan</text>
+    <text x="30" y="230">▸ 10 more...</text>
+  </g>
+  <text x="80" y="360" text-anchor="middle" font-size="9" fill="#00ADD8">磁盘上的文件夹</text>
+
+  <!-- Arrows: 3 layers -->
+  <line x1="140" y1="100" x2="195" y2="100" stroke="#00ADD8" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <line x1="140" y1="200" x2="195" y2="200" stroke="#E76F00" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <line x1="140" y1="300" x2="195" y2="300" stroke="#D32F2F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <defs>
+    <marker id="arr1" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#00ADD8"/></marker>
+    <marker id="arr2" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#E76F00"/></marker>
+    <marker id="arr3" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#D32F2F"/></marker>
+  </defs>
+
+  <!-- L1: Metadata -->
+  <rect x="195" y="70" width="340" height="75" fill="#FFFFFF" stroke="#00ADD8" stroke-width="1.5" rx="8"/>
+  <rect x="195" y="70" width="340" height="20" fill="#00ADD8" rx="8"/>
+  <text x="210" y="84" font-size="10" font-weight="bold" fill="#FFFFFF">L1 · 元数据层（启动时加载全部）</text>
+  <text x="210" y="105" font-size="9" fill="#555555">name: code-review</text>
+  <text x="210" y="118" font-size="9" fill="#555555">description: "Review code for bugs, security, style..."</text>
+  <text x="210" y="132" font-size="9" fill="#888888">仅 ~100 tokens / skill × 20 = ~2,000 tokens 总开销</text>
+
+  <!-- L2: Body -->
+  <rect x="195" y="170" width="340" height="75" fill="#FFFFFF" stroke="#E76F00" stroke-width="1.5" rx="8"/>
+  <rect x="195" y="170" width="340" height="20" fill="#E76F00" rx="8"/>
+  <text x="210" y="184" font-size="10" font-weight="bold" fill="#FFFFFF">L2 · 正文层（仅被触发的 Skill 加载）</text>
+  <text x="210" y="205" font-size="9" fill="#555555">## 步骤</text>
+  <text x="210" y="218" font-size="9" fill="#555555">1. 读取变更文件  2. 检查 OWASP Top 10</text>
+  <text x="210" y="232" font-size="9" fill="#888888">~5,000 tokens · 仅"code-review"被触发时加载</text>
+
+  <!-- L3: Resources -->
+  <rect x="195" y="270" width="340" height="75" fill="#FFFFFF" stroke="#D32F2F" stroke-width="1.5" rx="8"/>
+  <rect x="195" y="270" width="340" height="20" fill="#D32F2F" rx="8"/>
+  <text x="210" y="284" font-size="10" font-weight="bold" fill="#FFFFFF">L3 · 资源层（按需读取引用文件）</text>
+  <text x="210" y="305" font-size="9" fill="#555555">scripts/lint_runner.sh  references/style-guide.md</text>
+  <text x="210" y="318" font-size="9" fill="#555555">assets/checklist.json</text>
+  <text x="210" y="332" font-size="9" fill="#888888">0 tokens（直到 Agent 主动读取）· 脚本输出进上下文</text>
+
+  <!-- Bottom note -->
+  <text x="280" y="375" text-anchor="middle" font-size="9" fill="#666666" font-style="italic">20 Skills 总初始开销 ~2K tokens（vs 全量加载 ~100K+ tokens）</text>
+</svg>

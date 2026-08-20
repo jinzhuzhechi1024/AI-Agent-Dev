@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrM" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">LangChain 中间件管道：可组合的 Harness</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">Terminal Bench 2.0：52.8% → 66.5%（不换模型，只改 Harness）</text>
+
+  <!-- 管道入口 -->
+  <rect x="210" y="55" width="140" height="32" rx="6" fill="#1e293b"/>
+  <text x="280" y="75" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">Agent Request</text>
+
+  <!-- 箭头 -->
+  <path d="M280,87 L280,95" stroke="#475569" stroke-width="1.5" marker-end="url(#arrM)" fill="none"/>
+
+  <!-- ① LocalContextMiddleware -->
+  <rect x="80" y="98" width="400" height="52" rx="8" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="100" y="118" font-size="10" font-weight="700" fill="#1e40af">① LocalContextMiddleware</text>
+  <text x="470" y="118" text-anchor="end" font-size="8.5" fill="#3b82f6" font-weight="600">启动时</text>
+  <text x="100" y="133" font-size="9" fill="#475569">启动时扫描目录结构、发现可用工具（Python路径等）、注入环境上下文</text>
+  <text x="100" y="145" font-size="8.5" fill="#64748b">效果：消除"环境发现"类报错，Agent 直接开始干活</text>
+
+  <path d="M280,150 L280,158" stroke="#475569" stroke-width="1.5" marker-end="url(#arrM)" fill="none"/>
+
+  <!-- ② LoopDetectionMiddleware -->
+  <rect x="80" y="161" width="400" height="52" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="100" y="181" font-size="10" font-weight="700" fill="#15803d">② LoopDetectionMiddleware</text>
+  <text x="470" y="181" text-anchor="end" font-size="8.5" fill="#22c55e" font-weight="600">工具调用时</text>
+  <text x="100" y="196" font-size="9" fill="#475569">跟踪每个文件编辑次数，同一文件编辑 >5 次 → 注入"重新考虑方案"提示</text>
+  <text x="100" y="208" font-size="8.5" fill="#64748b">效果：打破死循环（Agent 反复微调同一 bug 不换思路）</text>
+
+  <path d="M280,213 L280,221" stroke="#475569" stroke-width="1.5" marker-end="url(#arrM)" fill="none"/>
+
+  <!-- ③ ReasoningSandwichMiddleware -->
+  <rect x="80" y="224" width="400" height="52" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="100" y="244" font-size="10" font-weight="700" fill="#b45309">③ ReasoningSandwichMiddleware</text>
+  <text x="470" y="244" text-anchor="end" font-size="8.5" fill="#f59e0b" font-weight="600">模型调用时</text>
+  <text x="100" y="259" font-size="9" fill="#475569">规划阶段 xhigh → 执行阶段 high → 验证阶段 xhigh（推理三明治）</text>
+  <text x="100" y="271" font-size="8.5" fill="#64748b">效果：66.5% > 全程xhigh 53.9%（超时）> 全程high 63.6%</text>
+
+  <path d="M280,276 L280,284" stroke="#475569" stroke-width="1.5" marker-end="url(#arrM)" fill="none"/>
+
+  <!-- ④ PreCompletionChecklistMiddleware -->
+  <rect x="80" y="287" width="400" height="52" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="100" y="307" font-size="10" font-weight="700" fill="#9d174d">④ PreCompletionChecklistMiddleware</text>
+  <text x="470" y="307" text-anchor="end" font-size="8.5" fill="#ec4899" font-weight="600">退出前</text>
+  <text x="100" y="322" font-size="9" fill="#475569">退出前强制走验证清单：读规格→跑测试→查边界→核对路径→检查格式</text>
+  <text x="100" y="334" font-size="8.5" fill="#64748b">效果：防止"看起来对了"的过早自批准，强制 Build → Verify 闭环</text>
+
+  <path d="M280,339 L280,347" stroke="#475569" stroke-width="1.5" marker-end="url(#arrM)" fill="none"/>
+
+  <!-- 管道出口 -->
+  <rect x="210" y="350" width="140" height="32" rx="6" fill="#1e293b"/>
+  <text x="280" y="370" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">Agent Response</text>
+
+  <!-- 底部注释 -->
+  <text x="280" y="396" text-anchor="middle" font-size="8.5" fill="#64748b">每层独立可组合·可测试·可进化——入站正序执行，出站逆序执行（如 Express 中间件）</text>
+</svg>

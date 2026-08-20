@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .subtitle { font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; fill: #333; }
+      .label { font-family: system-ui, sans-serif; font-size: 11px; fill: #555; }
+      .wrong { font-family: system-ui, sans-serif; font-size: 11px; fill: #D32F2F; font-weight: bold; }
+      .right { font-family: system-ui, sans-serif; font-size: 11px; fill: #2E7D32; font-weight: bold; }
+      .note { font-family: system-ui, sans-serif; font-size: 11px; fill: #666; }
+      .step { font-family: system-ui, sans-serif; font-size: 10px; fill: #fff; font-weight: bold; }
+    </style>
+  </defs>
+
+  <text x="280" y="22" text-anchor="middle" class="title">权限继承RAG vs 传统后过滤RAG</text>
+
+  <!-- Left: Wrong approach -->
+  <rect x="20" y="40" width="250" height="310" rx="8" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1"/>
+  <text x="145" y="62" text-anchor="middle" class="subtitle" fill="#C62828">✗ 传统：先检索后过滤</text>
+
+  <rect x="40" y="76" width="210" height="28" rx="4" fill="#EF5350"/>
+  <text x="145" y="94" text-anchor="middle" class="step">用户提问</text>
+
+  <rect x="40" y="114" width="210" height="28" rx="4" fill="#EF5350"/>
+  <text x="145" y="132" text-anchor="middle" class="step">向量检索 Top-20（全库）</text>
+
+  <rect x="40" y="152" width="210" height="28" rx="4" fill="#EF5350"/>
+  <text x="145" y="170" text-anchor="middle" class="step">后过滤：去掉无权限文档</text>
+
+  <rect x="40" y="190" width="210" height="28" rx="4" fill="#EF5350"/>
+  <text x="145" y="208" text-anchor="middle" class="step">剩余 Top-5 → LLM</text>
+
+  <rect x="40" y="228" width="210" height="28" rx="4" fill="#EF5350"/>
+  <text x="145" y="246" text-anchor="middle" class="step">LLM生成答案</text>
+
+  <text x="145" y="280" text-anchor="middle" class="wrong">问题1：过滤后可能不足Top-5</text>
+  <text x="145" y="296" text-anchor="middle" class="wrong">问题2：权限检查在LLM之前</text>
+  <text x="145" y="312" text-anchor="middle" class="wrong">问题3：向量索引含越权数据</text>
+  <text x="145" y="328" text-anchor="middle" class="label" fill="#C62828">索引膨胀 · 召回率下降</text>
+
+  <!-- Right: Correct approach -->
+  <rect x="290" y="40" width="250" height="310" rx="8" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="415" y="62" text-anchor="middle" class="subtitle" fill="#2E7D32">✓ 权限继承：召回时收口</text>
+
+  <rect x="310" y="76" width="210" height="28" rx="4" fill="#43A047"/>
+  <text x="415" y="94" text-anchor="middle" class="step">用户提问 + 权限上下文</text>
+
+  <rect x="310" y="114" width="210" height="28" rx="4" fill="#43A047"/>
+  <text x="415" y="132" text-anchor="middle" class="step">权限过滤预编译（RBAC+ABAC）</text>
+
+  <rect x="310" y="152" width="210" height="28" rx="4" fill="#43A047"/>
+  <text x="415" y="170" text-anchor="middle" class="step">向量检索（仅授权子空间）</text>
+
+  <rect x="310" y="190" width="210" height="28" rx="4" fill="#43A047"/>
+  <text x="415" y="208" text-anchor="middle" class="step">CrossEncoder重排 Top-5</text>
+
+  <rect x="310" y="228" width="210" height="28" rx="4" fill="#43A047"/>
+  <text x="415" y="246" text-anchor="middle" class="step">LLM生成 + 引用标注</text>
+
+  <text x="415" y="280" text-anchor="middle" class="right">优势1：召回率100%在授权域内</text>
+  <text x="415" y="296" text-anchor="middle" class="right">优势2：向量索引按租户隔离</text>
+  <text x="415" y="312" text-anchor="middle" class="right">优势3：权限变更实时反映</text>
+  <text x="415" y="328" text-anchor="middle" class="label" fill="#2E7D32">零越权 · 召回精准</text>
+
+  <text x="280" y="372" text-anchor="middle" class="note">AWS(2025) · Petronella(2025) · AgenixHub(2025)：权限在召回时收口而非后过滤</text>
+  <text x="280" y="388" text-anchor="middle" class="note">数据源权限（ACL/AD组）镜像到索引元数据 · 策略即代码版本化</text>
+</svg>

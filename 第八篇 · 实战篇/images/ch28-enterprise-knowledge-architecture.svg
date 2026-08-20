@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .layer-title { font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; fill: #fff; }
+      .layer-desc { font-family: system-ui, sans-serif; font-size: 11px; fill: #555; }
+      .note { font-family: system-ui, sans-serif; font-size: 11px; fill: #666; }
+      .accent { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #D32F2F; }
+    </style>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#1976D2"/></linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#E65100"/><stop offset="100%" stop-color="#F57C00"/></linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#2E7D32"/><stop offset="100%" stop-color="#388E3C"/></linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#6A1B9A"/><stop offset="100%" stop-color="#7B1FA2"/></linearGradient>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#C62828"/><stop offset="100%" stop-color="#D32F2F"/></linearGradient>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#455A64"/><stop offset="100%" stop-color="#546E7A"/></linearGradient>
+  </defs>
+
+  <text x="280" y="22" text-anchor="middle" class="title">企业知识增强助手 · 六层架构</text>
+
+  <!-- Layer 1: 终端接入 -->
+  <rect x="30" y="40" width="500" height="42" rx="6" fill="url(#g1)"/>
+  <text x="50" y="58" class="layer-title">① 终端接入层</text>
+  <text x="50" y="74" class="layer-desc" fill="#E3F2FD">Web · 移动端 · IDE插件 · IM机器人 · SSE流式响应 · JWT/OAuth 2.1认证</text>
+
+  <!-- Arrow -->
+  <path d="M280 84 L280 92" stroke="#999" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+
+  <!-- Layer 2: 身份权限 -->
+  <rect x="30" y="92" width="500" height="42" rx="6" fill="url(#g2)"/>
+  <text x="50" y="110" class="layer-title">② 身份权限层</text>
+  <text x="50" y="126" class="layer-desc" fill="#FFF3E0">SSO集成 · RBAC角色 + ABAC属性 · 权限继承RAG召回时收口 · 数据脱敏(PII/密钥)</text>
+
+  <path d="M280 136 L280 144" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Layer 3: 文档处理 -->
+  <rect x="30" y="144" width="500" height="42" rx="6" fill="url(#g3)"/>
+  <text x="50" y="162" class="layer-title">③ 文档处理层</text>
+  <text x="50" y="178" class="layer-desc" fill="#E8F5E9">Confluence/SharePoint/飞书 → OCR+版面分析 → 语义分块150-400T → 元数据标注ACL</text>
+
+  <path d="M280 188 L280 196" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Layer 4: 知识检索 -->
+  <rect x="30" y="196" width="500" height="42" rx="6" fill="url(#g4)"/>
+  <text x="50" y="214" class="layer-title">④ 知识检索层</text>
+  <text x="50" y="230" class="layer-desc" fill="#F3E5F5">混合检索 BM25+向量 → CrossEncoder重排 → 权限过滤(召回时) → Top-K上下文组装</text>
+
+  <path d="M280 240 L280 248" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Layer 5: 模型推理 -->
+  <rect x="30" y="248" width="500" height="42" rx="6" fill="url(#g5)"/>
+  <text x="50" y="266" class="layer-title">⑤ 模型推理层</text>
+  <text x="50" y="282" class="layer-desc" fill="#FFEBEE">Agent Loop(ReAct) · 模型路由 · Grounding事实校验 · 引用标注 · 幻觉拦截(&lt;0.85阻断)</text>
+
+  <path d="M280 292 L280 300" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Layer 6: 审计运维 -->
+  <rect x="30" y="300" width="500" height="42" rx="6" fill="url(#g6)"/>
+  <text x="50" y="318" class="layer-title">⑥ 审计运维层</text>
+  <text x="50" y="334" class="layer-desc" fill="#ECEFF1">OTel Trace · 查询审计日志 · 成本追踪 · Langfuse评估 · 分级保留 热30天/温90天/冷1年</text>
+
+  <text x="280" y="372" text-anchor="middle" class="note">权限继承RAG：不是"先检索再过滤"——召回时就按用户权限收口</text>
+  <text x="280" y="388" text-anchor="middle" class="accent">RBAC + ABAC 混合权限 · 混合检索+重排 · 幻觉率从27%降至2-5%</text>
+
+  <defs>
+    <marker id="arrowDown" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+      <path d="M1,1 L4,7 L7,1" fill="#999"/>
+    </marker>
+  </defs>
+</svg>

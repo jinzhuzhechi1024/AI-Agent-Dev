@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#333333"/>
+    </marker>
+  </defs>
+  <line x1="280" y1="15" x2="280" y2="385" stroke="#DDDDDD" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="140" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#333333">ReAct</text>
+  <text x="140" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#888888">边想边做</text>
+  <rect x="30" y="75" width="220" height="40" rx="5" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2"/>
+  <text x="140" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Thought → Action → Observe</text>
+  <path d="M 140,115 C 140,145 140,145 140,115" fill="none" stroke="#333333" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+  <text x="165" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">循环</text>
+  <line x1="140" y1="150" x2="140" y2="178" stroke="#D32F2F" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <rect x="75" y="180" width="130" height="35" rx="5" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2"/>
+  <text x="140" y="203" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#333333">Final Answer</text>
+  <text x="140" y="245" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">每步调用 LLM</text>
+  <text x="140" y="265" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">灵活适应变化</text>
+  <text x="140" y="285" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#D32F2F">Token 消耗大</text>
+  <text x="420" y="35" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#333333">Plan-Execute</text>
+  <text x="420" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#888888">先规划后执行</text>
+  <rect x="320" y="75" width="200" height="40" rx="5" fill="#FFFFFF" stroke="#E76F00" stroke-width="2"/>
+  <text x="420" y="100" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Planner → Plan: 1,2,3</text>
+  <line x1="420" y1="115" x2="420" y2="143" stroke="#333333" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <rect x="320" y="145" width="200" height="40" rx="5" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2"/>
+  <text x="420" y="170" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Step1 → Step2 → Step3</text>
+  <line x1="420" y1="185" x2="420" y2="213" stroke="#333333" stroke-width="1.5" marker-end="url(#arr2)"/>
+  <rect x="355" y="215" width="130" height="35" rx="5" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2"/>
+  <text x="420" y="238" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#333333">Answer</text>
+  <text x="420" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">规划 1 次 + 执行高效</text>
+  <text x="420" y="300" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">可用小模型执行</text>
+  <text x="420" y="320" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#D32F2F">计划可能过时</text>
+  <rect x="30" y="350" width="510" height="35" rx="4" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1"/>
+  <text x="280" y="372" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">混合策略：Plan-Execute 定方向 + ReAct 做执行 = 最佳实践</text>
+</svg>

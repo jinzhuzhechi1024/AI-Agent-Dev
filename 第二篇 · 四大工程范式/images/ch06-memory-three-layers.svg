@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">三层记忆架构</text>
+
+  <!-- Layer 1: Short-term Memory (top) -->
+  <rect x="140" y="50" width="280" height="70" rx="8" fill="#E76F00" opacity="0.12" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="280" y="75" text-anchor="middle" font-size="13" font-weight="bold" fill="#E76F00">短期记忆</text>
+  <text x="280" y="93" text-anchor="middle" font-size="10" fill="#555555">对话历史 · 当前会话上下文</text>
+  <text x="280" y="108" text-anchor="middle" font-size="9" fill="#888888" font-style="italic">便签本：随手记，关掉就没了</text>
+
+  <!-- Arrow down -->
+  <path d="M 280 120 L 280 135" stroke="#888888" stroke-width="1.5" marker-end="url(#memArrow)"/>
+
+  <!-- Layer 2: Working Memory (middle) -->
+  <rect x="100" y="140" width="360" height="70" rx="8" fill="#00ADD8" opacity="0.12" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="280" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#00ADD8">工作记忆</text>
+  <text x="280" y="183" text-anchor="middle" font-size="10" fill="#555555">会话状态持久化 · SQLite / Redis</text>
+  <text x="280" y="198" text-anchor="middle" font-size="9" fill="#888888" font-style="italic">日记本：今天做了什么，明天还能查</text>
+
+  <!-- Arrow down -->
+  <path d="M 280 210 L 280 225" stroke="#888888" stroke-width="1.5" marker-end="url(#memArrow)"/>
+
+  <!-- Layer 3: Long-term Memory (bottom) -->
+  <rect x="60" y="230" width="440" height="70" rx="8" fill="#333333" opacity="0.08" stroke="#333333" stroke-width="1.5"/>
+  <text x="280" y="255" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">长期记忆</text>
+  <text x="280" y="273" text-anchor="middle" font-size="10" fill="#555555">向量存储 · 知识图谱 · 跨会话检索</text>
+  <text x="280" y="288" text-anchor="middle" font-size="9" fill="#888888" font-style="italic">档案柜：随时可查，永久保存</text>
+
+  <!-- Retieval arrow from L3 to L1 (right side) -->
+  <path d="M 500 265 Q 530 170 500 85" stroke="#D32F2F" stroke-width="1" fill="none" stroke-dasharray="4,3" marker-end="url(#retArrow)"/>
+  <text x="540" y="175" text-anchor="middle" font-size="9" fill="#D32F2F" transform="rotate(90, 540, 175)">检索注入</text>
+
+  <!-- Persistence arrow from L1 to L3 (left side) -->
+  <path d="M 60 85 Q 30 170 60 265" stroke="#00ADD8" stroke-width="1" fill="none" stroke-dasharray="4,3" marker-end="url(#persArrow)"/>
+  <text x="20" y="175" text-anchor="middle" font-size="9" fill="#00ADD8" transform="rotate(-90, 20, 175)">持久化</text>
+
+  <!-- Bottom labels -->
+  <text x="140" y="325" text-anchor="middle" font-size="9" fill="#E76F00">容量：小</text>
+  <text x="140" y="340" text-anchor="middle" font-size="9" fill="#E76F00">速度：快</text>
+  <text x="280" y="325" text-anchor="middle" font-size="9" fill="#00ADD8">容量：中</text>
+  <text x="280" y="340" text-anchor="middle" font-size="9" fill="#00ADD8">速度：中</text>
+  <text x="420" y="325" text-anchor="middle" font-size="9" fill="#333333">容量：大</text>
+  <text x="420" y="340" text-anchor="middle" font-size="9" fill="#333333">速度：慢</text>
+
+  <text x="280" y="375" text-anchor="middle" font-size="10" fill="#888888">容量递增 · 速度递减 · 持久性递增</text>
+
+  <defs>
+    <marker id="memArrow" markerWidth="8" markerHeight="6" refX="4" refY="6" orient="auto">
+      <polygon points="0 0, 8 0, 4 6" fill="#888888"/>
+    </marker>
+    <marker id="retArrow" markerWidth="8" markerHeight="6" refX="4" refY="0" orient="auto">
+      <polygon points="0 6, 8 6, 4 0" fill="#D32F2F"/>
+    </marker>
+    <marker id="persArrow" markerWidth="8" markerHeight="6" refX="4" refY="6" orient="auto">
+      <polygon points="0 0, 8 0, 4 6" fill="#00ADD8"/>
+    </marker>
+  </defs>
+</svg>

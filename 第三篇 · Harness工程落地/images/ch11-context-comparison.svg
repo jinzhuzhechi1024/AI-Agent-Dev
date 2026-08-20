@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">上下文占用对比：System Prompt vs Skills</text>
+
+  <!-- Left: Traditional approach -->
+  <rect x="25" y="50" width="245" height="320" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="25" y="50" width="245" height="22" fill="#D32F2F" rx="8"/>
+  <text x="148" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">传统方案：全量塞入 System Prompt</text>
+
+  <!-- Context bar - full -->
+  <rect x="45" y="85" width="205" height="30" fill="#FFCDD2" rx="4"/>
+  <rect x="45" y="85" width="200" height="30" fill="#D32F2F" rx="4"/>
+  <text x="148" y="104" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">~100,000+ tokens</text>
+
+  <text x="45" y="135" font-size="9" fill="#555555">所有指令一次性加载：</text>
+  <g font-size="9" fill="#777777">
+    <text x="50" y="150">▸ code-review 规范 (8K)</text>
+    <text x="50" y="164">▸ git-commit 模板 (3K)</text>
+    <text x="50" y="178">▸ deploy 流程 (12K)</text>
+    <text x="50" y="192">▸ test 规范 (6K)</text>
+    <text x="50" y="206">▸ db-migrate 指南 (9K)</text>
+    <text x="50" y="220">▸ doc-gen 模板 (5K)</text>
+    <text x="50" y="234">▸ lint 规则 (4K)</text>
+    <text x="50" y="248">▸ ... 更多 (53K+)</text>
+  </g>
+  <text x="45" y="278" font-size="9" fill="#D32F2F" font-weight="bold">问题：</text>
+  <g font-size="9" fill="#666666">
+    <text x="50" y="293">❌ 上下文窗口被占满</text>
+    <text x="50" y="307">❌ 无关指令干扰推理</text>
+    <text x="50" y="321">❌ 无法扩展到 50+ 技能</text>
+    <text x="50" y="335">❌ 每次请求都全量付费</text>
+  </g>
+  <text x="148" y="360" text-anchor="middle" font-size="9" fill="#999999" font-style="italic">"百科全书式"加载</text>
+
+  <!-- Right: Skills approach -->
+  <rect x="290" y="50" width="245" height="320" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="290" y="50" width="245" height="22" fill="#00ADD8" rx="8"/>
+  <text x="412" y="65" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">Skills 方案：渐进式披露</text>
+
+  <!-- Context bar - small -->
+  <rect x="310" y="85" width="205" height="30" fill="#E0E0E0" rx="4"/>
+  <rect x="310" y="85" width="20" height="30" fill="#00ADD8" rx="4"/>
+  <text x="412" y="104" text-anchor="middle" font-size="10" font-weight="bold" fill="#333333">~2,000 tokens（仅 ~2%）</text>
+
+  <text x="310" y="135" font-size="9" fill="#555555">启动时仅加载元数据：</text>
+  <g font-size="9" fill="#777777">
+    <text x="315" y="150">▸ code-review: "Review code..."</text>
+    <text x="315" y="164">▸ git-commit: "Format..."</text>
+    <text x="315" y="178">▸ deploy-k8s: "Deploy..."</text>
+    <text x="315" y="192">▸ test-runner: "Run tests..."</text>
+    <text x="315" y="206">▸ 其余 16 个休眠中</text>
+  </g>
+
+  <text x="310" y="234" font-size="9" fill="#555555">触发时才加载正文：</text>
+  <rect x="315" y="242" width="200" height="28" fill="#FFF3E0" stroke="#E76F00" stroke-width="1" rx="4"/>
+  <text x="415" y="259" text-anchor="middle" font-size="9" fill="#E76F00">code-review 正文 ~5K tokens</text>
+
+  <text x="310" y="288" font-size="9" fill="#00ADD8" font-weight="bold">优势：</text>
+  <g font-size="9" fill="#666666">
+    <text x="315" y="303">✅ 减少 ~98% 初始上下文</text>
+    <text x="315" y="317">✅ 50+ 技能无压力扩展</text>
+    <text x="315" y="331">✅ 无关技能零干扰</text>
+    <text x="315" y="345">✅ 按需付费，成本可控</text>
+  </g>
+  <text x="412" y="360" text-anchor="middle" font-size="9" fill="#00ADD8" font-style="italic">"图书馆式"按需取阅</text>
+</svg>

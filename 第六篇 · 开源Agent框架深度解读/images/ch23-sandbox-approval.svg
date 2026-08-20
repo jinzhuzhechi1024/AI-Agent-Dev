@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">Codex 沙箱与审批矩阵</text>
+
+  <!-- 三列：审批模式 -->
+  <!-- 列1: suggest -->
+  <rect x="30" y="55" width="150" height="320" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="105" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565C0">suggest</text>
+  <text x="105" y="95" text-anchor="middle" font-size="10" fill="#555">建议模式</text>
+
+  <rect x="45" y="110" width="120" height="35" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="105" y="132" text-anchor="middle" font-size="10" fill="#333">沙箱: read-only</text>
+
+  <rect x="45" y="155" width="120" height="35" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="105" y="177" text-anchor="middle" font-size="10" fill="#333">权限: untrusted</text>
+
+  <rect x="45" y="200" width="120" height="60" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="105" y="222" text-anchor="middle" font-size="10" fill="#333">行为:只读分析</text>
+  <text x="105" y="237" text-anchor="middle" font-size="10" fill="#333">不修改任何文件</text>
+  <text x="105" y="252" text-anchor="middle" font-size="10" fill="#333">输出建议diff</text>
+
+  <text x="105" y="300" text-anchor="middle" font-size="10" fill="#D32F2F">适合:代码审查</text>
+  <text x="105" y="318" text-anchor="middle" font-size="10" fill="#D32F2F">安全分析</text>
+  <text x="105" y="345" text-anchor="middle" font-size="11" fill="#1565C0" font-weight="bold">最安全</text>
+
+  <!-- 列2: auto-edit -->
+  <rect x="205" y="55" width="150" height="320" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="8"/>
+  <text x="280" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">auto-edit</text>
+  <text x="280" y="95" text-anchor="middle" font-size="10" fill="#555">自动编辑模式</text>
+
+  <rect x="220" y="110" width="120" height="35" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="280" y="132" text-anchor="middle" font-size="10" fill="#333">沙箱: workspace-write</text>
+
+  <rect x="220" y="155" width="120" height="35" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="280" y="177" text-anchor="middle" font-size="10" fill="#333">权限: on-request</text>
+
+  <rect x="220" y="200" width="120" height="60" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="280" y="222" text-anchor="middle" font-size="10" fill="#333">行为:自动改文件</text>
+  <text x="280" y="237" text-anchor="middle" font-size="10" fill="#333">命令需确认</text>
+  <text x="280" y="252" text-anchor="middle" font-size="10" fill="#333">Git可回滚</text>
+
+  <text x="280" y="300" text-anchor="middle" font-size="10" fill="#D32F2F">适合:日常开发</text>
+  <text x="280" y="318" text-anchor="middle" font-size="10" fill="#D32F2F">代码重构</text>
+  <text x="280" y="345" text-anchor="middle" font-size="11" fill="#E65100" font-weight="bold">平衡模式</text>
+
+  <!-- 列3: full-auto -->
+  <rect x="380" y="55" width="150" height="320" fill="#FCE4EC" stroke="#C62828" stroke-width="2" rx="8"/>
+  <text x="455" y="78" text-anchor="middle" font-size="13" font-weight="bold" fill="#C62828">full-auto</text>
+  <text x="455" y="95" text-anchor="middle" font-size="10" fill="#555">全自主模式</text>
+
+  <rect x="395" y="110" width="120" height="35" fill="#FFF" stroke="#C62828" rx="4"/>
+  <text x="455" y="132" text-anchor="middle" font-size="10" fill="#333">沙箱: full-access</text>
+
+  <rect x="395" y="155" width="120" height="35" fill="#FFF" stroke="#C62828" rx="4"/>
+  <text x="455" y="177" text-anchor="middle" font-size="10" fill="#333">权限: never(免审批)</text>
+
+  <rect x="395" y="200" width="120" height="60" fill="#FFF" stroke="#C62828" rx="4"/>
+  <text x="455" y="222" text-anchor="middle" font-size="10" fill="#333">行为:完全自主</text>
+  <text x="455" y="237" text-anchor="middle" font-size="10" fill="#333">改文件+跑命令</text>
+  <text x="455" y="252" text-anchor="middle" font-size="10" fill="#333">Git回滚兜底</text>
+
+  <text x="455" y="300" text-anchor="middle" font-size="10" fill="#D32F2F">适合:批量任务</text>
+  <text x="455" y="318" text-anchor="middle" font-size="10" fill="#D32F2F">CI/CD集成</text>
+  <text x="455" y="345" text-anchor="middle" font-size="11" fill="#C62828" font-weight="bold">最高效率</text>
+
+  <!-- 底部标注 -->
+  <text x="280" y="388" text-anchor="middle" font-size="11" fill="#D32F2F">⚡ 三档审批 × 三档沙箱 = 安全与效率的渐进式权衡</text>
+
+  <defs>
+  </defs>
+</svg>

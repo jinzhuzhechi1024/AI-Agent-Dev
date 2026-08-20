@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+    <marker id="dt" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#888888"/></marker>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">模式选择决策树：从最简单开始</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#888888">"找到最简单的解决方案，只在需要时才增加复杂度"</text>
+
+  <!-- Root question -->
+  <rect x="180" y="55" width="200" height="32" fill="#333333" rx="6"/>
+  <text x="280" y="75" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFFFFF">任务能一步完成？</text>
+
+  <!-- Yes branch -->
+  <line x1="220" y1="87" x2="100" y2="110" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="100" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="30" y="112" width="140" height="28" fill="#E0F2F1" stroke="#80CBC4" stroke-width="1" rx="6"/>
+  <text x="100" y="130" text-anchor="middle" font-size="9" fill="#00695C">单次 LLM 调用</text>
+
+  <!-- No branch -->
+  <line x1="340" y1="87" x2="280" y2="105" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="100" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+
+  <!-- Q2: Fixed steps? -->
+  <rect x="180" y="107" width="200" height="28" fill="#1976D2" rx="6"/>
+  <text x="280" y="125" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">固定步骤顺序？</text>
+
+  <!-- Q2 Yes -->
+  <line x1="220" y1="135" x2="100" y2="155" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="148" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="30" y="157" width="140" height="28" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1" rx="6"/>
+  <text x="100" y="175" text-anchor="middle" font-size="9" fill="#1565C0">提示链 Prompt Chaining</text>
+
+  <!-- Q2 No -->
+  <line x1="340" y1="135" x2="280" y2="150" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="148" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+
+  <!-- Q3: Categorizable? -->
+  <rect x="180" y="152" width="200" height="28" fill="#1976D2" rx="6"/>
+  <text x="280" y="170" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">输入可分类？</text>
+
+  <!-- Q3 Yes -->
+  <line x1="220" y1="180" x2="100" y2="200" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="193" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="30" y="202" width="140" height="28" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1" rx="6"/>
+  <text x="100" y="220" text-anchor="middle" font-size="9" fill="#2E7D32">路由 Routing</text>
+
+  <!-- Q3 No -->
+  <line x1="340" y1="180" x2="280" y2="195" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="193" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+
+  <!-- Q4: Parallelizable? -->
+  <rect x="180" y="197" width="200" height="28" fill="#1976D2" rx="6"/>
+  <text x="280" y="215" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">可并行子任务？</text>
+
+  <!-- Q4 Yes -->
+  <line x1="220" y1="225" x2="100" y2="245" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="238" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="20" y="247" width="160" height="28" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1" rx="6"/>
+  <text x="100" y="265" text-anchor="middle" font-size="9" fill="#E65100">并行化 Parallelization</text>
+
+  <!-- Q4 No -->
+  <line x1="340" y1="225" x2="280" y2="240" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="238" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+
+  <!-- Q5: Unpredictable subtasks? -->
+  <rect x="180" y="242" width="200" height="28" fill="#1976D2" rx="6"/>
+  <text x="280" y="260" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">子任务不可预知？</text>
+
+  <!-- Q5 Yes -->
+  <line x1="220" y1="270" x2="100" y2="290" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="283" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="20" y="292" width="160" height="28" fill="#F3E5F5" stroke="#CE93D8" stroke-width="1" rx="6"/>
+  <text x="100" y="310" text-anchor="middle" font-size="9" fill="#7B1FA2">编排者 Orchestrator</text>
+
+  <!-- Q5 No -->
+  <line x1="340" y1="270" x2="280" y2="285" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="283" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+
+  <!-- Q6: Acceptance criteria? -->
+  <rect x="180" y="287" width="200" height="28" fill="#1976D2" rx="6"/>
+  <text x="280" y="305" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">有验收标准？</text>
+
+  <!-- Q6 Yes -->
+  <line x1="220" y1="315" x2="100" y2="335" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="150" y="328" font-size="8" fill="#00897B" font-weight="bold">是</text>
+  <rect x="15" y="337" width="170" height="28" fill="#FCE4EC" stroke="#F48FB1" stroke-width="1" rx="6"/>
+  <text x="100" y="355" text-anchor="middle" font-size="9" fill="#C2185B">评估器-优化器</text>
+
+  <!-- Q6 No -->
+  <line x1="340" y1="315" x2="280" y2="330" stroke="#888888" stroke-width="1" marker-end="url(#dt)"/>
+  <text x="370" y="328" font-size="8" fill="#D32F2F" font-weight="bold">否</text>
+  <rect x="380" y="332" width="160" height="28" fill="#333333" rx="6"/>
+  <text x="460" y="350" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">自主 Agent</text>
+
+  <!-- Complexity arrow bottom -->
+  <line x1="30" y1="380" x2="540" y2="380" stroke="#888888" stroke-width="1.5" marker-end="url(#dt)"/>
+  <text x="30" y="395" font-size="8" fill="#00897B">简单·低成本·高可预测</text>
+  <text x="540" y="395" text-anchor="end" font-size="8" fill="#D32F2F">复杂·高成本·低可预测</text>
+</svg>

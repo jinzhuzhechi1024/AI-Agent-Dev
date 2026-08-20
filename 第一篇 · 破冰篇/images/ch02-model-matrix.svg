@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">模型选择矩阵</text>
+
+  <!-- Chart area background -->
+  <rect x="70" y="55" width="460" height="300" rx="4" fill="#F5F5F5" stroke="#333333" stroke-width="1"/>
+
+  <!-- Quadrant dividers -->
+  <line x1="300" y1="55" x2="300" y2="355" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="70" y1="205" x2="530" y2="205" stroke="#CCCCCC" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Axis labels -->
+  <text x="300" y="380" text-anchor="middle" font-size="11" fill="#888888">开源程度 →</text>
+  <text x="30" y="205" text-anchor="middle" font-size="11" fill="#888888" transform="rotate(-90, 30, 205)">推理能力 →</text>
+
+  <!-- Quadrant labels -->
+  <text x="185" y="75" text-anchor="middle" font-size="10" fill="#AAAAAA">强能力 · 闭源</text>
+  <text x="415" y="75" text-anchor="middle" font-size="10" fill="#AAAAAA">强能力 · 开源</text>
+  <text x="185" y="345" text-anchor="middle" font-size="10" fill="#AAAAAA">轻量 · 闭源</text>
+  <text x="415" y="345" text-anchor="middle" font-size="10" fill="#AAAAAA">轻量 · 开源</text>
+
+  <!-- Top-left: Commercial Flagship -->
+  <rect x="100" y="95" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="185" y="118" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">商业旗舰</text>
+  <text x="185" y="140" text-anchor="middle" font-size="10" fill="#333333">GPT-4o / Claude 3.5</text>
+  <text x="185" y="160" text-anchor="middle" font-size="10" fill="#888888">最强推理 · 闭源 API</text>
+  <text x="185" y="175" text-anchor="middle" font-size="9" fill="#AAAAAA">成本高 · 延迟可控</text>
+
+  <!-- Top-right: Open Source Strong -->
+  <rect x="330" y="95" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="415" y="118" text-anchor="middle" font-size="12" font-weight="bold" fill="#00ADD8">开源强者</text>
+  <text x="415" y="140" text-anchor="middle" font-size="10" fill="#333333">DeepSeek-R1 / Llama 3</text>
+  <text x="415" y="160" text-anchor="middle" font-size="10" fill="#888888">可本地部署 · 社区活跃</text>
+  <text x="415" y="175" text-anchor="middle" font-size="9" fill="#AAAAAA">成本低 · 需自建推理</text>
+
+  <!-- Bottom-left: Lightweight Commercial -->
+  <rect x="100" y="225" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#E76F00" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="185" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">轻量商业</text>
+  <text x="185" y="270" text-anchor="middle" font-size="10" fill="#333333">GPT-4o-mini / Haiku</text>
+  <text x="185" y="290" text-anchor="middle" font-size="10" fill="#888888">速度快 · 成本低</text>
+  <text x="185" y="305" text-anchor="middle" font-size="9" fill="#AAAAAA">适合简单任务分流</text>
+
+  <!-- Bottom-right: Lightweight Open Source -->
+  <rect x="330" y="225" width="170" height="90" rx="6" fill="#FFFFFF" stroke="#00ADD8" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="415" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#00ADD8">轻量开源</text>
+  <text x="415" y="270" text-anchor="middle" font-size="10" fill="#333333">Qwen 2.5 / Phi-3</text>
+  <text x="415" y="290" text-anchor="middle" font-size="10" fill="#888888">小模型 · 可端侧运行</text>
+  <text x="415" y="305" text-anchor="middle" font-size="9" fill="#AAAAAA">隐私友好 · 零 API 费</text>
+</svg>

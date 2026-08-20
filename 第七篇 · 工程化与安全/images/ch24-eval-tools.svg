@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">Agent 评估可观测工具链对比</text>
+
+  <!-- LangSmith -->
+  <rect x="30" y="55" width="155" height="310" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="107" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#1565C0">LangSmith</text>
+  <text x="107" y="95" text-anchor="middle" font-size="10" fill="#666">LangChain出品</text>
+
+  <rect x="42" y="108" width="131" height="28" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="107" y="126" text-anchor="middle" font-size="10" fill="#333">闭源 · SaaS</text>
+  <rect x="42" y="143" width="131" height="28" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="107" y="161" text-anchor="middle" font-size="10" fill="#333">零配置(LangChain)</text>
+  <rect x="42" y="178" width="131" height="28" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="107" y="196" text-anchor="middle" font-size="10" fill="#333">深度LangGraph集成</text>
+  <rect x="42" y="213" width="131" height="28" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="107" y="231" text-anchor="middle" font-size="10" fill="#333">托管Agent部署</text>
+
+  <text x="107" y="270" text-anchor="middle" font-size="10" fill="#D32F2F">优势:零配置+深集成</text>
+  <text x="107" y="288" text-anchor="middle" font-size="10" fill="#D32F2F">劣势:贵·闭源</text>
+  <text x="107" y="315" text-anchor="middle" font-size="10" fill="#1565C0" font-weight="bold">适合:</text>
+  <text x="107" y="332" text-anchor="middle" font-size="10" fill="#1565C0">LangChain团队</text>
+  <text x="107" y="349" text-anchor="middle" font-size="10" fill="#1565C0">快速原型</text>
+
+  <!-- Langfuse -->
+  <rect x="200" y="55" width="155" height="310" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="277" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#2E7D32">Langfuse</text>
+  <text x="277" y="95" text-anchor="middle" font-size="10" fill="#666">开源MIT</text>
+
+  <rect x="212" y="108" width="131" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="277" y="126" text-anchor="middle" font-size="10" fill="#333">开源 · 可自托管</text>
+  <rect x="212" y="143" width="131" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="277" y="161" text-anchor="middle" font-size="10" fill="#333">框架无关</text>
+  <rect x="212" y="178" width="131" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="277" y="196" text-anchor="middle" font-size="10" fill="#333">OpenTelemetry原生</text>
+  <rect x="212" y="213" width="131" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="277" y="231" text-anchor="middle" font-size="10" fill="#333">CI/CD评估门控</text>
+
+  <text x="277" y="270" text-anchor="middle" font-size="10" fill="#D32F2F">优势:自托管·数据主权</text>
+  <text x="277" y="288" text-anchor="middle" font-size="10" fill="#D32F2F">劣势:需运维ClickHouse</text>
+  <text x="277" y="315" text-anchor="middle" font-size="10" fill="#2E7D32" font-weight="bold">适合:</text>
+  <text x="277" y="332" text-anchor="middle" font-size="10" fill="#2E7D32">数据敏感团队</text>
+  <text x="277" y="349" text-anchor="middle" font-size="10" fill="#2E7D32">多框架技术栈</text>
+
+  <!-- Arize Phoenix -->
+  <rect x="370" y="55" width="155" height="310" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="8"/>
+  <text x="447" y="78" text-anchor="middle" font-size="14" font-weight="bold" fill="#E65100">Arize Phoenix</text>
+  <text x="447" y="95" text-anchor="middle" font-size="10" fill="#666">开源ELv2</text>
+
+  <rect x="382" y="108" width="131" height="28" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="447" y="126" text-anchor="middle" font-size="10" fill="#333">开源 · 可自托管</text>
+  <rect x="382" y="143" width="131" height="28" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="447" y="161" text-anchor="middle" font-size="10" fill="#333">OTel标准</text>
+  <rect x="382" y="178" width="131" height="28" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="447" y="196" text-anchor="middle" font-size="10" fill="#333">企业级可视化</text>
+  <rect x="382" y="213" width="131" height="28" fill="#FFF" stroke="#E65100" rx="4"/>
+  <text x="447" y="231" text-anchor="middle" font-size="10" fill="#333">无限自托管免费</text>
+
+  <text x="447" y="270" text-anchor="middle" font-size="10" fill="#D32F2F">优势:企业可解释性</text>
+  <text x="447" y="288" text-anchor="middle" font-size="10" fill="#D32F2F">劣势:评估功能有限</text>
+  <text x="447" y="315" text-anchor="middle" font-size="10" fill="#E65100" font-weight="bold">适合:</text>
+  <text x="447" y="332" text-anchor="middle" font-size="10" fill="#E65100">大规模企业部署</text>
+  <text x="447" y="349" text-anchor="middle" font-size="10" fill="#E65100">可解释性需求</text>
+
+  <!-- 底部标注 -->
+  <text x="280" y="385" text-anchor="middle" font-size="11" fill="#D32F2F">⚡ 三者都支持OpenTelemetry → 插桩代码可移植，后端可切换</text>
+</svg>

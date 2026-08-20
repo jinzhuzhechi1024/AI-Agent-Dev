@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">Agent 工程演进时间线</text>
+
+  <!-- Timeline axis -->
+  <line x1="40" y1="200" x2="520" y2="200" stroke="#CCCCCC" stroke-width="2"/>
+
+  <!-- Year markers -->
+  <text x="90" y="225" text-anchor="middle" font-size="10" fill="#888888">2023</text>
+  <text x="220" y="225" text-anchor="middle" font-size="10" fill="#888888">2024</text>
+  <text x="350" y="225" text-anchor="middle" font-size="10" fill="#888888">2025</text>
+  <text x="480" y="225" text-anchor="middle" font-size="10" fill="#888888">2026</text>
+
+  <!-- Tick marks -->
+  <line x1="90" y1="195" x2="90" y2="205" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="220" y1="195" x2="220" y2="205" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="350" y1="195" x2="350" y2="205" stroke="#CCCCCC" stroke-width="1"/>
+  <line x1="480" y1="195" x2="480" y2="205" stroke="#CCCCCC" stroke-width="1"/>
+
+  <!-- L1 Prompt Engineering -->
+  <circle cx="90" cy="200" r="8" fill="#333333"/>
+  <rect x="35" y="100" width="130" height="70" rx="6" fill="#F5F5F5" stroke="#333333" stroke-width="1.5"/>
+  <text x="100" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#333333">L1 Prompt</text>
+  <text x="100" y="145" text-anchor="middle" font-size="10" fill="#555555">Prompt Engineering</text>
+  <text x="100" y="160" text-anchor="middle" font-size="9" fill="#888888">"怎么说清楚"</text>
+  <line x1="100" y1="170" x2="90" y2="192" stroke="#333333" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- L2 Context Engineering -->
+  <circle cx="220" cy="200" r="8" fill="#E76F00"/>
+  <rect x="155" y="100" width="140" height="70" rx="6" fill="#F5F5F5" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="225" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">L2 Context</text>
+  <text x="225" y="145" text-anchor="middle" font-size="10" fill="#555555">Context Engineering</text>
+  <text x="225" y="160" text-anchor="middle" font-size="9" fill="#888888">"给 AI 看什么"</text>
+  <line x1="225" y1="170" x2="220" y2="192" stroke="#E76F00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- L3 Loop Engineering -->
+  <circle cx="350" cy="200" r="8" fill="#00ADD8"/>
+  <rect x="285" y="100" width="140" height="70" rx="6" fill="#F5F5F5" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="355" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#00ADD8">L3 Loop</text>
+  <text x="355" y="145" text-anchor="middle" font-size="10" fill="#555555">Loop Engineering</text>
+  <text x="355" y="160" text-anchor="middle" font-size="9" fill="#888888">"怎么循环决策"</text>
+  <line x1="355" y1="170" x2="350" y2="192" stroke="#00ADD8" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- L4 Harness Engineering -->
+  <circle cx="480" cy="200" r="8" fill="#E76F00"/>
+  <rect x="410" y="100" width="140" height="70" rx="6" fill="#F5F5F5" stroke="#E76F00" stroke-width="2"/>
+  <text x="480" y="125" text-anchor="middle" font-size="12" font-weight="bold" fill="#E76F00">L4 Harness</text>
+  <text x="480" y="145" text-anchor="middle" font-size="10" fill="#555555">Harness Engineering</text>
+  <text x="480" y="160" text-anchor="middle" font-size="9" fill="#888888">"怎么建可靠系统"</text>
+  <line x1="480" y1="170" x2="480" y2="192" stroke="#E76F00" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- Bottom descriptions -->
+  <text x="100" y="260" text-anchor="middle" font-size="9" fill="#555555">Few-Shot / CoT</text>
+  <text x="100" y="275" text-anchor="middle" font-size="9" fill="#555555">System Prompt</text>
+  <text x="100" y="290" text-anchor="middle" font-size="9" fill="#AAAAAA">GPT-3.5 时代</text>
+
+  <text x="225" y="260" text-anchor="middle" font-size="9" fill="#555555">RAG / 记忆系统</text>
+  <text x="225" y="275" text-anchor="middle" font-size="9" fill="#555555">上下文窗口管理</text>
+  <text x="225" y="290" text-anchor="middle" font-size="9" fill="#AAAAAA">GPT-4 时代</text>
+
+  <text x="355" y="260" text-anchor="middle" font-size="9" fill="#555555">ReAct / Plan-Execute</text>
+  <text x="355" y="275" text-anchor="middle" font-size="9" fill="#555555">循环控制 / 反思</text>
+  <text x="355" y="290" text-anchor="middle" font-size="9" fill="#AAAAAA">Agent 框架爆发</text>
+
+  <text x="480" y="260" text-anchor="middle" font-size="9" fill="#555555">沙箱 / MCP / Skills</text>
+  <text x="480" y="275" text-anchor="middle" font-size="9" fill="#555555">架构约束 / 熵管理</text>
+  <text x="480" y="290" text-anchor="middle" font-size="9" fill="#AAAAAA">生产级 Agent</text>
+
+  <!-- Progression arrow -->
+  <path d="M 90 320 L 480 320" stroke="#888888" stroke-width="1.5" marker-end="url(#evArrow)"/>
+  <text x="280" y="345" text-anchor="middle" font-size="10" fill="#888888" font-style="italic">复杂度递增 · 可靠性递增</text>
+
+  <defs>
+    <marker id="evArrow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#888888"/>
+    </marker>
+  </defs>
+</svg>

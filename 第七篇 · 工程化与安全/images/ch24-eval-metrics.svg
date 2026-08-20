@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">Agent 评估指标体系</text>
+
+  <!-- 四大维度 -->
+  <!-- 1. 任务完成率（左上） -->
+  <rect x="30" y="50" width="240" height="90" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="150" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565C0">任务完成率</text>
+  <text x="150" y="90" text-anchor="middle" font-size="10" fill="#555">pass@1：单次成功率</text>
+  <text x="150" y="105" text-anchor="middle" font-size="10" fill="#555">pass^k：k次全成功（一致性）</text>
+  <text x="150" y="120" text-anchor="middle" font-size="10" fill="#555">部分完成：加权评分</text>
+  <text x="150" y="135" text-anchor="middle" font-size="10" fill="#888">→ 回答"能不能做到"</text>
+
+  <!-- 2. 工具调用准确率（右上） -->
+  <rect x="290" y="50" width="240" height="90" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="410" y="72" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">工具调用准确率</text>
+  <text x="410" y="90" text-anchor="middle" font-size="10" fill="#555">工具选择：选对了吗？</text>
+  <text x="410" y="105" text-anchor="middle" font-size="10" fill="#555">参数正确性：值对吗？</text>
+  <text x="410" y="120" text-anchor="middle" font-size="10" fill="#555">调用顺序：依赖对吗？</text>
+  <text x="410" y="135" text-anchor="middle" font-size="10" fill="#888">→ 回答"做得对不对"</text>
+
+  <!-- 3. 推理质量（左下） -->
+  <rect x="30" y="155" width="240" height="90" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="8"/>
+  <text x="150" y="177" text-anchor="middle" font-size="13" font-weight="bold" fill="#E65100">推理质量</text>
+  <text x="150" y="195" text-anchor="middle" font-size="10" fill="#555">计划合理性：步骤逻辑？</text>
+  <text x="150" y="210" text-anchor="middle" font-size="10" fill="#555">错误恢复：失败了会补救？</text>
+  <text x="150" y="225" text-anchor="middle" font-size="10" fill="#555">目标对齐：不跑题？</text>
+  <text x="150" y="240" text-anchor="middle" font-size="10" fill="#888">→ 回答"想得清楚不清楚"</text>
+
+  <!-- 4. 效率（右下） -->
+  <rect x="290" y="155" width="240" height="90" fill="#FCE4EC" stroke="#C62828" stroke-width="2" rx="8"/>
+  <text x="410" y="177" text-anchor="middle" font-size="13" font-weight="bold" fill="#C62828">效率</text>
+  <text x="410" y="195" text-anchor="middle" font-size="10" fill="#555">延迟：p50 / p95 响应时间</text>
+  <text x="410" y="210" text-anchor="middle" font-size="10" fill="#555">Token消耗：每次任务花多少</text>
+  <text x="410" y="225" text-anchor="middle" font-size="10" fill="#555">工具调用次数：是否冗余</text>
+  <text x="410" y="240" text-anchor="middle" font-size="10" fill="#888">→ 回答"划不划算"</text>
+
+  <!-- 中心：CLASSic框架 -->
+  <rect x="130" y="265" width="300" height="50" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="8"/>
+  <text x="280" y="287" text-anchor="middle" font-size="13" font-weight="bold" fill="#7B1FA2">CLASSic 框架</text>
+  <text x="280" y="305" text-anchor="middle" font-size="11" fill="#555">Cost · Latency · Accuracy · Stability · Security</text>
+
+  <!-- 底部标注 -->
+  <text x="280" y="345" text-anchor="middle" font-size="12" fill="#D32F2F">⚡ 四维互补：只看完成率会漏掉"撞大运成功"</text>
+  <text x="280" y="365" text-anchor="middle" font-size="11" fill="#666">两个Agent可能最终输出相同，但路径一优一劣</text>
+  <text x="280" y="383" text-anchor="middle" font-size="11" fill="#666">轨迹评估（Trajectory Eval）补上了"路径质量"维度</text>
+</svg>

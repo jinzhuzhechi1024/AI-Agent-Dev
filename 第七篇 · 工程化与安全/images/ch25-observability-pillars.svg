@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow25a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="bold" fill="#333">Agent可观测性三大支柱</text>
+
+  <!-- Agent box at top center -->
+  <rect x="210" y="45" width="140" height="36" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="280" y="68" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">Agent执行链路</text>
+
+  <!-- Lines from Agent to three pillars -->
+  <line x1="280" y1="81" x2="100" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25a)"/>
+  <line x1="280" y1="81" x2="280" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25a)"/>
+  <line x1="280" y1="81" x2="460" y2="110" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25a)"/>
+
+  <!-- Pillar 1: Trace (Blue) -->
+  <rect x="30" y="115" width="140" height="220" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="100" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#1565C0">Trace 追踪</text>
+  <text x="100" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#555">决策链路可视化</text>
+  <line x1="45" y1="168" x2="155" y2="168" stroke="#1565C0" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="100" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">gen_ai.invoke_agent</text>
+  <text x="100" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">gen_ai.request</text>
+  <text x="100" y="219" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">gen_ai.execute_tool</text>
+  <text x="100" y="236" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">父子Span层级</text>
+  <text x="100" y="253" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">TraceID贯穿全链</text>
+  <text x="100" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1565C0" font-weight="bold">Waterfall视图</text>
+  <text x="100" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#1565C0" font-weight="bold">慢节点定位</text>
+  <text x="100" y="312" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">Jaeger/Tempo</text>
+
+  <!-- Pillar 2: Metrics (Orange) -->
+  <rect x="210" y="115" width="140" height="220" fill="#FFF3E0" stroke="#E76F00" stroke-width="2" rx="8"/>
+  <text x="280" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#E76F00">Metrics 监控</text>
+  <text x="280" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#555">量化指标聚合</text>
+  <line x1="225" y1="168" x2="335" y2="168" stroke="#E76F00" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="280" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">Token消耗分布</text>
+  <text x="280" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">延迟p50/p95/p99</text>
+  <text x="280" y="219" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">任务成功率</text>
+  <text x="280" y="236" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">工具调用分布</text>
+  <text x="280" y="253" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">错误率趋势</text>
+  <text x="280" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#E76F00" font-weight="bold">Grafana仪表盘</text>
+  <text x="280" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#E76F00" font-weight="bold">Prometheus采集</text>
+  <text x="280" y="312" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">告警阈值触发</text>
+
+  <!-- Pillar 3: Logs (Green) -->
+  <rect x="390" y="115" width="140" height="220" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="460" y="138" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#2E7D32">Logs 日志</text>
+  <text x="460" y="158" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#555">详细决策记录</text>
+  <line x1="405" y1="168" x2="515" y2="168" stroke="#2E7D32" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <text x="460" y="185" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">结构化JSON</text>
+  <text x="460" y="202" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">Prompt输入输出</text>
+  <text x="460" y="219" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">模型版本/参数</text>
+  <text x="460" y="236" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">工具参数与结果</text>
+  <text x="460" y="253" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#333">错误堆栈重试</text>
+  <text x="460" y="275" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">Loki/ELK</text>
+  <text x="460" y="292" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#2E7D32" font-weight="bold">PII脱敏</text>
+  <text x="460" y="312" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#888">分级保留策略</text>
+
+  <!-- Bottom annotation -->
+  <rect x="60" y="350" width="440" height="36" fill="#F5F5F5" stroke="#999" stroke-width="1" rx="6"/>
+  <text x="280" y="373" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">OpenTelemetry GenAI语义约定：一次埋点 → Trace+Metrics+Logs同时上报</text>
+</svg>

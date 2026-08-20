@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="#888888"/>
+    </marker>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">Prompt 不是"许愿"，是"需求文档"</text>
+  <text x="280" y="42" text-anchor="middle" font-size="10" fill="#888888">从模糊愿望 → 精确规格说明</text>
+
+  <!-- Left: Wishing well analogy -->
+  <rect x="25" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="25" y="60" width="245" height="22" fill="#D32F2F" rx="8"/>
+  <text x="148" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">❌ 许愿式 Prompt</text>
+
+  <rect x="50" y="100" width="195" height="55" fill="#FFEBEE" stroke="#EF9A9A" stroke-width="1" rx="6"/>
+  <text x="148" y="118" text-anchor="middle" font-size="10" fill="#C62828" font-weight="bold">"帮我写一个很好的方案"</text>
+  <text x="148" y="135" text-anchor="middle" font-size="9" fill="#999999">模糊愿望 · 交给运气</text>
+  <text x="148" y="148" text-anchor="middle" font-size="9" fill="#999999">每次结果不同 · 不可重复</text>
+
+  <text x="148" y="180" text-anchor="middle" font-size="9" fill="#666666">像对着流星许愿：</text>
+  <g font-size="9" fill="#999999">
+    <text x="55" y="200">▪ 没说给谁看的方案</text>
+    <text x="55" y="215">▪ 没说方案要解决什么</text>
+    <text x="55" y="230">▪ 没说格式、长度、风格</text>
+    <text x="55" y="245">▪ 没说验收标准</text>
+  </g>
+
+  <rect x="50" y="265" width="195" height="40" fill="#FFCDD2" rx="4"/>
+  <text x="148" y="285" text-anchor="middle" font-size="9" fill="#D32F2F" font-weight="bold">结果：随机质量</text>
+  <text x="148" y="298" text-anchor="middle" font-size="8" fill="#D32F2F">10次只有1次满意</text>
+
+  <text x="148" y="335" text-anchor="middle" font-size="14" fill="#D32F2F">🎲</text>
+  <text x="148" y="355" text-anchor="middle" font-size="9" fill="#D32F2F" font-style="italic">不可重复 · 不可测试</text>
+
+  <!-- Right: Engineering spec analogy -->
+  <rect x="290" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="290" y="60" width="245" height="22" fill="#00897B" rx="8"/>
+  <text x="412" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">✅ 工程式 Prompt（三段式）</text>
+
+  <!-- Role section -->
+  <rect x="310" y="100" width="195" height="32" fill="#E0F2F1" stroke="#80CBC4" stroke-width="1" rx="4"/>
+  <text x="318" y="115" font-size="9" font-weight="bold" fill="#00695C">① 角色设定</text>
+  <text x="318" y="128" font-size="8" fill="#555555">"你是资深安全工程师，15年审计经验"</text>
+
+  <!-- Constraint section -->
+  <rect x="310" y="140" width="195" height="55" fill="#FFF8E1" stroke="#FFE082" stroke-width="1" rx="4"/>
+  <text x="318" y="155" font-size="9" font-weight="bold" fill="#F57F17">② 行为约束</text>
+  <g font-size="8" fill="#555555">
+    <text x="322" y="168">▪ 只关注安全问题，不评风格</text>
+    <text x="322" y="180">▪ 给出 CWE 编号和 CVSS 评分</text>
+    <text x="322" y="192">▪ 不确定标注"疑似"</text>
+  </g>
+
+  <!-- Output format section -->
+  <rect x="310" y="205" width="195" height="55" fill="#F3E5F5" stroke="#CE93D8" stroke-width="1" rx="4"/>
+  <text x="318" y="220" font-size="9" font-weight="bold" fill="#7B1FA2">③ 输出格式</text>
+  <text x="322" y="235" font-size="7" fill="#555555" font-family="monospace">{"cwe_id": "CWE-89",</text>
+  <text x="322" y="246" font-size="7" fill="#555555" font-family="monospace"> "severity": "high|medium|low",</text>
+  <text x="322" y="257" font-size="7" fill="#555555" font-family="monospace"> "description": "...", "fix": "..."}</text>
+
+  <rect x="310" y="275" width="195" height="40" fill="#C8E6C9" rx="4"/>
+  <text x="412" y="295" text-anchor="middle" font-size="9" fill="#2E7D32" font-weight="bold">结果：稳定产出</text>
+  <text x="412" y="308" text-anchor="middle" font-size="8" fill="#2E7D32">10次有9次符合预期</text>
+
+  <text x="412" y="335" text-anchor="middle" font-size="14" fill="#00897B">📋</text>
+  <text x="412" y="355" text-anchor="middle" font-size="9" fill="#00897B" font-style="italic">可重复 · 可测试 · 可迭代</text>
+
+  <!-- Arrow between -->
+  <line x1="275" y1="200" x2="285" y2="200" stroke="#888888" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="280" y="190" text-anchor="middle" font-size="8" fill="#888888" font-weight="bold">转变</text>
+</svg>

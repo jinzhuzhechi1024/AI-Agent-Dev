@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 420" font-family="Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadowA">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="560" height="420" fill="url(#bgA)" rx="8"/>
+  <text x="280" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e293b">附录A · 开发环境技术栈全景</text>
+
+  <!-- Layer 1: Runtime -->
+  <rect x="20" y="48" width="520" height="60" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="30" y="68" font-size="11" font-weight="bold" fill="#1e40af">① 运行时与包管理</text>
+  <rect x="30" y="74" width="100" height="26" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="80" y="91" text-anchor="middle" font-size="10" fill="#1e40af">Python 3.12+</text>
+  <rect x="140" y="74" width="80" height="26" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="180" y="91" text-anchor="middle" font-size="10" fill="#1e40af">uv (Rust)</text>
+  <rect x="230" y="74" width="90" height="26" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="275" y="91" text-anchor="middle" font-size="10" fill="#1e40af">Node.js 20+</text>
+  <rect x="330" y="74" width="90" height="26" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="375" y="91" text-anchor="middle" font-size="10" fill="#1e40af">pnpm / npm</text>
+  <rect x="430" y="74" width="100" height="26" rx="4" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="480" y="91" text-anchor="middle" font-size="10" fill="#1e40af">Docker 24+</text>
+
+  <!-- Layer 2: Framework -->
+  <rect x="20" y="120" width="520" height="60" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="30" y="140" font-size="11" font-weight="bold" fill="#15803d">② Agent 框架与编排</text>
+  <rect x="30" y="146" width="90" height="26" rx="4" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+  <text x="75" y="163" text-anchor="middle" font-size="10" fill="#15803d">LangGraph</text>
+  <rect x="130" y="146" width="80" height="26" rx="4" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+  <text x="170" y="163" text-anchor="middle" font-size="10" fill="#15803d">LangChain</text>
+  <rect x="220" y="146" width="80" height="26" rx="4" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+  <text x="260" y="163" text-anchor="middle" font-size="10" fill="#15803d">CrewAI</text>
+  <rect x="310" y="146" width="100" height="26" rx="4" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+  <text x="360" y="163" text-anchor="middle" font-size="10" fill="#15803d">Agents SDK</text>
+  <rect x="420" y="146" width="110" height="26" rx="4" fill="#f0fdf4" stroke="#4ade80" stroke-width="1"/>
+  <text x="475" y="163" text-anchor="middle" font-size="10" fill="#15803d">LangSmith Studio</text>
+
+  <!-- Layer 3: LLM -->
+  <rect x="20" y="192" width="520" height="60" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="30" y="212" font-size="11" font-weight="bold" fill="#b45309">③ 本地 LLM 推理</text>
+  <rect x="30" y="218" width="110" height="26" rx="4" fill="#fffbeb" stroke="#fbbf24" stroke-width="1"/>
+  <text x="85" y="235" text-anchor="middle" font-size="10" fill="#b45309">Ollama (开发)</text>
+  <rect x="150" y="218" width="110" height="26" rx="4" fill="#fffbeb" stroke="#fbbf24" stroke-width="1"/>
+  <text x="205" y="235" text-anchor="middle" font-size="10" fill="#b45309">vLLM (生产)</text>
+  <rect x="270" y="218" width="110" height="26" rx="4" fill="#fffbeb" stroke="#fbbf24" stroke-width="1"/>
+  <text x="325" y="235" text-anchor="middle" font-size="10" fill="#b45309">Qwen3 / Llama3</text>
+  <rect x="390" y="218" width="140" height="26" rx="4" fill="#fffbeb" stroke="#fbbf24" stroke-width="1"/>
+  <text x="460" y="235" text-anchor="middle" font-size="10" fill="#b45309">OpenAI 兼容 API</text>
+
+  <!-- Layer 4: Protocol -->
+  <rect x="20" y="264" width="520" height="60" rx="6" fill="#ede9fe" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="30" y="284" font-size="11" font-weight="bold" fill="#6d28d9">④ 协议开发 (MCP / A2A)</text>
+  <rect x="30" y="290" width="100" height="26" rx="4" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="80" y="307" text-anchor="middle" font-size="10" fill="#6d28d9">FastMCP (Py)</text>
+  <rect x="140" y="290" width="120" height="26" rx="4" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="200" y="307" text-anchor="middle" font-size="10" fill="#6d28d9">@modelcontextprotocol/sdk</text>
+  <rect x="270" y="290" width="80" height="26" rx="4" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="310" y="307" text-anchor="middle" font-size="10" fill="#6d28d9">a2a-sdk (Py)</text>
+  <rect x="360" y="290" width="80" height="26" rx="4" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="400" y="307" text-anchor="middle" font-size="10" fill="#6d28d9">@a2a-js/sdk</text>
+  <rect x="450" y="290" width="80" height="26" rx="4" fill="#f5f3ff" stroke="#a78bfa" stroke-width="1"/>
+  <text x="490" y="307" text-anchor="middle" font-size="10" fill="#6d28d9">MCP Inspector</text>
+
+  <!-- Layer 5: Observability -->
+  <rect x="20" y="336" width="520" height="60" rx="6" fill="#fee2e2" stroke="#ef4444" stroke-width="1.5" filter="url(#shadowA)"/>
+  <text x="30" y="356" font-size="11" font-weight="bold" fill="#991b1b">⑤ 可观测性与评估</text>
+  <rect x="30" y="362" width="90" height="26" rx="4" fill="#fef2f2" stroke="#f87171" stroke-width="1"/>
+  <text x="75" y="379" text-anchor="middle" font-size="10" fill="#991b1b">LangSmith</text>
+  <rect x="130" y="362" width="80" height="26" rx="4" fill="#fef2f2" stroke="#f87171" stroke-width="1"/>
+  <text x="170" y="379" text-anchor="middle" font-size="10" fill="#991b1b">Langfuse</text>
+  <rect x="220" y="362" width="110" height="26" rx="4" fill="#fef2f2" stroke="#f87171" stroke-width="1"/>
+  <text x="275" y="379" text-anchor="middle" font-size="10" fill="#991b1b">OpenTelemetry</text>
+  <rect x="340" y="362" width="90" height="26" rx="4" fill="#fef2f2" stroke="#f87171" stroke-width="1"/>
+  <text x="385" y="379" text-anchor="middle" font-size="10" fill="#991b1b">Prometheus</text>
+  <rect x="440" y="362" width="90" height="26" rx="4" fill="#fef2f2" stroke="#f87171" stroke-width="1"/>
+  <text x="485" y="379" text-anchor="middle" font-size="10" fill="#991b1b">AgentBench</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="404" width="520" height="12" rx="2" fill="#64748b"/>
+  <text x="280" y="414" text-anchor="middle" font-size="9" fill="white">五层技术栈从底到顶：运行时 → 框架 → 推理 → 协议 → 可观测；每层独立可替换，通过标准接口耦合</text>
+</svg>

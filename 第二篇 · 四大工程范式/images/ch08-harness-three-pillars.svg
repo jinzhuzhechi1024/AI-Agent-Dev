@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <text x="280" y="25" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="bold" fill="#333333">Harness 三大支柱</text>
+
+  <!-- Pillar 1: Context Engineering -->
+  <rect x="25" y="55" width="160" height="250" rx="8" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2"/>
+  <rect x="25" y="55" width="160" height="35" rx="8" fill="#00ADD8"/>
+  <text x="105" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">上下文工程</text>
+  <text x="105" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF"></text>
+  <text x="105" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Context</text>
+  <text x="105" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">让 Agent</text>
+  <text x="105" y="158" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">知道该做什么</text>
+  <text x="105" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">System Prompt</text>
+  <text x="105" y="215" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">RAG / 记忆</text>
+  <text x="105" y="235" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">渐进式披露</text>
+  <text x="105" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">上下文压缩</text>
+  <text x="105" y="285" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">第 5-6 章详解</text>
+
+  <!-- Pillar 2: Architectural Constraints -->
+  <rect x="200" y="55" width="160" height="250" rx="8" fill="#FFFFFF" stroke="#E76F00" stroke-width="2"/>
+  <rect x="200" y="55" width="160" height="35" rx="8" fill="#E76F00"/>
+  <text x="280" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">架构约束</text>
+  <text x="280" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Constraint</text>
+  <text x="280" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">确保 Agent</text>
+  <text x="280" y="158" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">只在边界内行事</text>
+  <text x="280" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">沙箱隔离</text>
+  <text x="280" y="215" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">CI / Linter</text>
+  <text x="280" y="235" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">权限分级</text>
+  <text x="280" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">Hooks / Rule</text>
+  <text x="280" y="285" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">第三篇详解</text>
+
+  <!-- Pillar 3: Entropy Management -->
+  <rect x="375" y="55" width="160" height="250" rx="8" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2"/>
+  <rect x="375" y="55" width="160" height="35" rx="8" fill="#D32F2F"/>
+  <text x="455" y="78" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">熵管理</text>
+  <text x="455" y="110" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#333333">Entropy</text>
+  <text x="455" y="140" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">保障系统</text>
+  <text x="455" y="158" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#666666">不随时间退化</text>
+  <text x="455" y="195" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">自动清理 PR</text>
+  <text x="455" y="215" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">质量评分</text>
+  <text x="455" y="235" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">文档漂移检测</text>
+  <text x="455" y="255" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333333">反馈闭环</text>
+  <text x="455" y="285" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">贯穿全书</text>
+
+  <!-- Bottom formula -->
+  <rect x="100" y="335" width="360" height="45" rx="8" fill="#F5F5F5" stroke="#333333" stroke-width="2"/>
+  <text x="280" y="363" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#333333">Agent = Model + Harness</text>
+</svg>

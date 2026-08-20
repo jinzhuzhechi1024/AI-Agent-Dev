@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#F5F5F5" rx="8" />
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#333333">MCP 三层架构</text>
+
+  <!-- Host box (top, spanning full width) -->
+  <rect x="30" y="50" width="500" height="120" fill="#FFFFFF" stroke="#333333" stroke-width="2" rx="8" />
+  <rect x="30" y="50" width="500" height="28" fill="#333333" rx="8" />
+  <text x="280" y="69" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">Host（宿主应用）</text>
+  <text x="55" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#888888">Claude Desktop / Cursor / Codex CLI</text>
+
+  <!-- LLM inside Host -->
+  <rect x="45" y="105" width="80" height="50" fill="#E76F00" rx="6" />
+  <text x="85" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">LLM</text>
+  <text x="85" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#FFDDBB">推理引擎</text>
+
+  <!-- Client 1 -->
+  <rect x="155" y="105" width="100" height="50" fill="#00ADD8" rx="6" />
+  <text x="205" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Client A</text>
+  <text x="205" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#CCEEFF">1:1 会话</text>
+
+  <!-- Client 2 -->
+  <rect x="285" y="105" width="100" height="50" fill="#00ADD8" rx="6" />
+  <text x="335" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Client B</text>
+  <text x="335" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#CCEEFF">1:1 会话</text>
+
+  <!-- Client 3 -->
+  <rect x="415" y="105" width="100" height="50" fill="#00ADD8" rx="6" />
+  <text x="465" y="128" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">Client C</text>
+  <text x="465" y="145" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#CCEEFF">1:1 会话</text>
+
+  <!-- Connection lines -->
+  <line x1="205" y1="155" x2="205" y2="195" stroke="#00ADD8" stroke-width="2" stroke-dasharray="4,3" />
+  <line x1="335" y1="155" x2="335" y2="195" stroke="#00ADD8" stroke-width="2" stroke-dasharray="4,3" />
+  <line x1="465" y1="155" x2="465" y2="195" stroke="#00ADD8" stroke-width="2" stroke-dasharray="4,3" />
+  <text x="210" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">JSON-RPC</text>
+  <text x="340" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">JSON-RPC</text>
+  <text x="470" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">JSON-RPC</text>
+
+  <!-- Server A (stdio) -->
+  <rect x="135" y="195" width="140" height="70" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2" rx="6" />
+  <rect x="135" y="195" width="140" height="22" fill="#00ADD8" rx="6" />
+  <text x="205" y="211" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Server A: 文件系统</text>
+  <text x="205" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">Transport: stdio</text>
+  <text x="205" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">本地子进程</text>
+
+  <!-- Server B (stdio) -->
+  <rect x="285" y="195" width="100" height="70" fill="#FFFFFF" stroke="#E76F00" stroke-width="2" rx="6" />
+  <rect x="285" y="195" width="100" height="22" fill="#E76F00" rx="6" />
+  <text x="335" y="211" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Server B: DB</text>
+  <text x="335" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">stdio</text>
+  <text x="335" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">PostgreSQL</text>
+
+  <!-- Server C (HTTP) -->
+  <rect x="395" y="195" width="140" height="70" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2" rx="6" />
+  <rect x="395" y="195" width="140" height="22" fill="#D32F2F" rx="6" />
+  <text x="465" y="211" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">Server C: GitHub</text>
+  <text x="465" y="234" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#333333">Streamable HTTP</text>
+  <text x="465" y="252" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">远程 OAuth2.1</text>
+
+  <!-- Bottom: three primitives -->
+  <rect x="30" y="285" width="500" height="95" fill="#FFFFFF" stroke="#DDDDDD" rx="6" />
+  <text x="55" y="307" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#333333">Server 暴露三大原语:</text>
+
+  <rect x="55" y="318" width="140" height="50" fill="#F5F5F5" stroke="#00ADD8" rx="4" />
+  <text x="125" y="338" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#00ADD8">Tools</text>
+  <text x="125" y="356" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">模型控制·可执行</text>
+
+  <rect x="210" y="318" width="140" height="50" fill="#F5F5F5" stroke="#E76F00" rx="4" />
+  <text x="280" y="338" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#E76F00">Resources</text>
+  <text x="280" y="356" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">应用控制·只读数据</text>
+
+  <rect x="365" y="318" width="140" height="50" fill="#F5F5F5" stroke="#D32F2F" rx="4" />
+  <text x="435" y="338" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#D32F2F">Prompts</text>
+  <text x="435" y="356" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#888888">用户控制·可复用模板</text>
+</svg>

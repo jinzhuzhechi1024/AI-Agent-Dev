@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">OpenClaw 消息流转全景</text>
+
+  <!-- 左侧：IM平台 -->
+  <rect x="20" y="100" width="100" height="220" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="8"/>
+  <text x="70" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">IM 平台</text>
+  <text x="70" y="145" text-anchor="middle" font-size="10" fill="#333">WhatsApp</text>
+  <text x="70" y="165" text-anchor="middle" font-size="10" fill="#333">Telegram</text>
+  <text x="70" y="185" text-anchor="middle" font-size="10" fill="#333">Discord</text>
+  <text x="70" y="205" text-anchor="middle" font-size="10" fill="#333">Slack</text>
+  <text x="70" y="225" text-anchor="middle" font-size="10" fill="#333">飞书</text>
+  <text x="70" y="245" text-anchor="middle" font-size="10" fill="#333">微信</text>
+  <text x="70" y="280" text-anchor="middle" font-size="10" fill="#666">26+ 平台</text>
+  <text x="70" y="300" text-anchor="middle" font-size="10" fill="#666">统一协议</text>
+
+  <!-- 箭头1: IM → Gateway -->
+  <line x1="120" y1="200" x2="165" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowR1)"/>
+  <text x="142" y="190" text-anchor="middle" font-size="9" fill="#666">消息</text>
+
+  <!-- 中间：Gateway -->
+  <rect x="170" y="90" width="120" height="240" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="8"/>
+  <text x="230" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565C0">Gateway</text>
+  <text x="230" y="135" text-anchor="middle" font-size="10" fill="#555">ws://127.0.0.1</text>
+  <text x="230" y="150" text-anchor="middle" font-size="10" fill="#555">:18789</text>
+
+  <rect x="185" y="165" width="90" height="30" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="230" y="184" text-anchor="middle" font-size="10" fill="#333">身份识别</text>
+  <rect x="185" y="200" width="90" height="30" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="230" y="219" text-anchor="middle" font-size="10" fill="#333">会话匹配</text>
+  <rect x="185" y="235" width="90" height="30" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="230" y="254" text-anchor="middle" font-size="10" fill="#333">上下文注入</text>
+  <rect x="185" y="270" width="90" height="30" fill="#FFF" stroke="#1565C0" rx="4"/>
+  <text x="230" y="289" text-anchor="middle" font-size="10" fill="#333">结果回传</text>
+
+  <!-- 箭头2: Gateway → Agent -->
+  <line x1="290" y1="200" x2="330" y2="200" stroke="#333" stroke-width="2" marker-end="url(#arrowR1)"/>
+  <text x="310" y="190" text-anchor="middle" font-size="9" fill="#666">请求</text>
+
+  <!-- 右侧：Agent -->
+  <rect x="335" y="90" width="120" height="240" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" rx="8"/>
+  <text x="395" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">Agent</text>
+  <text x="395" y="135" text-anchor="middle" font-size="10" fill="#555">Pi Core</text>
+
+  <rect x="350" y="150" width="90" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="395" y="168" text-anchor="middle" font-size="9" fill="#333">MEMORY读取</text>
+  <rect x="350" y="183" width="90" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="395" y="201" text-anchor="middle" font-size="9" fill="#333">LLM推理</text>
+  <rect x="350" y="216" width="90" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="395" y="234" text-anchor="middle" font-size="9" fill="#333">Skill调用</text>
+  <rect x="350" y="249" width="90" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="395" y="267" text-anchor="middle" font-size="9" fill="#333">MCP工具</text>
+  <rect x="350" y="282" width="90" height="28" fill="#FFF" stroke="#2E7D32" rx="4"/>
+  <text x="395" y="300" text-anchor="middle" font-size="9" fill="#333">结果持久化</text>
+
+  <!-- 右下：心跳 -->
+  <rect x="475" y="170" width="70" height="80" fill="#FCE4EC" stroke="#C62828" stroke-width="1.5" rx="6"/>
+  <text x="510" y="195" text-anchor="middle" font-size="10" font-weight="bold" fill="#C62828">心跳</text>
+  <text x="510" y="215" text-anchor="middle" font-size="9" fill="#C62828">每30分钟</text>
+  <text x="510" y="235" text-anchor="middle" font-size="9" fill="#C62828">自主触发</text>
+
+  <line x1="475" y1="210" x2="455" y2="210" stroke="#C62828" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrowDash)"/>
+
+  <!-- 底部说明 -->
+  <text x="280" y="360" text-anchor="middle" font-size="12" fill="#D32F2F">⚡ 消息驱动 + 心跳驱动 = 7×24 自主运行</text>
+  <text x="280" y="380" text-anchor="middle" font-size="11" fill="#666">用户消息触发即时响应，心跳触发定时自主任务</text>
+
+  <defs>
+    <marker id="arrowR1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#333"/>
+    </marker>
+    <marker id="arrowDash" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#C62828"/>
+    </marker>
+  </defs>
+</svg>

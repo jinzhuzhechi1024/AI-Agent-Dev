@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="500" height="400" fill="#FAFAFA" rx="8"/>
+
+  <!-- 标题 -->
+  <text x="250" y="30" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="bold" fill="#333">Agent 五步循环</text>
+
+  <!-- 中心圆 -->
+  <circle cx="250" cy="210" r="45" fill="#E3F2FD" stroke="#1565C0" stroke-width="2"/>
+  <text x="250" y="207" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#1565C0">Agent</text>
+  <text x="250" y="223" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#1565C0">Loop</text>
+
+  <!-- 五个步骤（环形排列） -->
+  <!-- 感知（顶部） -->
+  <rect x="200" y="65" width="100" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="250" y="89" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">① 感知</text>
+
+  <!-- 理解（右上） -->
+  <rect x="360" y="140" width="100" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="410" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">② 理解</text>
+
+  <!-- 规划（右下） -->
+  <rect x="360" y="245" width="100" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="410" y="269" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">③ 规划</text>
+
+  <!-- 行动（左下） -->
+  <rect x="40" y="245" width="100" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="90" y="269" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">④ 行动</text>
+
+  <!-- 反思（左上） -->
+  <rect x="40" y="140" width="100" height="40" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="90" y="164" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#333">⑤ 反思</text>
+
+  <!-- 箭头连接（顺时针环形） -->
+  <defs>
+    <marker id="arr1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- 感知→理解 -->
+  <line x1="300" y1="85" x2="360" y2="155" stroke="#666" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <!-- 理解→规划 -->
+  <line x1="410" y1="180" x2="410" y2="245" stroke="#666" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <!-- 规划→行动 -->
+  <line x1="360" y1="270" x2="140" y2="270" stroke="#666" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <!-- 行动→反思 -->
+  <line x1="90" y1="245" x2="90" y2="180" stroke="#666" stroke-width="1.5" marker-end="url(#arr1)"/>
+  <!-- 反思→感知 -->
+  <line x1="140" y1="155" x2="200" y2="85" stroke="#666" stroke-width="1.5" marker-end="url(#arr1)"/>
+
+  <!-- 底部说明 -->
+  <text x="250" y="360" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#D32F2F">⚡ 这五步循环是 Agent 区别于 Chatbot 的本质</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" font-family="system-ui, -apple-system, sans-serif">
+  <!-- Title -->
+  <text x="280" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333333">四层递进模型（嵌套关系）</text>
+
+  <!-- L4: Harness (outermost) -->
+  <rect x="20" y="50" width="520" height="330" rx="10" fill="#E76F00" opacity="0.06" stroke="#E76F00" stroke-width="2"/>
+  <text x="45" y="75" font-size="13" font-weight="bold" fill="#E76F00">L4 · Harness Engineering</text>
+  <text x="45" y="92" font-size="10" fill="#888888" font-style="italic">在什么环境里做事 · 系统级</text>
+
+  <!-- L3: Loop -->
+  <rect x="55" y="115" width="450" height="235" rx="8" fill="#00ADD8" opacity="0.08" stroke="#00ADD8" stroke-width="1.5"/>
+  <text x="80" y="140" font-size="13" font-weight="bold" fill="#00ADD8">L3 · Loop Engineering</text>
+  <text x="80" y="157" font-size="10" fill="#888888" font-style="italic">怎么转 · 循环级</text>
+
+  <!-- L2: Context -->
+  <rect x="90" y="180" width="380" height="145" rx="6" fill="#E76F00" opacity="0.05" stroke="#E76F00" stroke-width="1.5"/>
+  <text x="115" y="205" font-size="13" font-weight="bold" fill="#E76F00">L2 · Context Engineering</text>
+  <text x="115" y="222" font-size="10" fill="#888888" font-style="italic">看到什么 · 推理级</text>
+
+  <!-- L1: Prompt (innermost) -->
+  <rect x="125" y="245" width="310" height="65" rx="4" fill="#333333" opacity="0.08" stroke="#333333" stroke-width="1.5"/>
+  <text x="280" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#333333">L1 · Prompt Engineering</text>
+  <text x="280" y="290" text-anchor="middle" font-size="10" fill="#888888" font-style="italic">说什么 · 表达级</text>
+
+  <!-- Nesting indicators -->
+  <text x="280" y="380" text-anchor="middle" font-size="10" fill="#AAAAAA">Harness ⊃ Loop ⊃ Context ⊃ Prompt</text>
+</svg>

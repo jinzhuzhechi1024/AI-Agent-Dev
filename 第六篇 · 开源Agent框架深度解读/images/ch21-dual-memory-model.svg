@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,-apple-system,sans-serif" font-size="16" font-weight="bold" fill="#333">OpenClaw 双模记忆机制</text>
+
+  <!-- 左侧：短期记忆 -->
+  <rect x="30" y="55" width="230" height="310" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" rx="10"/>
+  <text x="145" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#1565C0">短期记忆（热）</text>
+  <text x="145" y="100" text-anchor="middle" font-size="11" fill="#555">72小时上下文缓存</text>
+
+  <rect x="50" y="115" width="190" height="45" fill="#FFF" stroke="#1565C0" rx="5"/>
+  <text x="145" y="142" text-anchor="middle" font-size="11" fill="#333">近期对话轮次</text>
+
+  <rect x="50" y="170" width="190" height="45" fill="#FFF" stroke="#1565C0" rx="5"/>
+  <text x="145" y="197" text-anchor="middle" font-size="11" fill="#333">当前任务上下文</text>
+
+  <rect x="50" y="225" width="190" height="45" fill="#FFF" stroke="#1565C0" rx="5"/>
+  <text x="145" y="252" text-anchor="middle" font-size="11" fill="#333">工具调用结果</text>
+
+  <text x="145" y="300" text-anchor="middle" font-size="11" fill="#666">特性：快速访问</text>
+  <text x="145" y="318" text-anchor="middle" font-size="11" fill="#666">TTL：72h 自动过期</text>
+  <text x="145" y="336" text-anchor="middle" font-size="11" fill="#666">容量：有限（窗口）</text>
+
+  <!-- 中间箭头 -->
+  <line x1="270" y1="165" x2="290" y2="165" stroke="#D32F2F" stroke-width="2.5" marker-end="url(#arrowRight)"/>
+  <text x="280" y="155" text-anchor="middle" font-size="10" fill="#D32F2F" font-weight="bold">沉淀</text>
+  <line x1="290" y1="255" x2="270" y2="255" stroke="#2E7D32" stroke-width="2.5" marker-end="url(#arrowLeft)"/>
+  <text x="280" y="275" text-anchor="middle" font-size="10" fill="#2E7D32" font-weight="bold">回溯</text>
+
+  <!-- 右侧：长期记忆 -->
+  <rect x="300" y="55" width="230" height="310" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="10"/>
+  <text x="415" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="bold" fill="#E65100">长期记忆（冷）</text>
+  <text x="415" y="100" text-anchor="middle" font-size="11" fill="#555">SQLite 永久存储</text>
+
+  <rect x="320" y="115" width="190" height="45" fill="#FFF" stroke="#E65100" rx="5"/>
+  <text x="415" y="142" text-anchor="middle" font-size="11" fill="#333">MEMORY.md 画像</text>
+
+  <rect x="320" y="170" width="190" height="45" fill="#FFF" stroke="#E65100" rx="5"/>
+  <text x="415" y="197" text-anchor="middle" font-size="11" fill="#333">用户偏好与习惯</text>
+
+  <rect x="320" y="225" width="190" height="45" fill="#FFF" stroke="#E65100" rx="5"/>
+  <text x="415" y="252" text-anchor="middle" font-size="11" fill="#333">历史决策记录</text>
+
+  <text x="415" y="300" text-anchor="middle" font-size="11" fill="#666">特性：FTS5 全文检索</text>
+  <text x="415" y="318" text-anchor="middle" font-size="11" fill="#666">TTL：永久</text>
+  <text x="415" y="336" text-anchor="middle" font-size="11" fill="#666">容量：无上限</text>
+
+  <!-- 底部说明 -->
+  <text x="280" y="385" text-anchor="middle" font-size="12" fill="#D32F2F">⚡ 热记忆保"即时响应"，冷记忆保"跨会话连续性"</text>
+
+  <defs>
+    <marker id="arrowRight" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#D32F2F"/>
+    </marker>
+    <marker id="arrowLeft" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto-start-reverse">
+      <path d="M0,0 L0,6 L6,3 z" fill="#2E7D32"/>
+    </marker>
+  </defs>
+</svg>

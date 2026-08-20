@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <linearGradient id="safeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22c55e" stop-opacity="0.3"/><stop offset="1" stop-color="#22c55e" stop-opacity="0.05"/></linearGradient>
+    <linearGradient id="warnGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.05"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0.3"/></linearGradient>
+    <linearGradient id="dangerGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#ef4444" stop-opacity="0.3"/><stop offset="1" stop-color="#ef4444" stop-opacity="0.05"/></linearGradient>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Context Rot：上下文越长，性能越差</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">Chroma Research 2025.7 · 18个前沿模型全部退化</text>
+
+  <!-- 坐标轴 -->
+  <line x1="80" y1="340" x2="520" y2="340" stroke="#475569" stroke-width="1.5"/>
+  <line x1="80" y1="340" x2="80" y2="70" stroke="#475569" stroke-width="1.5"/>
+
+  <!-- Y轴标签 -->
+  <text x="75" y="75" text-anchor="end" font-size="9" fill="#64748b">100%</text>
+  <text x="75" y="207" text-anchor="end" font-size="9" fill="#64748b">50%</text>
+  <text x="75" y="343" text-anchor="end" font-size="9" fill="#64748b">0%</text>
+  <text x="50" y="205" text-anchor="middle" font-size="10" fill="#475569" transform="rotate(-90, 50, 205)">模型准确率</text>
+
+  <!-- X轴标签 -->
+  <text x="80" y="356" text-anchor="middle" font-size="9" fill="#64748b">0%</text>
+  <text x="227" y="356" text-anchor="middle" font-size="9" fill="#64748b">25%</text>
+  <text x="373" y="356" text-anchor="middle" font-size="9" fill="#64748b">50%</text>
+  <text x="520" y="356" text-anchor="middle" font-size="9" fill="#64748b">100%</text>
+  <text x="300" y="375" text-anchor="middle" font-size="10" fill="#475569">上下文窗口使用率</text>
+
+  <!-- 三色背景区 -->
+  <rect x="80" y="70" width="147" height="270" fill="url(#safeGrad)"/>
+  <rect x="227" y="70" width="146" height="270" fill="url(#warnGrad)"/>
+  <rect x="373" y="70" width="147" height="270" fill="url(#dangerGrad)"/>
+
+  <!-- 区域标签 -->
+  <text x="153" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#15803d">聪明区</text>
+  <text x="153" y="100" text-anchor="middle" font-size="8" fill="#15803d">0%~40%</text>
+  <text x="300" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">衰退区</text>
+  <text x="300" y="100" text-anchor="middle" font-size="8" fill="#b45309">40%~80%</text>
+  <text x="447" y="88" text-anchor="middle" font-size="10" font-weight="700" fill="#dc2626">迟钝区</text>
+  <text x="447" y="100" text-anchor="middle" font-size="8" fill="#dc2626">80%~100%</text>
+
+  <!-- 分界线 -->
+  <line x1="227" y1="70" x2="227" y2="340" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4 3"/>
+  <line x1="373" y1="70" x2="373" y2="340" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- 性能曲线 -->
+  <path d="M 80,85 C 130,88 180,100 227,130 C 270,170 320,220 373,270 C 420,300 470,318 520,328" stroke="#1e293b" stroke-width="2.5" fill="none"/>
+
+  <!-- 关键点标注 -->
+  <circle cx="153" cy="95" r="4" fill="#22c55e"/>
+  <text x="165" y="92" font-size="8.5" fill="#15803d">~95% 准确</text>
+
+  <circle cx="227" cy="130" r="4" fill="#f59e0b"/>
+  <text x="235" y="128" font-size="8.5" fill="#b45309">拐点 ~40%</text>
+
+  <circle cx="373" cy="270" r="4" fill="#ef4444"/>
+  <text x="300" y="265" font-size="8.5" fill="#dc2626">急剧衰退</text>
+
+  <!-- 底部注释 -->
+  <rect x="80" y="385" width="440" height="0" fill="none"/>
+  <text x="280" y="395" text-anchor="middle" font-size="8.5" fill="#64748b">来源：Chroma Context Rot Report (2025.7) · Adobe NoLiMa: 有效记忆仅~2,000 tokens</text>
+</svg>

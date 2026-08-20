@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .tier-label { font-family: system-ui, sans-serif; font-size: 12px; font-weight: bold; fill: #fff; }
+      .tier-desc { font-family: system-ui, sans-serif; font-size: 10px; fill: #E3F2FD; }
+      .action-label { font-family: system-ui, sans-serif; font-size: 11px; fill: #333; }
+      .note { font-family: system-ui, sans-serif; font-size: 11px; fill: #666; }
+      .accent { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #D32F2F; }
+      .green { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #2E7D32; }
+    </style>
+  </defs>
+
+  <text x="280" y="22" text-anchor="middle" class="title">运维Agent安全边界：风险分级与审批门控</text>
+
+  <!-- Tier 1: Auto-execute (Green) -->
+  <rect x="30" y="50" width="500" height="70" rx="8" fill="#E8F5E9" stroke="#66BB6A" stroke-width="2"/>
+  <rect x="30" y="50" width="120" height="70" rx="8" fill="#43A047"/>
+  <text x="90" y="78" text-anchor="middle" class="tier-label">低风险</text>
+  <text x="90" y="96" text-anchor="middle" class="tier-desc">自动执行</text>
+  <text x="90" y="110" text-anchor="middle" class="tier-desc">无需审批</text>
+
+  <text x="165" y="74" class="action-label">• Pod重启（CrashLoopBackOff）</text>
+  <text x="165" y="90" class="action-label">• 清理磁盘空间 / 临时文件</text>
+  <text x="165" y="106" class="action-label">• SSL证书续期 / 缓存刷新</text>
+
+  <!-- Tier 2: Auto + Monitor (Orange) -->
+  <rect x="30" y="135" width="500" height="70" rx="8" fill="#FFF3E0" stroke="#FFA726" stroke-width="2"/>
+  <rect x="30" y="135" width="120" height="70" rx="8" fill="#FB8C00"/>
+  <text x="90" y="163" text-anchor="middle" class="tier-label">中风险</text>
+  <text x="90" y="181" text-anchor="middle" class="tier-desc">自动执行</text>
+  <text x="90" y="195" text-anchor="middle" class="tier-desc">增强监控</text>
+
+  <text x="165" y="159" class="action-label">• 水平扩容（HPA触发）</text>
+  <text x="165" y="175" class="action-label">• 流量切换（同AZ故障转移）</text>
+  <text x="165" y="191" class="action-label">• 限流降级（非核心接口）</text>
+
+  <!-- Tier 3: Human Approval (Red) -->
+  <rect x="30" y="220" width="500" height="70" rx="8" fill="#FFEBEE" stroke="#EF5350" stroke-width="2"/>
+  <rect x="30" y="220" width="120" height="70" rx="8" fill="#E53935"/>
+  <text x="90" y="248" text-anchor="middle" class="tier-label">高风险</text>
+  <text x="90" y="266" text-anchor="middle" class="tier-desc">人工审批</text>
+  <text x="90" y="280" text-anchor="middle" class="tier-desc">HITL必须</text>
+
+  <text x="165" y="244" class="action-label">• 版本回滚（GitOps rollback）</text>
+  <text x="165" y="260" class="action-label">• 数据库Schema变更</text>
+  <text x="165" y="276" class="action-label">• 跨AZ故障转移 / 熔断核心链路</text>
+
+  <!-- Tier 4: Human Only (Dark Red) -->
+  <rect x="30" y="305" width="500" height="50" rx="8" fill="#FFCDD2" stroke="#C62828" stroke-width="2"/>
+  <rect x="30" y="305" width="120" height="50" rx="8" fill="#B71C1C"/>
+  <text x="90" y="328" text-anchor="middle" class="tier-label">禁止</text>
+  <text x="90" y="344" text-anchor="middle" class="tier-desc">仅人工操作</text>
+
+  <text x="165" y="324" class="action-label">• 删除生产数据库 / 删除PV</text>
+  <text x="165" y="340" class="action-label">• 修改IAM权限 / 生产网络配置</text>
+
+  <text x="280" y="378" text-anchor="middle" class="green">Policy-as-Code(OPA) · 最小权限(RBAC) · 沙箱隔离 · 审计日志</text>
+  <text x="280" y="394" text-anchor="middle" class="accent">来源：DevOps Gheware 2026 · Unite.ai 2026 · CSA 2026</text>
+</svg>

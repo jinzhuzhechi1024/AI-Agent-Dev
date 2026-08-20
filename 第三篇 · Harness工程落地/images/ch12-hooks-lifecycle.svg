@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Hooks 生命周期拦截</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">每次工具调用前后，Hook 都是"检查站"</text>
+
+  <!-- 左侧：Agent Loop -->
+  <rect x="30" y="60" width="180" height="310" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="120" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#334155">Agent Loop</text>
+
+  <!-- LLM决策 -->
+  <rect x="50" y="95" width="140" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="120" y="117" text-anchor="middle" font-size="10" font-weight="600" fill="#1e40af">① LLM 决策：调用工具</text>
+
+  <!-- 箭头 -->
+  <path d="M120,131 L120,145" stroke="#475569" stroke-width="1.5" marker-end="url(#arrH)" fill="none"/>
+
+  <!-- PreToolUse Hook -->
+  <rect x="50" y="148" width="140" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="165" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">② PreToolUse Hook</text>
+  <text x="120" y="177" text-anchor="middle" font-size="8" fill="#92400e">退出码 2 → 阻断</text>
+
+  <path d="M120,184 L120,198" stroke="#475569" stroke-width="1.5" marker-end="url(#arrH)" fill="none"/>
+
+  <!-- 工具执行 -->
+  <rect x="50" y="201" width="140" height="36" rx="6" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="120" y="223" text-anchor="middle" font-size="10" font-weight="600" fill="#15803d">③ 工具实际执行</text>
+
+  <path d="M120,237 L120,251" stroke="#475569" stroke-width="1.5" marker-end="url(#arrH)" fill="none"/>
+
+  <!-- PostToolUse Hook -->
+  <rect x="50" y="254" width="140" height="36" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="120" y="271" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">④ PostToolUse Hook</text>
+  <text x="120" y="283" text-anchor="middle" font-size="8" fill="#92400e">检查结果 → 可注入反馈</text>
+
+  <path d="M120,290 L120,304" stroke="#475569" stroke-width="1.5" marker-end="url(#arrH)" fill="none"/>
+
+  <!-- 结果返回 -->
+  <rect x="50" y="307" width="140" height="36" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="120" y="329" text-anchor="middle" font-size="10" font-weight="600" fill="#1e40af">⑤ 结果返回 LLM</text>
+
+  <!-- 右侧：Hook 类型详解 -->
+  <rect x="240" y="60" width="290" height="310" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="385" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#b45309">Hook 处理程序类型</text>
+
+  <!-- command -->
+  <rect x="255" y="92" width="260" height="58" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="265" y="108" font-size="10" font-weight="700" fill="#0f172a">🔧 command（Shell 命令）</text>
+  <text x="265" y="122" font-size="9" fill="#475569">最常用。运行脚本，退出码决定放行/阻断</text>
+  <text x="265" y="135" font-size="9" fill="#64748b">例：prettier --write、eslint、git-secrets</text>
+  <text x="265" y="145" font-size="8.5" fill="#94a3b8">延迟低（~100ms）· 无状态</text>
+
+  <!-- http -->
+  <rect x="255" y="158" width="260" height="58" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="265" y="174" font-size="10" font-weight="700" fill="#0f172a">🌐 http（Webhook）</text>
+  <text x="265" y="188" font-size="9" fill="#475569">POST 到外部服务，适合审计/通知/远程策略</text>
+  <text x="265" y="201" font-size="9" fill="#64748b">例：发送 Slack 告警、写审计日志到 SIEM</text>
+  <text x="265" y="211" font-size="8.5" fill="#94a3b8">延迟中（~500ms）· 可有状态</text>
+
+  <!-- prompt -->
+  <rect x="255" y="224" width="260" height="58" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="265" y="240" font-size="10" font-weight="700" fill="#0f172a">💬 prompt（LLM 审核）</text>
+  <text x="265" y="254" font-size="9" fill="#475569">调用 LLM 判断，适合语义级安全检查</text>
+  <text x="265" y="267" font-size="9" fill="#64748b">例：检查 prompt 注入、敏感数据外泄</text>
+  <text x="265" y="277" font-size="8.5" fill="#94a3b8">延迟高（~2s）· 有状态</text>
+
+  <!-- agent -->
+  <rect x="255" y="290" width="260" height="58" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="265" y="306" font-size="10" font-weight="700" fill="#0f172a">🤖 agent（子 Agent 处理）</text>
+  <text x="265" y="320" font-size="9" fill="#475569">启动独立子 Agent 处理，最强大也最重</text>
+  <text x="265" y="333" font-size="9" fill="#64748b">例：复杂代码审查、安全漏洞深度分析</text>
+  <text x="265" y="343" font-size="8.5" fill="#94a3b8">延迟最高（~5s+）· 有状态</text>
+
+  <!-- 底部注释 -->
+  <text x="280" y="386" text-anchor="middle" font-size="9" fill="#64748b">🔍 核心原则：成功时安静，失败时响亮——正常执行不产生噪音，只在异常时阻断并报警</text>
+</svg>

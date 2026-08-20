@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow25b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L6,3 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="560" height="400" fill="#FAFAFA" rx="8"/>
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui,sans-serif" font-size="16" font-weight="bold" fill="#333">幻觉检测工具链与准确率对比</text>
+
+  <!-- Left side: Detection Flow -->
+  <text x="130" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#1565C0">检测流程</text>
+
+  <!-- Step 1: Agent Output -->
+  <rect x="55" y="65" width="150" height="34" fill="#E3F2FD" stroke="#1565C0" stroke-width="1.5" rx="6"/>
+  <text x="130" y="87" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">Agent输出</text>
+
+  <line x1="130" y1="99" x2="130" y2="115" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25b)"/>
+
+  <!-- Step 2: Grounding Check -->
+  <rect x="55" y="118" width="150" height="34" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="130" y="140" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">Grounding事实校验</text>
+
+  <line x1="130" y1="152" x2="130" y2="168" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25b)"/>
+
+  <!-- Step 3: Citation Verify -->
+  <rect x="55" y="171" width="150" height="34" fill="#FFF3E0" stroke="#E76F00" stroke-width="1.5" rx="6"/>
+  <text x="130" y="193" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">引用来源验证</text>
+
+  <line x1="130" y1="205" x2="130" y2="221" stroke="#333" stroke-width="1.5" marker-end="url(#arrow25b)"/>
+
+  <!-- Step 4: LLM-as-Judge -->
+  <rect x="55" y="224" width="150" height="34" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="6"/>
+  <text x="130" y="246" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" fill="#333">LLM-as-Judge判定</text>
+
+  <!-- Branch arrows -->
+  <line x1="130" y1="258" x2="80" y2="285" stroke="#D32F2F" stroke-width="1.5" marker-end="url(#arrow25b)"/>
+  <line x1="130" y1="258" x2="180" y2="285" stroke="#2E7D32" stroke-width="1.5" marker-end="url(#arrow25b)"/>
+
+  <!-- Alert -->
+  <rect x="30" y="290" width="90" height="34" fill="#FFEBEE" stroke="#D32F2F" stroke-width="1.5" rx="6"/>
+  <text x="75" y="312" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#D32F2F" font-weight="bold">告警拦截</text>
+
+  <!-- Pass -->
+  <rect x="140" y="290" width="90" height="34" fill="#E8F5E9" stroke="#2E7D32" stroke-width="1.5" rx="6"/>
+  <text x="185" y="312" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="#2E7D32" font-weight="bold">放行输出</text>
+
+  <!-- Right side: Tool comparison -->
+  <line x1="260" y1="45" x2="260" y2="370" stroke="#CCC" stroke-dasharray="5,3"/>
+
+  <text x="410" y="55" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="bold" fill="#E76F00">检测工具准确率对比</text>
+
+  <!-- Bar chart background -->
+  <line x1="290" y1="80" x2="290" y2="340" stroke="#999" stroke-width="1"/>
+  <line x1="290" y1="340" x2="540" y2="340" stroke="#999" stroke-width="1"/>
+
+  <!-- Axis labels -->
+  <text x="275" y="85" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">100%</text>
+  <text x="275" y="160" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">75%</text>
+  <text x="275" y="235" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">50%</text>
+  <text x="275" y="310" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">25%</text>
+  <text x="275" y="345" text-anchor="end" font-family="system-ui,sans-serif" font-size="9" fill="#888">0%</text>
+
+  <!-- W&B Weave: 91% -->
+  <rect x="305" y="86" width="55" height="254" fill="#1565C0" opacity="0.8" rx="3"/>
+  <text x="332" y="80" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="bold" fill="#1565C0">91%</text>
+  <text x="332" y="358" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#333">W&amp;B Weave</text>
+
+  <!-- Arize Phoenix: 90% -->
+  <rect x="380" y="89" width="55" height="251" fill="#E76F00" opacity="0.8" rx="3"/>
+  <text x="407" y="83" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="bold" fill="#E76F00">90%</text>
+  <text x="407" y="358" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#333">Phoenix</text>
+
+  <!-- Comet Opik: 72% -->
+  <rect x="455" y="139" width="55" height="201" fill="#2E7D32" opacity="0.8" rx="3"/>
+  <text x="482" y="133" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="bold" fill="#2E7D32">72%</text>
+  <text x="482" y="358" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#333">Comet Opik</text>
+
+  <!-- Annotation -->
+  <text x="410" y="378" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#D32F2F">Opik零误报 · Phoenix约12%误报率</text>
+</svg>

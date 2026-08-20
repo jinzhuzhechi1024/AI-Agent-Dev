@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="400" viewBox="0 0 560 400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/></marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="280" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#1e293b">Sub-Agent 架构：上下文防火墙</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#64748b">父 Agent 保持清爽 · 子 Agent 独立工作 · 只返回压缩结果</text>
+
+  <!-- 父 Agent -->
+  <rect x="200" y="60" width="160" height="70" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="2"/>
+  <text x="280" y="82" text-anchor="middle" font-size="11" font-weight="700" fill="#1e40af">🧠 主 Agent（Opus）</text>
+  <text x="280" y="98" text-anchor="middle" font-size="9" fill="#3b82f6">规划 · 协调 · 合成</text>
+  <rect x="215" y="105" width="130" height="16" rx="3" fill="#dbeafe"/>
+  <text x="280" y="117" text-anchor="middle" font-size="8" fill="#1e40af">上下文：~10K tokens（清爽）</text>
+
+  <!-- 分发箭头 -->
+  <path d="M250,130 C220,150 180,165 145,180" stroke="#475569" stroke-width="1.5" marker-end="url(#arrA)" fill="none"/>
+  <path d="M280,130 L280,180" stroke="#475569" stroke-width="1.5" marker-end="url(#arrA)" fill="none"/>
+  <path d="M310,130 C340,150 380,165 415,180" stroke="#475569" stroke-width="1.5" marker-end="url(#arrA)" fill="none"/>
+
+  <!-- 子 Agent 1 -->
+  <rect x="40" y="180" width="130" height="100" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="105" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#15803d">🔍 代码搜索 Agent</text>
+  <text x="105" y="214" text-anchor="middle" font-size="8" fill="#22c55e">Haiku · 只读工具</text>
+  <rect x="55" y="222" width="100" height="14" rx="3" fill="#dcfce7"/>
+  <text x="105" y="233" text-anchor="middle" font-size="7.5" fill="#15803d">独立上下文 ~50K</text>
+  <text x="105" y="250" text-anchor="middle" font-size="8" fill="#475569">扫描 200 文件</text>
+  <text x="105" y="263" text-anchor="middle" font-size="8" fill="#475569">grep 关键词</text>
+  <text x="105" y="275" text-anchor="middle" font-size="7.5" fill="#94a3b8">读取 30 文件全文</text>
+
+  <!-- 子 Agent 2 -->
+  <rect x="215" y="180" width="130" height="100" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="280" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#b45309">🔧 代码修复 Agent</text>
+  <text x="280" y="214" text-anchor="middle" font-size="8" fill="#f59e0b">Sonnet · 写工具</text>
+  <rect x="230" y="222" width="100" height="14" rx="3" fill="#fef9c3"/>
+  <text x="280" y="233" text-anchor="middle" font-size="7.5" fill="#b45309">独立上下文 ~80K</text>
+  <text x="280" y="250" text-anchor="middle" font-size="8" fill="#475569">修复 5 个 bug</text>
+  <text x="280" y="263" text-anchor="middle" font-size="8" fill="#475569">运行测试验证</text>
+  <text x="280" y="275" text-anchor="middle" font-size="7.5" fill="#94a3b8">迭代 3 轮</text>
+
+  <!-- 子 Agent 3 -->
+  <rect x="390" y="180" width="130" height="100" rx="8" fill="#fce7f3" stroke="#ec4899" stroke-width="1.5"/>
+  <text x="455" y="200" text-anchor="middle" font-size="10" font-weight="700" fill="#9d174d">📝 文档生成 Agent</text>
+  <text x="455" y="214" text-anchor="middle" font-size="8" fill="#ec4899">Haiku · 只读+写</text>
+  <rect x="405" y="222" width="100" height="14" rx="3" fill="#fbcfe8"/>
+  <text x="455" y="233" text-anchor="middle" font-size="7.5" fill="#9d174d">独立上下文 ~30K</text>
+  <text x="455" y="250" text-anchor="middle" font-size="8" fill="#475569">读取改动 diff</text>
+  <text x="455" y="263" text-anchor="middle" font-size="8" fill="#475569">生成 API 文档</text>
+  <text x="455" y="275" text-anchor="middle" font-size="7.5" fill="#94a3b8">输出 markdown</text>
+
+  <!-- 返回箭头（蓝色，表示压缩结果返回） -->
+  <path d="M145,280 C180,300 210,305 240,305" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrR)" fill="none"/>
+  <path d="M280,280 L280,305" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrR)" fill="none"/>
+  <path d="M415,280 C380,300 350,305 320,305" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrR)" fill="none"/>
+
+  <!-- 压缩结果说明 -->
+  <rect x="160" y="310" width="240" height="40" rx="6" fill="#eff6ff" stroke="#3b82f6" stroke-width="1" stroke-dasharray="3 2"/>
+  <text x="280" y="326" text-anchor="middle" font-size="9" font-weight="600" fill="#1e40af">⚡ 压缩结果返回父 Agent</text>
+  <text x="280" y="340" text-anchor="middle" font-size="8" fill="#3b82f6">每个子 Agent 只返回 ~500 tokens 结构化摘要</text>
+
+  <!-- 防火墙标注 -->
+  <rect x="40" y="360" width="480" height="32" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="280" y="378" text-anchor="middle" font-size="9" fill="#64748b">🔥 上下文防火墙：子 Agent 的 50K~80K 探索过程不污染父 Agent 的 10K 上下文</text>
+  <text x="280" y="390" text-anchor="middle" font-size="8.5" fill="#94a3b8">如同潜艇水密舱——一个舱室进水不影响整艘潜艇</text>
+</svg>

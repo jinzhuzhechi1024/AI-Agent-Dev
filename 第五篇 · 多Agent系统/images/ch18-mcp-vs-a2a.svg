@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+    <marker id="ar" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#888888"/></marker>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">MCP vs A2A：纵向工具调用 + 横向 Agent 协作</text>
+  <text x="280" y="40" text-anchor="middle" font-size="10" fill="#888888">互补而非竞争 — 2026 年双协议栈已成默认架构</text>
+
+  <!-- MCP: Vertical -->
+  <rect x="25" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="25" y="60" width="245" height="22" fill="#1976D2" rx="8"/>
+  <text x="148" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">MCP — 纵向通信</text>
+  <text x="148" y="92" text-anchor="middle" font-size="9" fill="#888888">Agent → Tool（工具调用）</text>
+
+  <!-- Agent node -->
+  <rect x="85" y="110" width="125" height="32" fill="#E3F2FD" stroke="#42A5F5" stroke-width="1.5" rx="6"/>
+  <text x="148" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#1565C0">Agent (LLM)</text>
+
+  <!-- Arrow down -->
+  <line x1="148" y1="145" x2="148" y2="170" stroke="#1976D2" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="170" y="160" font-size="8" fill="#1976D2">MCP 协议</text>
+  <text x="170" y="170" font-size="7" fill="#999">JSON-RPC / stdio</text>
+
+  <!-- MCP Server -->
+  <rect x="85" y="175" width="125" height="28" fill="#1976D2" rx="6"/>
+  <text x="148" y="193" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFFFFF">MCP Server</text>
+
+  <!-- Tools -->
+  <rect x="35" y="220" width="55" height="24" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1" rx="4"/>
+  <text x="62" y="236" text-anchor="middle" font-size="7" fill="#1565C0">文件系统</text>
+  <rect x="100" y="220" width="55" height="24" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1" rx="4"/>
+  <text x="127" y="236" text-anchor="middle" font-size="7" fill="#1565C0">数据库</text>
+  <rect x="165" y="220" width="55" height="24" fill="#BBDEFB" stroke="#90CAF9" stroke-width="1" rx="4"/>
+  <text x="192" y="236" text-anchor="middle" font-size="7" fill="#1565C0">API</text>
+  <line x1="148" y1="203" x2="62" y2="220" stroke="#90CAF9" stroke-width="1"/>
+  <line x1="148" y1="203" x2="127" y2="220" stroke="#90CAF9" stroke-width="1"/>
+  <line x1="148" y1="203" x2="192" y2="220" stroke="#90CAF9" stroke-width="1"/>
+
+  <text x="148" y="265" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">本质</text>
+  <g font-size="8" fill="#999999">
+    <text x="35" y="283">▪ Agent 调用确定性工具</text>
+    <text x="35" y="296">▪ 工具是被动的（被调用）</text>
+    <text x="35" y="309">▪ 请求-响应模式</text>
+    <text x="35" y="322">▪ 起源：Anthropic 2024.11</text>
+    <text x="35" y="335">▪ 治理：Linux Foundation</text>
+  </g>
+  <rect x="35" y="345" width="225" height="18" fill="#E3F2FD" rx="4"/>
+  <text x="148" y="358" text-anchor="middle" font-size="8" fill="#1565C0" font-weight="bold">"Agent 使用什么工具"</text>
+
+  <!-- A2A: Horizontal -->
+  <rect x="290" y="60" width="245" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="290" y="60" width="245" height="22" fill="#00897B" rx="8"/>
+  <text x="412" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">A2A — 横向通信</text>
+  <text x="412" y="92" text-anchor="middle" font-size="9" fill="#888888">Agent → Agent（协作通信）</text>
+
+  <!-- Agent A -->
+  <rect x="300" y="110" width="90" height="32" fill="#E0F2F1" stroke="#80CBC4" stroke-width="1.5" rx="6"/>
+  <text x="345" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#00695C">Agent A</text>
+
+  <!-- Arrow horizontal -->
+  <line x1="395" y1="126" x2="430" y2="126" stroke="#00897B" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="412" y="118" text-anchor="middle" font-size="7" fill="#00897B">A2A 协议</text>
+
+  <!-- Agent B -->
+  <rect x="435" y="110" width="90" height="32" fill="#E0F2F1" stroke="#80CBC4" stroke-width="1.5" rx="6"/>
+  <text x="480" y="130" text-anchor="middle" font-size="10" font-weight="bold" fill="#00695C">Agent B</text>
+
+  <!-- Agent B's MCP -->
+  <line x1="480" y1="145" x2="480" y2="170" stroke="#1976D2" stroke-width="1" stroke-dasharray="3,2" marker-end="url(#ar)"/>
+  <rect x="430" y="175" width="100" height="24" fill="#1976D2" rx="4" opacity="0.3"/>
+  <text x="480" y="191" text-anchor="middle" font-size="7" fill="#1565C0">B 自己的 MCP 工具</text>
+
+  <text x="412" y="218" text-anchor="middle" font-size="8" fill="#888888">Agent B 也有自己的工具</text>
+
+  <text x="412" y="245" text-anchor="middle" font-size="9" fill="#666666" font-weight="bold">本质</text>
+  <g font-size="8" fill="#999999">
+    <text x="300" y="263">▪ Agent 委托另一个 Agent</text>
+    <text x="300" y="276">▪ 对方是自主的（可协商）</text>
+    <text x="300" y="289">▪ 任务-生命周期模式</text>
+    <text x="300" y="302">▪ 起源：Google 2025.04</text>
+    <text x="300" y="315">▪ 治理：Linux Foundation</text>
+    <text x="300" y="328">▪ v1.0：2026.03 发布</text>
+  </g>
+  <rect x="300" y="345" width="225" height="18" fill="#E0F2F1" rx="4"/>
+  <text x="412" y="358" text-anchor="middle" font-size="8" fill="#00695C" font-weight="bold">"Agent 如何协作"</text>
+
+  <!-- Bottom annotation -->
+  <rect x="25" y="378" width="510" height="16" fill="#FFF8E1" stroke="#FFE082" stroke-width="1" rx="4"/>
+  <text x="280" y="390" text-anchor="middle" font-size="8" fill="#F57F17">典型组合：Agent A 通过 A2A 委托 Agent B，Agent B 通过 MCP 调用工具完成任务，结果通过 A2A 返回</text>
+</svg>

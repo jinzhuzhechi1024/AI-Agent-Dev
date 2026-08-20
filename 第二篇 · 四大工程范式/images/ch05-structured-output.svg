@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      text { font-family: system-ui, -apple-system, sans-serif; }
+    </style>
+    <marker id="ar1" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="#888888"/></marker>
+  </defs>
+  <rect width="560" height="400" fill="#F5F5F5" rx="12"/>
+
+  <text x="280" y="26" text-anchor="middle" font-size="15" font-weight="bold" fill="#333333">结构化输出：从"可能对"到"保证对"</text>
+  <text x="280" y="42" text-anchor="middle" font-size="10" fill="#888888">三种方案的可靠性递进</text>
+
+  <!-- Level 1: JSON Mode -->
+  <rect x="25" y="60" width="160" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="25" y="60" width="160" height="22" fill="#FF9800" rx="8"/>
+  <text x="105" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">JSON Mode</text>
+  <text x="105" y="100" text-anchor="middle" font-size="9" fill="#666666">2023·基础能力</text>
+  <text x="105" y="118" text-anchor="middle" font-size="8" fill="#999999">"请输出JSON格式"</text>
+
+  <rect x="35" y="135" width="140" height="80" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1" rx="4"/>
+  <text x="40" y="150" font-size="7" fill="#E65100" font-family="monospace">{</text>
+  <text x="45" y="162" font-size="7" fill="#E65100" font-family="monospace">"issue": "SQL注入"</text>
+  <text x="45" y="174" font-size="7" fill="#E65100" font-family="monospace">"severity": "high"</text>
+  <text x="45" y="186" font-size="7" fill="#E65100" font-family="monospace">"fix": "参数化查询"</text>
+  <text x="45" y="198" font-size="7" fill="#E65100" font-family="monospace">}  ← 缺逗号!</text>
+  <text x="45" y="210" font-size="7" fill="#D32F2F" font-family="monospace">解析失败</text>
+
+  <text x="105" y="235" text-anchor="middle" font-size="9" fill="#D32F2F" font-weight="bold">可靠性：~70%</text>
+  <g font-size="8" fill="#999999">
+    <text x="35" y="255">▪ 可能输出非法JSON</text>
+    <text x="35" y="270">▪ 缺引号/多余逗号</text>
+    <text x="35" y="285">▪ 字段名不固定</text>
+    <text x="35" y="300">▪ 类型可能错误</text>
+  </g>
+  <text x="105" y="335" text-anchor="middle" font-size="20">⚠️</text>
+  <text x="105" y="355" text-anchor="middle" font-size="8" fill="#FF9800" font-style="italic">尽力而为</text>
+
+  <!-- Arrow -->
+  <line x1="190" y1="200" x2="210" y2="200" stroke="#888888" stroke-width="2" marker-end="url(#ar1)"/>
+
+  <!-- Level 2: Function Calling -->
+  <rect x="210" y="60" width="160" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="210" y="60" width="160" height="22" fill="#2196F3" rx="8"/>
+  <text x="290" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">Function Calling</text>
+  <text x="290" y="100" text-anchor="middle" font-size="9" fill="#666666">2023·行业标准</text>
+  <text x="290" y="118" text-anchor="middle" font-size="8" fill="#999999">定义函数签名</text>
+
+  <rect x="220" y="135" width="140" height="80" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1" rx="4"/>
+  <text x="225" y="150" font-size="7" fill="#1565C0" font-family="monospace">function: review_code</text>
+  <text x="225" y="162" font-size="7" fill="#1565C0" font-family="monospace">args:</text>
+  <text x="230" y="174" font-size="7" fill="#1565C0" font-family="monospace">issue: "SQL注入"</text>
+  <text x="230" y="186" font-size="7" fill="#1565C0" font-family="monospace">severity: "high"</text>
+  <text x="230" y="198" font-size="7" fill="#1565C0" font-family="monospace">fix: "参数化查询"</text>
+  <text x="225" y="210" font-size="7" fill="#2E7D32" font-family="monospace">✓ 符合Schema</text>
+
+  <text x="290" y="235" text-anchor="middle" font-size="9" fill="#2196F3" font-weight="bold">可靠性：~95%</text>
+  <g font-size="8" fill="#999999">
+    <text x="220" y="255">▪ 训练为符合Schema</text>
+    <text x="220" y="270">▪ 参数类型固定</text>
+    <text x="220" y="285">▪ 字段名由签名定义</text>
+    <text x="220" y="300">▪ 极少格式错误</text>
+  </g>
+  <text x="290" y="335" text-anchor="middle" font-size="20">✅</text>
+  <text x="290" y="355" text-anchor="middle" font-size="8" fill="#2196F3" font-style="italic">高度可靠</text>
+
+  <!-- Arrow -->
+  <line x1="375" y1="200" x2="395" y2="200" stroke="#888888" stroke-width="2" marker-end="url(#ar1)"/>
+
+  <!-- Level 3: Structured Output -->
+  <rect x="395" y="60" width="160" height="310" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1" rx="8"/>
+  <rect x="395" y="60" width="160" height="22" fill="#00897B" rx="8"/>
+  <text x="475" y="75" text-anchor="middle" font-size="11" font-weight="bold" fill="#FFFFFF">Structured Output</text>
+  <text x="475" y="100" text-anchor="middle" font-size="9" fill="#666666">2024·约束解码</text>
+  <text x="475" y="118" text-anchor="middle" font-size="8" fill="#999999">Pydantic Schema</text>
+
+  <rect x="405" y="135" width="140" height="80" fill="#E0F2F1" stroke="#80CBC4" stroke-width="1" rx="4"/>
+  <text x="410" y="150" font-size="7" fill="#00695C" font-family="monospace">class CodeReview:</text>
+  <text x="415" y="162" font-size="7" fill="#00695C" font-family="monospace">issue_type: str</text>
+  <text x="415" y="174" font-size="7" fill="#00695C" font-family="monospace">severity: str</text>
+  <text x="415" y="186" font-size="7" fill="#00695C" font-family="monospace">description: str</text>
+  <text x="415" y="198" font-size="7" fill="#00695C" font-family="monospace">fix_suggestion: str</text>
+  <text x="410" y="210" font-size="7" fill="#00695C" font-family="monospace">→ 100% 合规</text>
+
+  <text x="475" y="235" text-anchor="middle" font-size="9" fill="#00897B" font-weight="bold">可靠性：100%</text>
+  <g font-size="8" fill="#999999">
+    <text x="405" y="255">▪ 约束解码保证</text>
+    <text x="405" y="270">▪ 每个Token只允许</text>
+    <text x="405" y="285">  符合Schema的输出</text>
+    <text x="405" y="300">▪ Agent解析无隐患</text>
+  </g>
+  <text x="475" y="335" text-anchor="middle" font-size="20">🔒</text>
+  <text x="475" y="355" text-anchor="middle" font-size="8" fill="#00897B" font-style="italic">数学保证</text>
+</svg>

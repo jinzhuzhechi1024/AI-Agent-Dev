@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .phase-title { font-family: system-ui, sans-serif; font-size: 13px; font-weight: bold; fill: #fff; }
+      .phase-desc { font-family: system-ui, sans-serif; font-size: 11px; fill: #555; }
+      .tool-label { font-family: system-ui, sans-serif; font-size: 10px; fill: #fff; }
+      .note { font-family: system-ui, sans-serif; font-size: 11px; fill: #666; }
+      .accent { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #D32F2F; }
+      .green { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #2E7D32; }
+    </style>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+      <path d="M1,1 L4,7 L7,1" fill="#666"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="22" text-anchor="middle" class="title">自动化运维Agent · 三阶段闭环架构</text>
+
+  <!-- Phase 1: 感知 -->
+  <rect x="20" y="40" width="160" height="260" rx="8" fill="#E3F2FD" stroke="#90CAF9" stroke-width="1"/>
+  <text x="100" y="62" text-anchor="middle" class="phase-title" fill="#1565C0">① 监控感知</text>
+
+  <rect x="35" y="76" width="130" height="28" rx="4" fill="#1976D2"/>
+  <text x="100" y="94" text-anchor="middle" class="tool-label">告警接入(PagerDuty/Webhook)</text>
+
+  <rect x="35" y="114" width="130" height="28" rx="4" fill="#1976D2"/>
+  <text x="100" y="132" text-anchor="middle" class="tool-label">事件关联降噪(95%↓)</text>
+
+  <rect x="35" y="152" width="130" height="28" rx="4" fill="#1976D2"/>
+  <text x="100" y="170" text-anchor="middle" class="tool-label">异常检测(动态基线)</text>
+
+  <rect x="35" y="190" width="130" height="28" rx="4" fill="#1976D2"/>
+  <text x="100" y="208" text-anchor="middle" class="tool-label">拓扑感知(影响面分析)</text>
+
+  <text x="100" y="240" text-anchor="middle" class="phase-desc">Prometheus/Datadog</text>
+  <text x="100" y="256" text-anchor="middle" class="phase-desc">OpenTelemetry/Jaeger</text>
+  <text x="100" y="272" text-anchor="middle" class="phase-desc">ELK/Loki</text>
+  <text x="100" y="288" text-anchor="middle" class="phase-desc">源：IntelligentVisibility 2026</text>
+
+  <!-- Arrow -->
+  <path d="M185 170 L210 170" stroke="#666" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 2: 推理 -->
+  <rect x="215" y="40" width="160" height="260" rx="8" fill="#FFF3E0" stroke="#FFCC80" stroke-width="1"/>
+  <text x="295" y="62" text-anchor="middle" class="phase-title" fill="#E65100">② 诊断推理</text>
+
+  <rect x="230" y="76" width="130" height="28" rx="4" fill="#F57C00"/>
+  <text x="295" y="94" text-anchor="middle" class="tool-label">日志分析(NLP/LLM)</text>
+
+  <rect x="230" y="114" width="130" height="28" rx="4" fill="#F57C00"/>
+  <text x="295" y="132" text-anchor="middle" class="tool-label">根因假设(变更关联)</text>
+
+  <rect x="230" y="152" width="130" height="28" rx="4" fill="#F57C00"/>
+  <text x="295" y="170" text-anchor="middle" class="tool-label">RAG检索历史工单</text>
+
+  <rect x="230" y="190" width="130" height="28" rx="4" fill="#F57C00"/>
+  <text x="295" y="208" text-anchor="middle" class="tool-label">止血方案生成(Playbook)</text>
+
+  <text x="295" y="240" text-anchor="middle" class="phase-desc">Agent Loop(ReAct)</text>
+  <text x="295" y="256" text-anchor="middle" class="phase-desc">RAG + 依赖图谱</text>
+  <text x="295" y="272" text-anchor="middle" class="phase-desc">变更关联 94%置信</text>
+  <text x="295" y="288" text-anchor="middle" class="phase-desc">源：Unite.ai 2026</text>
+
+  <!-- Arrow -->
+  <path d="M380 170 L405 170" stroke="#666" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Phase 3: 执行 -->
+  <rect x="410" y="40" width="130" height="260" rx="8" fill="#E8F5E9" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="475" y="62" text-anchor="middle" class="phase-title" fill="#2E7D32">③ 执行操作</text>
+
+  <rect x="422" y="76" width="106" height="24" rx="4" fill="#66BB6A"/>
+  <text x="475" y="92" text-anchor="middle" class="tool-label">Pod重启(低风险)</text>
+
+  <rect x="422" y="108" width="106" height="24" rx="4" fill="#FFA726"/>
+  <text x="475" y="124" text-anchor="middle" class="tool-label">扩容(中风险)</text>
+
+  <rect x="422" y="140" width="106" height="24" rx="4" fill="#EF5350"/>
+  <text x="475" y="156" text-anchor="middle" class="tool-label">回滚(高风险)</text>
+
+  <rect x="422" y="172" width="106" height="24" rx="4" fill="#EF5350"/>
+  <text x="475" y="188" text-anchor="middle" class="tool-label">熔断降级(高风险)</text>
+
+  <rect x="422" y="206" width="106" height="28" rx="4" fill="#546E7A"/>
+  <text x="475" y="224" text-anchor="middle" class="tool-label">HITL审批门控</text>
+
+  <text x="475" y="252" text-anchor="middle" class="phase-desc">K8s API/Ansible</text>
+  <text x="475" y="268" text-anchor="middle" class="phase-desc">MCP工具链</text>
+  <text x="475" y="284" text-anchor="middle" class="phase-desc">Policy-as-Code</text>
+  <text x="475" y="300" text-anchor="middle" class="phase-desc">源：AgenticWork 2026</text>
+
+  <!-- Feedback loop -->
+  <path d="M475 306 Q 295 360 100 306" stroke="#999" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arr)"/>
+  <text x="295" y="356" text-anchor="middle" class="note">验证闭环：执行后5分钟健康检查 → 回归则回滚 → 更新Playbook</text>
+
+  <text x="280" y="378" text-anchor="middle" class="green">MTTR ↓ 50-70% · 告警噪声 ↓ 95% · 自动解决率 ↑ 60%</text>
+  <text x="280" y="394" text-anchor="middle" class="accent">来源：PagerDuty 2025 · Cyfuture 2026 · Unite.ai 2026 · arXiv 2026</text>
+</svg>

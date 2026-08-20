@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 400" width="560" height="400">
+  <defs>
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 16px; font-weight: bold; fill: #333; }
+      .layer-label { font-family: system-ui, sans-serif; font-size: 12px; font-weight: bold; fill: #333; }
+      .server-name { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #fff; }
+      .server-desc { font-family: system-ui, sans-serif; font-size: 10px; fill: #E3F2FD; }
+      .note { font-family: system-ui, sans-serif; font-size: 11px; fill: #666; }
+      .accent { font-family: system-ui, sans-serif; font-size: 11px; font-weight: bold; fill: #D32F2F; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="7" orient="auto">
+      <path d="M1,1 L4,7 L7,1" fill="#999"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="22" text-anchor="middle" class="title">企业MCP Server网格：Agent的多数据源接入</text>
+
+  <!-- Top: Agent -->
+  <rect x="200" y="40" width="160" height="36" rx="8" fill="#1565C0"/>
+  <text x="280" y="62" text-anchor="middle" class="server-name">Agent (LangGraph编排)</text>
+
+  <!-- Arrow down to governance -->
+  <path d="M280 78 L280 86" stroke="#999" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Governance Layer -->
+  <rect x="140" y="88" width="280" height="36" rx="6" fill="#546E7A"/>
+  <text x="280" y="110" text-anchor="middle" class="server-name">MCP Control Layer（策略网关 · ABAC · 审计 · 限流）</text>
+
+  <!-- Arrows to 6 servers -->
+  <path d="M280 126 L280 134" stroke="#999" stroke-width="1.5"/>
+  <path d="M280 134 L100 134 L100 148" stroke="#999" stroke-width="1" fill="none"/>
+  <path d="M280 134 L260 134 L260 148" stroke="#999" stroke-width="1" fill="none"/>
+  <path d="M280 134 L420 134 L420 148" stroke="#999" stroke-width="1" fill="none"/>
+  <path d="M280 134 L100 134 L100 148" stroke="#999" stroke-width="1" fill="none"/>
+
+  <!-- Row 1: 3 MCP Servers -->
+  <rect x="30" y="148" width="150" height="42" rx="6" fill="#2E7D32"/>
+  <text x="105" y="166" text-anchor="middle" class="server-name">Knowledge-MCP</text>
+  <text x="105" y="180" text-anchor="middle" class="server-desc">Confluence · Notion · 飞书</text>
+
+  <rect x="205" y="148" width="150" height="42" rx="6" fill="#E65100"/>
+  <text x="280" y="166" text-anchor="middle" class="server-name">CRM-MCP</text>
+  <text x="280" y="180" text-anchor="middle" class="server-desc">Salesforce · HubSpot</text>
+
+  <rect x="380" y="148" width="150" height="42" rx="6" fill="#6A1B9A"/>
+  <text x="455" y="166" text-anchor="middle" class="server-name">ITSM-MCP</text>
+  <text x="455" y="180" text-anchor="middle" class="server-desc">Jira · ServiceNow</text>
+
+  <!-- Row 2: 3 MCP Servers -->
+  <rect x="30" y="206" width="150" height="42" rx="6" fill="#1565C0"/>
+  <text x="105" y="224" text-anchor="middle" class="server-name">DW-MCP</text>
+  <text x="105" y="238" text-anchor="middle" class="server-desc">Snowflake · BigQuery</text>
+
+  <rect x="205" y="206" width="150" height="42" rx="6" fill="#C62828"/>
+  <text x="280" y="224" text-anchor="middle" class="server-name">HRIS-MCP</text>
+  <text x="280" y="238" text-anchor="middle" class="server-desc">Workday · BambooHR</text>
+
+  <rect x="380" y="206" width="150" height="42" rx="6" fill="#00838F"/>
+  <text x="455" y="224" text-anchor="middle" class="server-name">Comms-MCP</text>
+  <text x="455" y="238" text-anchor="middle" class="server-desc">Slack · Teams · 邮件</text>
+
+  <!-- Arrows down -->
+  <path d="M105 190 L105 206" stroke="#999" stroke-width="1" fill="none"/>
+  <path d="M280 190 L280 206" stroke="#999" stroke-width="1" fill="none"/>
+  <path d="M455 190 L455 206" stroke="#999" stroke-width="1" fill="none"/>
+
+  <!-- Source systems -->
+  <rect x="30" y="268" width="500" height="28" rx="4" fill="#ECEFF1" stroke="#CFD8DC" stroke-width="1"/>
+  <text x="280" y="286" text-anchor="middle" class="note">数据源层：权限继承 · 数据不复制 · 实时查询源系统</text>
+
+  <!-- Bottom notes -->
+  <text x="280" y="320" text-anchor="middle" class="note">Atlassian Rovo MCP（2026.2 GA）· Glean MCP（100+数据源）· CData Connect AI（350+源）</text>
+  <text x="280" y="338" text-anchor="middle" class="note">6-12个MCP Server覆盖单一业务单元 · 每Server继承统一策略</text>
+  <text x="280" y="362" text-anchor="middle" class="accent">来源：SWFTE(2026) · Altudo(2026) · CData(2026) · Atlassian(2026)</text>
+  <text x="280" y="380" text-anchor="middle" class="note">Agent与数据源解耦 · 新增数据源=新增MCP Server配置 · 零代码</text>
+</svg>

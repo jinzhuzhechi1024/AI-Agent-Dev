@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="560" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="560" height="400" fill="#F5F5F5" rx="8" />
+
+  <!-- Title -->
+  <text x="280" y="28" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="bold" fill="#333333">自我验证循环</text>
+  <text x="280" y="48" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#888888">写 → 跑 → 看 → 修 → 再来</text>
+
+  <!-- Center hub -->
+  <circle cx="280" cy="210" r="38" fill="#333333" />
+  <text x="280" y="207" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">Agent</text>
+  <text x="280" y="224" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#CCCCCC">Loop</text>
+
+  <!-- Step 1: Write (top) -->
+  <rect x="220" y="68" width="120" height="44" fill="#FFFFFF" stroke="#00ADD8" stroke-width="2" rx="6" />
+  <text x="280" y="86" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#00ADD8">写代码</text>
+  <text x="280" y="103" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">Write</text>
+  <!-- Arrow: center to write -->
+  <line x1="280" y1="172" x2="280" y2="112" stroke="#00ADD8" stroke-width="2" marker-end="url(#aw1)" />
+  <polygon points="276,115 280,107 284,115" fill="#00ADD8" />
+
+  <!-- Step 2: Run (right) -->
+  <rect x="420" y="188" width="120" height="44" fill="#FFFFFF" stroke="#E76F00" stroke-width="2" rx="6" />
+  <text x="480" y="206" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#E76F00">运行</text>
+  <text x="480" y="223" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">Run</text>
+  <!-- Arrow: write to run -->
+  <path d="M340 90 Q410 90 440 180" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#aw2)" />
+  <polygon points="437,177 442,184 443,175" fill="#888888" />
+
+  <!-- Step 3: Observe (bottom) -->
+  <rect x="220" y="308" width="120" height="44" fill="#FFFFFF" stroke="#333333" stroke-width="2" rx="6" />
+  <text x="280" y="326" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#333333">观察结果</text>
+  <text x="280" y="343" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">Observe</text>
+  <!-- Arrow: run to observe -->
+  <path d="M480 232 Q480 290 350 320" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#aw3)" />
+  <polygon points="353,316 344,320 352,324" fill="#888888" />
+
+  <!-- Step 4: Fix (left) -->
+  <rect x="20" y="188" width="120" height="44" fill="#FFFFFF" stroke="#D32F2F" stroke-width="2" rx="6" />
+  <text x="80" y="206" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="bold" fill="#D32F2F">修复</text>
+  <text x="80" y="223" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">Fix</text>
+  <!-- Arrow: observe to fix -->
+  <path d="M220 330 Q140 330 100 240" stroke="#888888" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#aw4)" />
+  <polygon points="103,243 95,238 97,247" fill="#888888" />
+
+  <!-- Arrow: fix back to center (write again) -->
+  <line x1="140" y1="210" x2="242" y2="210" stroke="#D32F2F" stroke-width="2" marker-end="url(#aw5)" />
+  <polygon points="239,206 247,210 239,214" fill="#D32F2F" />
+
+  <!-- Loop label -->
+  <text x="280" y="280" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#888888">失败则循环 N 次</text>
+
+  <!-- Exit path -->
+  <rect x="420" y="68" width="120" height="40" fill="#333333" rx="6" />
+  <text x="480" y="93" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">测试通过</text>
+  <!-- Exit arrow from observe to success -->
+  <path d="M340 330 Q420 330 470 115" stroke="#D32F2F" stroke-width="2" stroke-dasharray="6,4" fill="none" marker-end="url(#aw6)" />
+  <polygon points="467,118 472,110 475,119" fill="#D32F2F" />
+  <text x="435" y="250" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#D32F2F">退出循环</text>
+
+  <!-- Bottom note -->
+  <rect x="20" y="362" width="520" height="28" fill="#FFFFFF" stroke="#DDDDDD" rx="4" />
+  <text x="280" y="381" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#666666">测试驱动Agent: 先写测试→运行失败→实现代码→再运行→直到通过</text>
+</svg>
